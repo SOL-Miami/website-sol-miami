@@ -1,0 +1,410 @@
+/**
+ * General Layout
+ */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.no-container {
+		.site-content {
+			max-width: 100%;
+		}
+		.vc_row {
+			margin-left: 0;
+			margin-right: 0;
+			
+			.vc_column_container {
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.page-template-template-homepage,
+	.page-template-template-homepage-v2,
+	.page-template-template-homepage-v3 {
+		.site-content {
+			max-width: 100%;
+		}
+	}
+
+	.no-container {
+		.site-content {
+			max-width: 100%;
+		}
+		.vc_row {
+			margin-left: 0;
+			margin-right: 0;
+			
+			.vc_column_container {
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+			
+			&.wrap {
+				@include container;
+			}
+		}
+		.comments-area {
+			@include container;
+		}
+	}
+
+	.site-header {
+		.site-branding,
+		.site-logo-anchor,
+		.site-logo-link {
+			display: block;
+			width: 290px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			height: 68px;
+			z-index: 9;
+
+			img {
+				height: auto;
+				max-width: 100%;
+				max-height: none;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.wrap{
+		@include container();
+	}
+
+	.site-branding{
+		.site-description {
+			margin-bottom: 0;
+			display: block;
+		}
+	}
+
+	.site-branding,
+	.site-search,
+	.site-header-cart,
+	.site-logo-anchor {
+		margin-bottom: 1em;
+	}
+
+	.site-header {
+		.subscribe-and-connect-connect {
+			float: right;
+			margin-bottom: 1em;
+
+			.icons {
+				list-style: none;
+				margin: 0;
+
+				a {
+					font-size: 1em !important;
+				}
+
+				li {
+					margin: 0 0 0 .53em !important;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.site-content {
+		@include clearfix;
+		@include container;
+
+	}
+
+	.home-page{
+		.site-content {
+			 margin-left: auto;
+		    margin-right: auto;
+		    padding-left: 15px;
+		    padding-right: 15px;
+
+		}
+	}
+
+	@include with-layout($layout-settings) {
+		.left-sidebar {
+			
+			.site-content{
+				@include container;
+				@include clearfix;
+			}
+
+			.content-area {
+				@include span(last 12 of 15);
+				padding-left: 5.4%;
+				padding-right: 0;
+			}
+
+			.widget-area {
+				@include span(3 of 15);
+				padding: 0;
+			}
+		}
+
+		.right-sidebar {
+			
+			.site-content{
+				@include container;
+				@include clearfix;
+			}
+
+			.content-area {
+				@include span(12 of 15);
+				padding-right: 5.4%;
+				padding-left: 0;
+			}
+
+			.widget-area {
+				@include span(last 3 of 15);
+				padding-right: 0;
+			}
+		}
+	}
+
+	.bethlehem-full-width-content {
+		.content-area {
+			@include span(full);
+		}
+	}
+
+	.content-area,
+	.widget-area {
+		margin-bottom: 2.618em;
+	}
+
+	/**
+	 * Full width & homepage template
+	 */
+	.page-template-template-fullwidth-php,
+	.page-template-template-homepage-php,
+	.page-template-template-homepage-v2-php,
+	.page-template-template-homepage-v3-php {
+		.content-area {
+			@include span(full);
+		}
+	}
+
+	/**
+	 * Footer widgets
+	 */
+	.site-footer {
+	 	@include clearfix;
+		background-color: $color_footer;
+	}
+
+	.footer-logo {
+	 	@include span(8 of 16);
+	}
+
+	.connect-with-us {
+	 	@include span(last 8 of 16);
+	}
+
+	.footer-widgets {
+		@include clearfix;
+		padding-bottom: 50px;
+		display: table;
+		width: 100%;
+		border-top: 1px solid #434343;
+
+		h5{
+			text-transform: uppercase;
+			margin: 0 0 25px;
+			font-size: 14px;
+		}
+
+		p{
+			color: #FFF;
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 21px;
+		}
+
+		.footer-widget {
+			border-right: 1px solid #434343;
+			padding: 35px 0 15px;
+			display: table-cell;
+			vertical-align: top;
+		}
+
+		blockquote {
+			font-size: 18px;
+			color: #fff;
+			text-align: center;
+			font-style: italic;
+			line-height: 26px;
+			padding: 0;
+			margin: 30px 0 25px 0;
+		}
+
+		.site-info{
+			color: #7f7f7f !important;
+			font-size: 13px;
+			text-align: center;
+			padding: 0;
+		}
+
+		.widget{
+			margin: 0;
+		}
+
+		@include with-layout($layout-settings) {
+
+			&.col-2 {
+				.block {
+					@include span(6 of 12);
+					padding: 0;
+
+					&.footer-widget-2 {
+						@include last;
+					}
+				}
+			}
+
+			&.col-3 {
+				.block {
+					.widget{
+						padding-left: 25px;
+						padding-right: 25px;
+					}
+
+					&.footer-widget-1 {
+						width: span(4 of 16);
+
+						.widget{
+							padding-left: 0;
+						}
+					}
+
+					&.footer-widget-2 {
+						width: span(3 of 16);
+					}
+
+					&.footer-widget-3 {
+						width: span(9 of 16);
+						border-right: none;
+
+						.widget{
+							padding-right: 0;
+						}
+					}
+				}
+			}
+
+			&.col-4 {
+				.block {
+					@include span(3 of 12);
+					padding: 0;
+
+					&.footer-widget-4 {
+						@include last;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.page-template-template-homepage,
+	.page-template-template-homepage-v2,
+	.page-template-template-homepage-v3 {
+		.site-content,.no-container{
+			@include responsiv-space ( $padding: 0 );
+		}
+	}
+
+	
+	.no-container{
+		.site-content{
+			padding: 50px 0 0;
+		}
+	}
+	
+
+	.site-content{
+		@include responsiv-space ( $padding: 20px );
+	}
+
+	.wrap{
+		@include responsiv-space ( $padding: 20px );
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.page-template-template-homepage,
+	.page-template-template-homepage-v2,
+	.page-template-template-homepage-v3 {
+		.site-content,.no-container{
+			@include responsiv-space ( $padding: 0 );
+		}
+	}
+
+	.site-content{
+		@include responsiv-space ( $padding: 20px );
+	}
+
+	.wrap{
+		@include responsiv-space ( $padding: 20px );
+	}
+
+	@include with-layout($layout-settings) {
+		.left-sidebar {
+			
+			.site-content{
+				@include container;
+				@include clearfix;
+			}
+
+			.content-area {
+				@include span(last 10 of 15);
+				padding-left: 2.4%;
+				padding-right: 0;
+			}
+
+			.widget-area {
+				@include span(5 of 15);
+				padding: 0;
+			}
+		}
+
+		.right-sidebar {
+			
+			.site-content{
+				@include container;
+				@include clearfix;
+			}
+
+			.content-area {
+				@include span(10 of 15);
+				padding-right: 2.4%;
+				padding-left: 0;
+			}
+
+			.widget-area {
+				@include span(last 5 of 15);
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+@media screen and ( min-width: 1200px ) {
+	.bethlehem-style-1 .home-page-slider {
+		background-color: #000;
+		min-height: 545px;
+	}
+}

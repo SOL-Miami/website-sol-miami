@@ -1,0 +1,437 @@
+/*===================================================================================*/
+/*  BLUE Color
+/*===================================================================================*/
+/**
+ * base/base.scss
+ */
+.contact-btn {
+  background: none repeat scroll 0 0 #3498db; }
+
+#scrollUp {
+  background-color: #3498db; }
+
+header.site-header .site-branding a h1 {
+  color: #3498db; }
+
+.hb-social li.hb-mail a:hover i {
+  background-color: #3498db !important; }
+
+.hb-more-button:hover {
+  border: 2px solid #3498db !important;
+  background-color: #3498db; }
+
+/**
+ * base/typography.scss
+ */
+input.button {
+  background-color: #3498db; }
+
+.button.wc-backward {
+  background: none repeat scroll 0 0 #3498db; }
+
+/**
+ * components/comments.scss
+ */
+#comments .comment-list .reply a:hover {
+  color: #3498db !important; }
+
+.comment-form input[type="submit"] {
+  background: none repeat scroll 0 0 #3498db; }
+
+/**
+ * components/content.scss
+ */
+.media-attachment-gallery .owl-dots .owl-dot.active span {
+  background-color: #3498db; }
+  .media-attachment-gallery .owl-dots .owl-dot.active span:hover {
+    background-color: #3498db; }
+
+.isotope article .hb-more:hover {
+  color: #3498db; }
+
+/**
+ * components/footer.scss
+ */
+footer.site-footer .footer-logo .site-title {
+  color: #3498db; }
+
+footer.site-footer .connect-with-us h5 {
+  color: #3498db; }
+
+footer.site-footer .footer-widget aside.widget_text h5 {
+  color: #3498db; }
+
+.footer-2 footer.site-footer .footer-widget {
+  border-color: #3498db; }
+  .footer-2 footer.site-footer .footer-widget:after {
+    color: #3498db; }
+
+.footer-2 footer.site-footer ul.hb-social li a i {
+  border: 2px solid #3498db; }
+
+.footer-3 footer.site-footer .bethlehem-logo svg {
+  fill: #3498db; }
+
+.footer-3 footer.site-footer .mc4wp-form p input[type=submit]:hover {
+  background-color: #3498db;
+  border: 2px solid #3498db; }
+
+/**
+ * components/forms.scss
+ */
+.cart-collaterals .coupon input[type="submit"] {
+  background-color: #3498db; }
+
+.wpcf7 form p > input {
+  background-color: #3498db; }
+
+.single_add_to_cart_button:after {
+  border-left: 11px solid #3498db; }
+
+.single_add_to_cart_button:before {
+  background: none repeat scroll 0 0 #3498db; }
+
+/**
+ * components/header.scss
+ */
+.site-title {
+  color: #3498db; }
+
+.bethlehem-style-2 .bethlehem-logo svg, .header-7 .bethlehem-logo svg {
+  fill: #3498db; }
+
+.bethlehem-style-3 .bethlehem-logo svg {
+  fill: #3498db; }
+
+.bethlehem-style-3 .content-area .images-carousel-wrap > a:hover {
+  background-color: #3498db;
+  border-color: #3498db; }
+
+/**
+ * components/menu.scss
+ */
+.main-navigation ul li a:hover {
+  color: #3498db; }
+
+.header-7 .header-nav-menu {
+  background-color: #3498db; }
+  .header-7 .header-nav-menu input[type="search"] {
+    background-color: #1d6fa5 !important; }
+
+.header-7 .header-top-nav-menu .bethlehem-counter h3.counter-title {
+  color: #3498db; }
+
+.header-7 .header-top-nav-menu .top-nav-links ul li a:hover {
+  color: #3498db; }
+
+/**
+ * Primary Navigation
+ */
+.main-navigation ul.menu > li .megamenu-content ul > li > a:hover,
+.main-navigation ul.nav-menu > li .megamenu-content ul > li > a:hover {
+  color: #3498db; }
+
+.main-navigation ul.menu > li.sub-menu .megamenu-content .vc_wp_custommenu .menu > li.menu-item-has-children .sub-menu > li > a:hover,
+.main-navigation ul.nav-menu > li.sub-menu .megamenu-content .vc_wp_custommenu .menu > li.menu-item-has-children .sub-menu > li > a:hover {
+  color: #3498db;
+  background-color: transparent; }
+
+/**
+ * components/widgets.scss
+ */
+.widget_search form:after,
+.widget_product_search form:after {
+  color: #3498db; }
+
+.widget-area .widget.widget_recent_reviews .product_list_widget li .star-rating span:before, .widget-area .widget.widget_top_rated_products .product_list_widget li .star-rating span:before {
+  color: #3498db; }
+
+.widget-area .widget.widget_tag_cloud .tagcloud a, .widget-area .widget.widget_product_tag_cloud .tagcloud a {
+  background: none repeat scroll 0 0 #3498db; }
+
+.widget-area .widget.widget_mc4wp_widget .mc4wp-form input[type="submit"] {
+  background: none repeat scroll 0 0 #3498db; }
+
+/**
+ * layout/layout.scss
+ */
+.footer-widgets h5 {
+  color: #3498db; }
+
+/**
+ * inc/bethlehem-extensions/ministries.scss
+ */
+.ministries-archive .ministries-head ul > li.active a:before {
+  color: #3498db; }
+
+/**
+ * inc/bethlehem-extensions/sermons.scss
+ */
+.sermons-carousel-wrap .sermons-carousel-item .sermons-carousel-info .hb-more:hover {
+  color: #3498db; }
+
+.sermons-carousel-wrap ul.post-icons li a .icon-info:hover {
+  background-color: #3498db !important;
+  border-color: #3498db !important; }
+
+/**
+ * inc/bethlehem-extensions/team-members.scss
+ */
+.team-large .member .member-info .hb-more:hover, .team-small .member .member-info .hb-more:hover {
+  color: #3498db; }
+
+/**
+ * inc/bethlehem-extensions/vc-elements.scss
+ */
+.vc-tribe-events-list-widget .tribe-events-link a:hover, .page .tribe-events-link a:hover {
+  color: #3498db; }
+
+.quote-wrap #quote-info-slider .owl-controls .owl-nav .owl-prev:hover i, .quote-wrap #quote-info-slider .owl-controls .owl-nav .owl-next:hover i {
+  color: #3498db !important; }
+
+.quote-wrap #quote-info-slider .quote-item h4 {
+  color: #3498db; }
+
+.quote-wrap #quote-img-slider .owl-stage .owl-item.synced .quote-item:before {
+  border-color: #3498db transparent; }
+
+.quote-wrap #quote-img-slider .owl-stage .owl-item.synced .quote-item img {
+  outline: 7px solid #3498db; }
+
+.vc-primary-large-btn a,
+.vc-primary-large-btn button, .vc-primary-small-btn a,
+.vc-primary-small-btn button, .vc-primary-medium-btn a,
+.vc-primary-medium-btn button {
+  background-color: #3498db !important; }
+
+.vc-primary-large-btn-inverse a:hover, .vc-primary-large-btn-inverse a:focus,
+.vc-primary-large-btn-inverse button:hover,
+.vc-primary-large-btn-inverse button:focus, .vc-primary-small-btn-inverse a:hover, .vc-primary-small-btn-inverse a:focus,
+.vc-primary-small-btn-inverse button:hover,
+.vc-primary-small-btn-inverse button:focus, .vc-primary-medium-btn-inverse a:hover, .vc-primary-medium-btn-inverse a:focus,
+.vc-primary-medium-btn-inverse button:hover,
+.vc-primary-medium-btn-inverse button:focus {
+  background-color: #3498db !important; }
+
+.vc_widget_recent_posts .archive-link:hover {
+  background-color: #3498db !important; }
+  .vc_widget_recent_posts .archive-link:hover:after {
+    border-left: 26px solid #3498db; }
+
+.vc_widget_recent_posts .hb-more:hover {
+  color: #3498db; }
+
+.vc_widget_recent_posts.type-2 .beth-recent-posts > li h1.entry-title a {
+  color: #3498db; }
+
+.vc-events-list-location .event-locations .location-content .event-btns a:hover {
+  background-color: #3498db; }
+
+/**
+ * inc/give/vc-elements.scss
+ */
+.give-btn {
+  background-color: #3498db !important; }
+
+.donation-carousel-wrap .owl-controls .owl-nav .owl-prev:hover, .donation-carousel-wrap .owl-controls .owl-nav .owl-next:hover {
+  color: #3498db !important; }
+
+.goal-progress .income {
+  color: #3498db; }
+
+.progress-bar > span {
+  background-color: #3498db; }
+
+/**
+* inc/tribe-events/events.scss
+*/
+#tribe-events .tribe-events-list .tribe-events-list-separator-month span {
+  background-color: #3498db; }
+
+.vc-events-calendar .events-lists h2 {
+  color: #3498db; }
+
+.vc-events-calendar .events-calendar table#wp-calendar caption {
+  color: #3498db; }
+
+/**
+ * inc/woocommerce/woocommerce.scss
+ */
+/**
+ * owl-Products
+ */
+.product-item .product-info .actions .button.add_to_cart_button, .product-item .product-info .actions .button.view_product_button {
+  background: #3498db; }
+  .product-item .product-info .actions .button.add_to_cart_button:after, .product-item .product-info .actions .button.view_product_button:after {
+    border-left: 10px solid #3498db; }
+
+/**
+ * Products
+ */
+ul.products li.product h3 a:hover {
+  color: #3498db; }
+
+ul.products li.product .button.add_to_cart_button, ul.products li.product .button.view_product_button {
+  background: #3498db; }
+  ul.products li.product .button.add_to_cart_button:after, ul.products li.product .button.view_product_button:after {
+    border-left: 10px solid #3498db; }
+
+#list-view ul.products li.product .button.add_to_cart_button:after, #list-view ul.products li.product .button.view_product_button:after {
+  border-left: 11px solid #3498db; }
+
+#list-view ul.products li.product .button.add_to_cart_button:before, #list-view ul.products li.product .button.view_product_button:before {
+  background: none repeat scroll 0 0 #3498db; }
+
+.added_to_cart.wc-forward:hover {
+  color: #3498db; }
+
+.wc-proceed-to-checkout .checkout-button, .wc-proceed-to-checkout .checkout, .widget_shopping_cart_content .checkout-button, .widget_shopping_cart_content .checkout {
+  background-color: #3498db; }
+
+.widget_price_filter .price_slider_amount .button:hover {
+  background-color: #3498db; }
+
+.widget_price_filter .ui-slider .ui-slider-range {
+  background: #3498db; }
+
+.myaccount_user a {
+  color: #3498db; }
+
+.col2-set.addresses .col-1.address .title, .col2-set.addresses .col-2.address .title {
+  background-color: #3498db;
+  border-color: #3498db !important; }
+
+a.remove:hover {
+  color: #3498db; }
+
+.star-rating span:before {
+  color: #3498db; }
+
+.bethlehem-sorting ul > li.active a:before {
+  color: #3498db; }
+
+.woocommerce-checkout .panel-title a {
+  border: 1px solid #3498db; }
+  .woocommerce-checkout .panel-title a:before {
+    background-color: #3498db; }
+
+.donate-btn {
+  background-color: #3498db; }
+  .donate-btn:hover, .donate-btn:focus {
+    background-color: #1d6fa5; }
+
+.our-store.type-2 .product-item .actions .price {
+  color: #3498db; }
+
+.our-store.type-2 .product-item .actions .button.add_to_cart_button:hover, .our-store.type-2 .product-item .actions .button.add_to_cart_button:focus, .our-store.type-2 .product-item .actions .button.view_product_button:hover, .our-store.type-2 .product-item .actions .button.view_product_button:focus {
+  background-color: #3498db;
+  border: 2px solid #3498db; }
+
+.stories-archive .stories-featured .stories-content .entry-content p a {
+  color: #3498db; }
+
+.bethlehem-style-2 .comment-form input[type="submit"]:hover, .bethlehem-style-2 .comment-form input[type="submit"]:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db;
+  color: #fff; }
+
+.bethlehem-style-2 .wc-proceed-to-checkout input[type="submit"]:hover, .bethlehem-style-2 .wc-proceed-to-checkout input[type="submit"]:focus, .bethlehem-style-2 .wc-proceed-to-checkout .view-cart:hover, .bethlehem-style-2 .wc-proceed-to-checkout .view-cart:focus, .bethlehem-style-2 .wc-proceed-to-checkout .checkout-button:hover, .bethlehem-style-2 .wc-proceed-to-checkout .checkout-button:focus, .bethlehem-style-2 .wc-proceed-to-checkout .checkout:hover, .bethlehem-style-2 .wc-proceed-to-checkout .checkout:focus, .bethlehem-style-2 .widget_shopping_cart_content input[type="submit"]:hover, .bethlehem-style-2 .widget_shopping_cart_content input[type="submit"]:focus, .bethlehem-style-2 .widget_shopping_cart_content .view-cart:hover, .bethlehem-style-2 .widget_shopping_cart_content .view-cart:focus, .bethlehem-style-2 .widget_shopping_cart_content .checkout-button:hover, .bethlehem-style-2 .widget_shopping_cart_content .checkout-button:focus, .bethlehem-style-2 .widget_shopping_cart_content .checkout:hover, .bethlehem-style-2 .widget_shopping_cart_content .checkout:focus {
+  background: #3498db !important;
+  border: 1px solid #3498db;
+  color: #fff !important; }
+
+.bethlehem-style-2 .widget_price_filter .price_slider_amount .button:hover, .bethlehem-style-2 .widget_price_filter .price_slider_amount .button:focus {
+  background: #3498db !important;
+  border: 1px solid #3498db;
+  color: #fff !important; }
+
+.bethlehem-style-2 .cart-collaterals .coupon input[type="submit"]:hover, .bethlehem-style-2 .cart-collaterals .coupon input[type="submit"]:focus {
+  background: #3498db !important;
+  border: 1px solid #3498db;
+  color: #fff !important; }
+
+.bethlehem-style-2 input.button:hover, .bethlehem-style-2 input.button:focus,
+.bethlehem-style-2 .button.wc-backward:hover,
+.bethlehem-style-2 .button.wc-backward:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db;
+  color: #fff !important; }
+
+.bethlehem-style-2 .wpcf7 form p > input:hover, .bethlehem-style-2 .wpcf7 form p > input:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db;
+  color: #fff !important; }
+
+.bethlehem-style-2 .give-btn:hover, .bethlehem-style-2 .give-btn:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db !important;
+  color: #fff !important; }
+
+.bethlehem-style-2 input[type="submit"]:hover, .bethlehem-style-2 input[type="submit"]:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db !important;
+  color: #fff !important; }
+
+.bethlehem-style-2 .vc-events-list-location .event-locations .location-content .event-btns a:hover {
+  background-color: #3498db; }
+
+.bethlehem-style-2 .vc-primary-large-btn a:hover, .bethlehem-style-2 .vc-primary-large-btn a:focus,
+.bethlehem-style-2 .vc-primary-large-btn button:hover,
+.bethlehem-style-2 .vc-primary-large-btn button:focus, .bethlehem-style-2 .vc-primary-small-btn a:hover, .bethlehem-style-2 .vc-primary-small-btn a:focus,
+.bethlehem-style-2 .vc-primary-small-btn button:hover,
+.bethlehem-style-2 .vc-primary-small-btn button:focus, .bethlehem-style-2 .vc-primary-medium-btn a:hover, .bethlehem-style-2 .vc-primary-medium-btn a:focus,
+.bethlehem-style-2 .vc-primary-medium-btn button:hover,
+.bethlehem-style-2 .vc-primary-medium-btn button:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db !important;
+  color: #fff !important; }
+
+.team-member-carousel-wrap .owl-controls .owl-nav .owl-prev:hover, .team-member-carousel-wrap .owl-controls .owl-nav .owl-prev:focus,
+.team-member-carousel-wrap .owl-controls .owl-nav .owl-next:hover,
+.team-member-carousel-wrap .owl-controls .owl-nav .owl-next:focus {
+  color: #3498db;
+  border: 3px solid #3498db; }
+
+body.bethlehem-style-3 #respond .comment-form .form-submit input[type="submit"]:hover {
+  background: #3498db;
+  border: 2px solid #3498db; }
+
+body.bethlehem-style-3 .wc-proceed-to-checkout input[type="submit"]:hover, body.bethlehem-style-3 .wc-proceed-to-checkout input[type="submit"]:focus, body.bethlehem-style-3 .wc-proceed-to-checkout .view-cart:hover, body.bethlehem-style-3 .wc-proceed-to-checkout .view-cart:focus, body.bethlehem-style-3 .wc-proceed-to-checkout .checkout-button:hover, body.bethlehem-style-3 .wc-proceed-to-checkout .checkout-button:focus, body.bethlehem-style-3 .wc-proceed-to-checkout .checkout:hover, body.bethlehem-style-3 .wc-proceed-to-checkout .checkout:focus, body.bethlehem-style-3 .widget_shopping_cart_content input[type="submit"]:hover, body.bethlehem-style-3 .widget_shopping_cart_content input[type="submit"]:focus, body.bethlehem-style-3 .widget_shopping_cart_content .view-cart:hover, body.bethlehem-style-3 .widget_shopping_cart_content .view-cart:focus, body.bethlehem-style-3 .widget_shopping_cart_content .checkout-button:hover, body.bethlehem-style-3 .widget_shopping_cart_content .checkout-button:focus, body.bethlehem-style-3 .widget_shopping_cart_content .checkout:hover, body.bethlehem-style-3 .widget_shopping_cart_content .checkout:focus {
+  background: #3498db !important;
+  border: 1px solid #3498db;
+  color: #fff !important; }
+
+body.bethlehem-style-3 .widget_price_filter .price_slider_amount .button:hover, body.bethlehem-style-3 .widget_price_filter .price_slider_amount .button:focus {
+  background: #3498db !important;
+  border: 1px solid #3498db;
+  color: #fff !important; }
+
+body.bethlehem-style-3 .cart-collaterals .coupon input[type="submit"]:hover, body.bethlehem-style-3 .cart-collaterals .coupon input[type="submit"]:focus {
+  background: #3498db !important;
+  border: 1px solid #3498db;
+  color: #fff !important; }
+
+body.bethlehem-style-3 input.button:hover, body.bethlehem-style-3 input.button:focus,
+body.bethlehem-style-3 .button.wc-backward:hover,
+body.bethlehem-style-3 .button.wc-backward:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db;
+  color: #fff !important; }
+
+body.bethlehem-style-3 .wpcf7 form p > input:hover, body.bethlehem-style-3 .wpcf7 form p > input:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db;
+  color: #fff !important; }
+
+body.bethlehem-style-3 .give-btn:hover, body.bethlehem-style-3 .give-btn:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db !important;
+  color: #fff !important; }
+
+body.bethlehem-style-3 input[type="submit"]:hover, body.bethlehem-style-3 input[type="submit"]:focus {
+  background: #3498db !important;
+  border: 2px solid #3498db;
+  color: #fff !important; }
+
+body.bethlehem-style-3 .vc-events-list-location .event-locations .location-content .event-btns a:hover {
+  background-color: #3498db; }

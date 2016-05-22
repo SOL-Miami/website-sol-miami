@@ -1,0 +1,15 @@
+p, .content-area {
+	font-family: "proxima-nova",sans-serif !important;
+	font-weight: 300;
+}
+
+.bethlehem-style-3 .primary-navigation ul.menu>li>a {
+	font-family: "proxima-nova",sans-serif !important;
+	font-weight: 900;
+}
+
+/*h1, h2, h3, h4, h5, h6 {
+	font-family: "proxima-nova",sans-serif !important;
+	font-weight: 900;
+}
+

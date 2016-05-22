@@ -1,0 +1,82 @@
+.isotope {
+
+	article{
+		width: 33.2%;
+		padding: 0 10px;
+		margin-bottom: 25px !important;
+		margin-top: 0 !important;
+
+        .folio-item{
+        	border: 1px solid $color_border;
+
+		    img{
+				margin-bottom: 0 !important;
+				//width: 100%;
+			}
+
+			.entry-header,.entry-content{
+				padding: 30px;
+			}
+
+			.entry-header{
+				margin-bottom: 0 !important;
+				padding-bottom: 0 !important;
+				span{
+					a{
+						font-size: 13px;
+						font-weight: 400;
+						font-style: italic;
+						color: #5c5c5c;
+					}
+				}
+				.entry-title{
+					margin-bottom: 0;
+				}
+			}
+
+			.entry-title{
+				line-height: 0.9;
+			}
+
+			.cat-links{
+				font-size: 13px;
+				font-weight: 400;
+				font-style: italic;
+				color: #5c5c5c;
+				a{
+					font-size: 13px;
+					font-weight: 400;
+					font-style: italic;
+					color: #5c5c5c;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+.portfolio-inner {
+	overflow:hidden;
+	margin-bottom:25px;
+	clear: both;
+	
+}
+
+
+/* Isotope Transitions
+------------------------------- */
+.isotope, .isotope .post {-webkit-transition-duration: 0.8s;-moz-transition-duration:0.8s;-ms-transition-duration:0.8s;-o-transition-duration:0.8s;transition-duration:0.8s;}
+.isotope {-webkit-transition-property:height,width;-moz-transition-property: height,width;-ms-transition-property:height,width;-o-transition-property:height,width;transition-property:height,width;}
+.isotope .item {-webkit-transition-property: -webkit-transform,opacity;-moz-transition-property:-moz-transform,opacity;-ms-transition-property:-ms-transform,opacity;-o-transition-property:top,left,opacity;transition-property:transform, opacity;}
+
+/* Note: Design for a width of 480px */
+
+
+/* Note: Design for a width of 480px */
+@media only screen and (max-width: 767px) {
+	.isotope .post {
+		width: 100%;
+	}
+}

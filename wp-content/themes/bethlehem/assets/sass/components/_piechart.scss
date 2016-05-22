@@ -1,0 +1,57 @@
+.vc_pie_chart.bethlehem_piechart[data-pie-color="btn-primary"] .vc_pie_chart_back {
+ border: none !important;
+}
+.vc_pie_chart.bethlehem_piechart[data-pie-color="btn-info"] .vc_pie_chart_back {
+  border: none !important;
+}
+.vc_pie_chart.bethlehem_piechart[data-pie-color="btn-success"] .vc_pie_chart_back {
+  border: none !important;
+}
+.vc_pie_chart.bethlehem_piechart[data-pie-color="btn-warning"] .vc_pie_chart_back {
+  border: none !important;
+}
+.vc_pie_chart.bethlehem_piechart[data-pie-color="btn-danger"] .vc_pie_chart_back {
+  border: none !important;
+}
+.vc_pie_chart.bethlehem_piechart[data-pie-color="btn-inverse"] .vc_pie_chart_back {
+  border: none !important;
+}
+
+
+.vc_pie_chart{
+	&.bethlehem_piechart{
+		height: 230px;
+
+		.vc_pie_wrapper{
+			height: 142px;
+
+			canvas{
+				display: none !important;
+			}
+
+			.vc_pie_chart_value{
+				color: #ffb400;
+		        font-size: 60px !important;
+		        font-weight: 700;
+			}
+		}
+
+		.wpb_pie_chart_heading{
+			color: #595959;
+			font-weight: 400;
+			font-size: 18px;
+		}
+	}
+}
+
+
+.vc_separator{
+	&.vc_sep_color_grey {
+		&.bethlehem_separator{
+			.vc_sep_line{
+				border-color: #cbc6ac;
+				margin-top: 50px;
+			}
+		}
+	}
+}

@@ -1,0 +1,992 @@
+body.bethlehem-style-3 {
+	background-color: #fff;
+	font-family: 'Alegreya', serif;
+
+	input[type=email],
+	select,
+	textarea {
+		font-family: 'Alegreya', serif;
+	}
+
+	.site-page-title h1,
+	.woocommerce-breadcrumb,
+	.woocommerce-breadcrumb a{
+		color: #fff;
+	}
+
+	.sermons-media{
+		text-align: center;
+
+		.sermons-media-channel{
+			margin-bottom: 50px;
+
+            iframe{
+                width: 100%;
+            }
+		}
+	}
+
+	button,
+	input[type=submit],
+	.hb-more-button{
+		font-family: 'Montserrat', sans-serif;
+		//color: #a6a6a6;
+		//font-size: 16px;
+		border-radius: 6px;
+		&:hover{
+			color: #fff;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.site-description, .site-title {
+		color: #FFF;
+		text-shadow: none;
+	}
+
+	&.header-6{
+		.top-nav-links .donate-btn{
+			font-family: 'Montserrat', sans-serif;
+		}
+
+        header{
+            &.site-header{
+                .header-nav-menu{
+                    background-color: #191919;
+
+                    p.site-description{
+                        color: #a0a0a0;
+                        text-align: right;
+                    }
+
+                    .main-navigation{
+    					.left-nav-menu{
+    						.nav-menu{
+    							> li{
+                                    border-color: #424242;
+    								> a{
+    									color: #fff;
+                                        font-family: "Montserrat",sans-serif;
+    								}
+
+									> ul.sub-menu{
+										> li{
+											>a {
+												font-weight: 400;
+											}
+										}
+									}
+    							}
+    						}
+    					}
+    				}
+                }
+            }
+        }
+    }
+
+    .bethlehem-logo-body .site-title, .bethlehem-logo-body .site-description {
+        font-family: Bitter, serif;
+    }
+
+	&.home-page{
+		.site-main,.hentry{
+			margin-bottom: 0;
+		}
+
+		.content-area{
+			margin-bottom: 0;
+		}
+	}
+
+	.content-area{
+		h3.title{
+			font-size: 60px;
+			letter-spacing: -0.025em;
+			color: #212121;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: "Montserrat",sans-serif;
+			margin-bottom: 40px;
+			line-height: 1;
+		}
+
+		h3.pre-title{
+			color: #b0b0b0;
+		    font-family: "Alegreya",serif !important;
+		    font-size: 48px;
+		    font-style: italic;
+		    font-weight: 400;
+		    letter-spacing: -0.025em;
+		    margin-bottom: 0;
+		    text-align: center;
+		    text-transform: capitalize;
+		}
+
+		.bethlehem-tiled-gallery{
+
+			.description-content{
+				margin-bottom: 80px;
+
+				.textwidget{
+					> p{
+						width: 50.85%;
+						margin: 0 auto;
+					}
+
+					>p, address{
+						font-size: 25px;
+						color: #525050;
+						text-align: center;
+						line-height: 30px;
+						letter-spacing: -0.025em;
+					}
+				}
+			}
+
+			.gallery-content{
+				.wp-tiles-tile{
+					h4.wp-tiles-byline-title{
+						font-size: 25px;
+						color: #fff;
+						letter-spacing: -0.025em;
+						text-transform: uppercase;
+						margin-left: 10px;
+						line-height: 1;
+						font-family: "Montserrat",sans-serif;
+					}
+
+					.wp-tiles-byline-content{
+						font-size: 19px;
+						font-style: italic;
+						letter-spacing: -0.025em;
+						line-height: 1;
+						font-family: "Alegreya",serif !important;
+						margin: 0 30px 10px 10px;
+					}
+				}
+			}
+		}
+
+		.contact-address{
+			.wpb_wrapper{
+				padding: 0;
+				text-align: center;
+
+				address{
+					font-size: 25px;
+					color: #525050;
+					line-height: 30px;
+					letter-spacing: -0.025em;
+				}
+
+				ul{
+					margin: 30px 0 0 0;
+					clear: both;
+					display: inline-block;
+					color: #525050;
+					li{
+						list-style: none;
+						font-size: 21px;
+						float: left;
+						margin-right: 30px;
+						line-height: 1;
+
+						&:last-child{
+							margin-right: 0;
+						}
+
+						i{
+							margin-right: 6px;
+						}
+					}
+				}
+
+				p{
+					width: 73.73%;
+					margin: 40px auto !important;
+					font-size: 18px;
+					line-height: 1;
+				}
+			}
+		}
+
+		.contact-map{
+			line-height: 0;
+
+			.wpb_wrapper{
+				padding: 0;
+			}
+
+			iframe{
+				width: 100%;
+				height: 464px;
+				@include filter(grayscale(100%));
+				&:hover{
+					@include filter(grayscale(0%));
+				}
+			}
+		}
+
+		.images-carousel-wrap{
+			text-align: center;
+			.owl-carousel{
+				margin-bottom: 50px;
+				.owl-controls{
+					display: none;
+				}
+			}
+
+			> a{
+				padding: 16px 30px;
+				background-color: transparent;
+				border: 2px solid #a6a6a6;
+				text-transform: uppercase;
+				color: #a6a6a6;
+				display: inline-block;
+				font-size: 16px;
+				font-weight: bold;
+				line-height: 1;
+				font-family: 'Montserrat', sans-serif;
+				border-radius: 6px;
+				&:hover{
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.widget-area {
+        .widget {
+            h3.widget-title {
+                @include style2-titles();
+            }
+        }
+    }
+
+    .widget-area {
+        .widget {
+            &.widget_search,
+            &.widget_product_search{
+                form{
+                    input[type=search]{
+                        border-radius: 0;
+                        border: 1px solid #d3d3d3;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .widget_recent_entries,
+    .widget_pages,
+    .widget_categories,
+    .widget_archive,
+    .widget_recent_comments,
+    .widget_nav_menu,
+    .widget_links,
+    .widget_meta,
+    .widget_rss {
+        ul {
+
+            li {
+                border-bottom: 1px solid #D3D3D3;
+            }
+        }
+    }
+
+     .line{
+        background: #d3d3d3;
+    }
+
+    .hb-social li a i {
+	       background-color: #d3d3d3;
+	}
+
+	.comments-title,
+    .comment-reply-title {
+        border-bottom: 2px solid #d3d3d3;
+    }
+
+    input[type="submit"] {
+        border: 2px solid #9c9c9c;
+        transition: all 0.3s ease 0s;
+        border-radius: 6px;
+        background: rgba(0,0,0,0);
+        color: #a6a6a6;
+        text-shadow: none;
+    }
+
+    .comment-form {
+        input[type="submit"] {
+            border: 2px solid #9c9c9c;
+            transition: all 0.3s ease 0s;
+            border-radius: 6px;
+            background: rgba(0,0,0,0);
+            color: #a6a6a6;
+            text-shadow: none;
+        }
+
+        input,
+        textarea{
+            border-radius: 0;
+            border: 1px solid #d3d3d3;
+        }
+    }
+
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+	        .woocommerce-tabs {
+
+	            ul.tabs {
+
+	                li {
+
+	                    &.active {
+	                        border-radius: 0;
+	                        border-color: #d3d3d3 !important;
+	                    }
+	                }
+	            }
+
+	            .panel {
+	                background-color: #fff;
+	                border-radius: 0;
+	                border: 1px solid #d3d3d3;
+	            }
+	        }
+	    }
+
+        &.single-product {
+	        div.product {
+
+	            form.cart {
+
+	                .quantity {
+
+	                    input{
+	                        border-radius: 0;
+	                        border: 1px solid #d3d3d3;
+	                        background: #fff;
+	                    }
+	                }
+	            }
+	        }
+	    }
+
+	    .wc-proceed-to-checkout,.widget_shopping_cart_content {
+	        input[type="submit"],.view-cart,.checkout-button,.checkout{
+	            border: 1px solid #9c9c9c;
+	            display: inline-block;
+	            transition: all 0.3s ease 0s;
+	            border-radius: 6px;
+	            background: rgba(0,0,0,0);
+	            color: #a6a6a6 !important;
+	            text-shadow: none;
+	            text-align: center;
+
+	        }
+	    }
+
+    .widget_shopping_cart_content{
+        input[type="submit"],.view-cart{
+             padding: 10px 5px !important;
+             width: 107px !important;
+             font-family: "Montserrat",sans-serif;
+        }
+
+        .checkout-button,.checkout{
+            padding: 6px !important;
+            width: 100px !important;
+            top: 5px;
+            font-family: "Montserrat",sans-serif;
+
+        }
+    }
+
+    .wc-proceed-to-checkout {
+        input[type="submit"],.view-cart{
+             padding: 10px 5px !important;
+             width: 100% !important;
+             margin-bottom: 10px;
+             font-size: 13px;
+        }
+
+        .checkout-button,.checkout{
+            padding: 6px !important;
+            width: 100% !important;
+            position: relative;
+            font-family: "Montserrat",sans-serif;
+
+        }
+    }
+
+    .widget_price_filter {
+        .price_slider_amount {
+            .button {
+                border-radius: 6px;
+                background-color: rgba(0,0,0,0);
+                border: 1px solid #9c9c9c;
+                color: #a6a6a6;
+            }
+        }
+    }
+
+    .woocommerce-tabs {
+
+        ul.tabs {
+
+            li {
+
+                &.active {
+                    background-color: #fff;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    border-right-color: #fff !important;
+                    border: 1px solid #d3d3d3;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .woocommerce-tabs {
+            .panel {
+                background-color: #fff;
+                border-radius: 0;
+                border: 1px solid #d3d3d3;
+            }
+        }
+    }
+
+    .give-btn{
+        border-radius: 6px !important;
+        background: rgba(0,0,0,0) !important;
+        border: 2px solid #9c9c9c !important;
+        color: #a6a6a6;
+        transition: all 0.3s ease 0s;
+        text-shadow: none;
+    }
+
+    .vc-events-list-location {
+        .event-locations {
+            .location-content {
+                .event-btns {
+                    a{
+                       border-radius: 0;
+                       background-color: #d3d3d3;
+                    }
+                }
+            }
+        }
+    }
+
+    input.button,
+    .button.wc-backward{
+        border-radius: 6px;
+        background: rgba(0,0,0,0);
+        border: 2px solid #9c9c9c;
+        color: #a6a6a6;
+        transition: all 0.3s ease 0s;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    textarea,
+    .input-text {
+        border-radius: 0;
+         border: 1px solid #d3d3d3;
+    }
+
+
+    .select2-container {
+        .select2-choice{
+            border-radius: 0;
+            border: 1px solid #d3d3d3;
+        }
+    }
+
+    .cart-collaterals{
+        .coupon{
+            input[type="submit"]{
+                border-radius: 6px;
+                background: rgba(0,0,0,0);
+                border: 1px solid #9c9c9c;
+                color: #a6a6a6;
+                text-shadow: none;
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+
+    .related{
+        &.products{
+            >h2{
+                @include style2-titles;
+            }
+        }
+    }
+
+    .author-wrap {
+        border-bottom: 1px solid #d3d3d3;
+        border-top: 1px solid #d3d3d3;
+    }
+
+    .ministries-archive {
+        .ministries-head {
+            border-bottom: 2px solid #d3d3d3;
+        }
+
+        .grid-list #list-view .ministries-list {
+               border-bottom: 1px solid #d3d3d3;
+        }
+    }
+
+    select {
+        background: rgba(0,0,0,0);
+        border: 1px solid #d3d3d3;
+    }
+
+    .donations-loop {
+        border-bottom: 1px solid #d3d3d3;
+    }
+
+    .bethlehem-sorting {
+        border-bottom: 1px solid #d3d3d3;
+    }
+
+    #list-view {
+        ul.products {
+            li.product {
+                border-bottom: 1px solid #d3d3d3;
+            }
+        }
+    }
+
+    .widget_product_categories {
+        ul {
+            li {
+               border-bottom: 1px solid #d3d3d3;
+            }
+        }
+
+        .children {
+            li {
+                border: none;
+            }
+        }
+    }
+
+    .product_list_widget {
+        li {
+            border-bottom: 1px dotted #d3d3d3;
+        }
+    }
+
+    .stories-archive {
+        .stories-featured {
+            border-bottom: 1px solid #d3d3d3;
+        }
+    }
+
+    .sermons-loop {
+        border-bottom: 1px solid #d3d3d3;
+    }
+
+    .sermons-single {
+        .sermons-content {
+            .author-wrap {
+               background-color: #fff;
+            }
+        }
+    }
+
+    .sermons-related > h4 {
+        border-bottom: 2px solid #d3d3d3;
+    }
+
+    .widget-area {
+        .widget.widget_sermons_recent_posts {
+            > ul {
+                > li {
+                    border-bottom: 1px solid #d3d3d3;
+                }
+            }
+        }
+    }
+
+    #tribe-events {
+        .tribe-events-list {
+            .type-tribe_events {
+                border-bottom: 1px solid #d3d3d3;
+            }
+        }
+    }
+
+    .widget-area {
+        .widget.tribe-events-list-widget, .widget.tribe-events-adv-list-widget, .widget.tribe-events-venue-widget, .widget.tribe_mini_calendar_widget {
+            .type-tribe_events {
+                border-bottom: 1px solid #d3d3d3;
+            }
+        }
+    }
+
+    .tribe-events-single-event-description {
+           border-top: 1px solid #d3d3d3;
+    }
+
+    .side-widget h5 {
+         border-bottom: 2px solid #d3d3d3;
+    }
+
+     .widget-area {
+        .widget.widget_donations_recent_posts {
+            .beth-recent-posts {
+                li {
+                     border-bottom: 1px solid #d3d3d3;
+                }
+            }
+        }
+    }
+
+    .give_forms {
+        .summary {
+            form.give-form {
+                border-bottom: 1px solid #d3d3d3;
+                border-top: 1px solid #d3d3d3;
+            }
+        }
+    }
+
+    .give_forms {
+        .summary {
+            .give-display-onpage,
+            .give-display-reveal {
+                form.give-form {
+                    legend {
+                        border-color: #d3d3d3;
+                    }
+                }
+            }
+        }
+    }
+
+    .vc-events-list-location {
+         .event-locations {
+            border-bottom: 1px solid #d3d3d3;
+         }
+     }
+
+     .vc_separator.vc_sep_color_grey.bethlehem_separator .vc_sep_line {
+         border-color: #d3d3d3;
+     }
+
+     table {
+        thead {
+            th {
+                border-bottom: 2px solid #d3d3d3;
+            }
+        }
+    }
+
+    .team-small {
+        .title {
+             border-bottom: 2px solid #d3d3d3;
+         }
+     }
+
+     .vc-primary-large-btn,.vc-primary-small-btn,.vc-primary-medium-btn{
+        a,
+        button{
+            background: rgba(0,0,0,0);
+            text-shadow: none;
+            color: #a6a6a6;
+            border-radius: 6px;
+            font-family: "Montserrat",sans-serif;
+        }
+    }
+
+     .isotope article .folio-item {
+        border: 1px solid #d3d3d3;
+    }
+
+    table.cart tbody td {
+        border-bottom: 1px solid #d3d3d3;
+    }
+
+    .cart-collaterals {
+        table {
+            tbody {
+                tr:last-child {
+                    td,
+                    th {
+                        border-top: 1px solid #d3d3d3;
+                    }
+                }
+            }
+        }
+
+        h2 {
+            border-bottom: 2px solid #d3d3d3;
+        }
+    }
+
+    .coupon label {
+        border-bottom: 2px solid #d3d3d3;
+    }
+
+    .woocommerce-checkout {
+        .panel-title {
+            a.collapsed::before {
+                background-color: #d3d3d3;
+            }
+
+            a.collapsed{
+                 border: 1px solid #d3d3d3;
+            }
+        }
+    }
+
+    #payment {
+        border-top: 3px solid #d3d3d3;
+    }
+
+    ul.order_details {
+        border: 1px solid #d3d3d3;
+    }
+
+   .post-icons {
+        li {
+            a {
+                i,.icon-info {
+                    background-color: #d3d3d3;
+                    color: #FFF;
+                }
+
+                &:hover,
+                &:focus{
+                    i,
+                    .icon-info{
+                        background-color: #b4b4b4;
+                    }
+                }
+            }
+        }
+    }
+
+    .vc-events-calendar {
+        margin-top: 82px;
+        @include clearfix;
+
+        .events-lists{
+            h2{
+                margin-bottom: 33px;
+            }
+        }
+    }
+
+    .wpcf7{
+        form{
+
+            p{
+                >input{
+                    border-radius: 6px;
+                    background: rgba(0,0,0,0);
+                    border: 2px solid #9c9c9c;
+                    color: #a6a6a6;
+                    transition: all 0.3s ease 0s;
+                    text-shadow: none;
+                }
+            }
+
+        }
+    }
+
+    .widget-area {
+        .widget_rss {
+            .rss-date {
+                border-bottom: 1px solid #d3d3d3;
+                border-top: 1px solid #d3d3d3;
+            }
+        }
+    }
+
+    .pagination,
+    .woocommerce-pagination {
+        .page-numbers {
+            li {
+                .page-numbers {
+                     background-color: #d3d3d3;
+
+                     &.current{
+	                	background-color: #1a1a1a;
+	                }
+
+	                &.dots {
+	                	background-color: transparent;
+	                }
+
+	                &:hover {
+	                	background-color: rgba(0, 0, 0, 0.08);
+	                }
+                }
+            }
+        }
+    }
+
+    .wp-caption {
+        .wp-caption-text{
+            border-bottom: 2px solid #d3d3d3;
+        }
+    }
+
+    table {
+        tfoot {
+            tr:first-child {
+                th,
+                td {
+                    border-top: 1px solid #d3d3d3;
+                }
+            }
+        }
+    }
+
+    .col2-set.addresses {
+        .col-1.address,
+        .col-2.address {
+            .title,
+            address{
+                 border: 1px solid #d3d3d3;
+            }
+        }
+    }
+
+    .team-single {
+    	.team-single-content {
+    		.team-single-meta {
+    			ul.hb-social {
+                    border-top: 2px solid #d3d3d3;
+    			}
+    		}
+			.team-single-info{
+				p{
+					font-size: 15px;
+				}
+			}
+    	}
+    }
+
+    .single_add_to_cart_button {
+    	border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	body.bethlehem-style-3{
+		.content-area{
+			h3.title{
+				font-size: 40px;
+			}
+
+			h3.pre-title{
+			    font-size: 28px;
+			}
+
+			button,
+			input[type=submit],
+			.hb-more-button{
+				font-size: 14px !important;
+				padding: 10px 20px !important;
+			}
+
+			.contact-address{
+				.wpb_wrapper{
+					>p, address{
+						font-size: 18px;
+						line-height: 24px;
+					}
+
+					ul{
+						li{
+							float: none;
+							margin-right: 0;
+							margin-bottom: 20px;
+							font-size: 18px;
+						}
+					}
+				}
+			}
+
+			.gallery-content .wp-tiles-tile h4.wp-tiles-byline-title{
+				font-size: 14px;
+			}
+
+			.bethlehem-tiled-gallery{
+
+				.description-content{
+					margin-bottom: 80px;
+
+					.textwidget{
+						> p{
+							width: 90%;
+						}
+
+						>p, address{
+							font-size: 18px;
+							line-height: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	body.bethlehem-style-3{
+		&.header-6{
+			header.site-header{
+				.header-nav-menu{
+					text-align: center;
+					.top-nav-links{
+						float: right;
+						width: inherit;
+						margin-top: 6px;
+					}
+					nav.main-navigation{
+						width: inherit !important;
+						margin: 0 0 0 10px;
+					}
+					.primary-navigation{
+						display: inline-block;
+						.left-nav-menu{
+							> ul.nav-menu{
+								margin: 22px 0;
+								> li{
+									> a{
+										padding: 0 10px !important;
+									}
+								}
+							}
+						}
+					}
+				}
+				.site-branding{
+					width: inherit;
+					a{
+						display: inline-block;
+					}
+				}
+			}
+		}
+		.content-area{
+
+		}
+	}
+}

@@ -1,0 +1,796 @@
+/**
+ * Header
+ */
+
+header.site-header{
+	.site-branding{
+		a{
+			height: inherit;
+			display: block;
+			vertical-align: middle;
+			width: inherit;
+		}
+
+	}
+}
+
+.bethlehem-logo {
+	@include applyMedia();
+	width: 214px;
+	display: table;
+
+	svg {
+		@include applyMediaLeft();
+	}
+
+	.bethlehem-logo-body {
+		@include applyMediaBody();
+		height: inherit;
+		display: table-cell;
+		vertical-align: middle;
+		width: inherit;
+	}
+}
+
+.header-1 {
+	.bethlehem-logo {
+		margin: auto;
+		height: inherit;
+
+		.bethlehem-logo-body{
+			height: inherit;
+		    display: table-cell;
+		    vertical-align: middle;
+			width: inherit;
+		}
+	}
+}
+
+.site-branding{
+	text-align: center;
+
+	a{
+		img{
+			margin: 0 auto;
+		}
+	}
+}
+
+.site-title{
+	font-size: 32px;
+	text-transform: capitalize;
+	font-weight: bold;
+	text-shadow: 1px 1px rgba(2,3,3,.75);
+}
+
+.site-description{
+	font-size: 12px;
+	color: #fff;
+	text-shadow: 1px 1px rgba(4,4,4,.34);
+}
+
+.header-7 {
+	.site-description, .site-title {
+		color: #363636;
+		text-shadow: none;
+	}
+}
+
+.header-content{
+	margin-top: 25px;
+	margin-bottom: 15px;
+
+	> .wpb_row:last-child{
+		margin-bottom: 0;
+	}
+
+	iframe{
+		max-width: 100%;
+	}
+}
+
+.header-wrap{
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	.site-header{
+		background-color: transparent;
+		background-image: none !important;
+	}
+}
+
+.admin-bar .header-wrap{
+	top: 32px;
+}
+
+.header-8{
+	.primary-navigation .left-nav-menu .menu > li.full-width ul.sub-menu,
+	.primary-navigation .right-nav-menu .menu > li.full-width ul.sub-menu{
+		left: -26%;
+	}
+}
+
+.header-8,.header-2 {
+	header{
+		.site-branding{
+			position: relative;
+			text-align: left;
+			width: 240px;
+			@include applyMediaLeft;
+		}
+
+		.main-navigation{
+			@include applyMediaBody;
+			overflow: visible;
+
+			.primary-navigation {
+				.left-nav-menu{
+                    width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.header-7,.header-5{
+	.header-wrap{
+		position: relative;
+		top: 0;
+	}
+}
+
+.header-7 {
+	.header-wrap{
+		.site-header{
+			background-color: #fff !important;
+		}
+	}
+
+	.site-header{
+		padding: 0;
+		margin-bottom: 0 !important;
+		background-color: #fff !important;
+
+		.woocommerce-breadcrumb{
+			margin: 0;/*10px auto;*/
+			color: #606060;
+			text-shadow: none;
+			a{
+				color: #606060;
+				text-shadow: none;
+			}
+		}
+
+		.site-page-title{
+			h1{
+				color: #606060;
+				text-shadow: none;
+				top: -57px;
+			}
+		}
+	}
+
+	.header-top-nav-menu{
+		@include clearfix;
+		margin-top: 30px;
+
+		.wrap{
+			position: relative;
+		}
+
+		.site-branding{
+			position: relative;
+			text-align: left;
+			width: 240px;
+			@include applyMediaLeft;
+
+			.site-description{
+				color: $color_links;
+				text-shadow: none;
+			}
+		}
+
+		.top-nav-links{
+			@include applyMediaBody;
+			display: inline-block;
+			width: inherit;
+			color: #9c9c9c;
+            margin-left: 80px;
+
+			ul{
+				margin: 18px 0 0 0;
+				display: inline-block;
+				text-transform: uppercase;
+
+				li{
+					list-style: none;
+					float: left;
+					margin-right: 26px;
+
+					a{
+						color: #9c9c9c;
+						font-size: 16px;
+						font-weight: normal;
+						i{
+							margin-right: 8px;
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		.bethlehem-counter{
+			position: absolute;
+			right: 0;
+    		top: -18px;
+
+			h3.counter-title{
+				font-size: 15px;
+				font-weight: normal;
+			}
+
+			ul{
+				>li{
+					height: 80px;
+					width: 60px;
+					font-size: 13px;
+					span{
+						font-size: 36px;
+					}
+				}
+			}
+		}
+	}
+
+	.header-nav-menu{
+		margin-top: 20px;
+
+		.wrap{
+			position: relative;
+		}
+
+		.main-navigation{
+			padding-bottom: 0;
+			left: -38px;
+		}
+
+		.header_widget_search{
+			position: absolute;
+		    right: 0;
+		    top: 16px;
+		    width: 290px;
+
+		    form{
+		    	margin-bottom: 0;
+		    }
+		}
+
+		input[type="submit"]{
+			display: none;
+		}
+
+		input[type="search"]{
+			color: #cfe7e3 !important;
+			border: none !important;
+			border-radius: 0;
+			height: 40px;
+			margin-bottom: 0;
+			font-weight: normal;
+		}
+
+		.primary-navigation{
+			ul.menu{
+				border: none;
+				font-weight: bold;
+
+				> li{
+					text-transform: uppercase;
+
+					>a{
+						padding: 22px 15px;
+						color: #fff;
+						font-size: 18px !important;
+						font-weight: 700 !important;
+
+						&:hover{
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			ul.sub-menu {
+				> li {
+					text-transform: none;
+				}
+			}
+		}
+	}
+}
+
+.header-2{
+	.primary-navigation .left-nav-menu .menu > li.full-width ul.sub-menu,
+	.primary-navigation .right-nav-menu .menu > li.full-width ul.sub-menu{
+		left: -25.6%;
+	}
+}
+
+.header-3{
+
+	.primary-navigation .left-nav-menu .menu > li.full-width ul.sub-menu,
+	.primary-navigation .right-nav-menu .menu > li.full-width ul.sub-menu{
+		right: -42%;
+	}
+
+	header{
+		&.site-header{
+			top: 0;
+	        padding-top: 0;
+	        padding-bottom: 40px;
+
+			.header-nav-menu{
+				background: #292d30;
+
+				.wrap{
+			        .main-navigation{
+			        	display: inline-block;
+			        	float: left;
+			        	width: auto !important;
+			        	padding-bottom: 0;
+
+						.primary-navigation {
+							.left-nav-menu,
+							.right-nav-menu {
+								width: auto;
+
+								.menu{
+									border : none;
+
+									> li{
+										> a{
+											padding: 20px 40px !important;
+										}
+
+										&:first-child{
+											> a{
+												padding-left: 0 !important;
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.top-nav-links{
+							display: inline-block;
+			        	    float: right;
+						}
+					}
+
+					.top-nav-links{
+					    display: inline-block;
+			        	float: right;
+
+			        	ul {
+			        		li {
+			        			margin: 8px 0;
+			        		}
+			        	}
+
+			        	.donations-link{
+			        		margin: 8px 0;
+			        	}
+				    }
+				}
+			}
+
+			.header-top-nav-menu{
+				padding: 25px 0;
+
+				.wrap{
+					.site-branding{
+						position: relative;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+
+	.home-page-slider {
+		margin-top: 68px;
+	}
+
+	.woocommerce-breadcrumb {
+		clear: both;
+	}
+}
+
+.header-5,.header-4{
+	.site-header{
+		padding: 0;
+		margin-bottom: 0 !important;
+
+		.header-top-nav-menu{
+			background-color: $color_links;
+			padding: 10px 0;
+		}
+
+		.header-nav-menu{
+			.site-branding{
+				text-align: left;
+				.site-description{
+					color: $color_links;
+					text-shadow: none;
+				}
+			}
+		}
+	}
+
+	.top-nav-links{
+		.donate-btn{
+			padding: 13.5px 28px;
+		}
+	}
+}
+
+.header-4{
+
+	.site-header{
+		padding-bottom: 40px;
+
+		.header-top-nav-menu{
+			background-color: transparent !important;
+
+		}
+
+		.header-nav-menu{
+            margin-bottom: 32px;
+		}
+	}
+}
+
+.header-5,
+.header-6,
+.header-7{
+	.site-header{
+		padding-top: 0;
+
+		.wrap{
+			.woocommerce-breadcrumb{
+	            margin-top: 32px;
+	            margin-bottom: 40px;
+	        }
+
+	        .site-page-title{
+	        	h1{
+	        		top: -83px;
+	        	}
+
+	        }
+		}
+	}
+}
+
+.header-8{
+	.site-header{
+		padding-bottom: 40px !important;
+	}
+}
+
+.header-5,
+.header-4,
+.header-6{
+
+	.primary-navigation .left-nav-menu .menu > li.full-width ul.sub-menu,
+	.primary-navigation .right-nav-menu .menu > li.full-width ul.sub-menu{
+		left: -32.6%;
+    	right: -28%;
+	}
+
+	header{
+		&.site-header{
+
+			.header-top-nav-menu{
+				color: #eeebdd;
+
+				.header-contact-info{
+					float: left;
+
+					.phone,
+					.mail{
+                       display: inline-block;
+                       font-size: 13px;
+
+                        i{
+                       	    margin-right: 10px;
+                        }
+					}
+
+					> div{
+						margin-right: 35px;
+
+						&:last-child{
+							margin-right: 0;
+						}
+					}
+				}
+
+				.bethlehem-counter{
+					float: right;
+					display: table;
+
+					.counter-title{
+						font-size: 13px;
+						display: table-cell;
+						vertical-align: middle;
+						color: #eeebdd;
+						font-weight: 400;
+					}
+
+					ul{
+						display: table-cell;
+						list-style: none;
+						float: right;
+						margin: 0 0 0 5px !important;
+
+						> li{
+							margin-right: 5px;
+							float: left;
+						}
+					}
+				}
+			}
+
+			.header-nav-menu{
+				//margin-bottom: 10px;
+
+				.site-branding,
+				.main-navigation{
+					float: left;
+					position: relative;
+				}
+
+				.site-branding{
+					width: 240px;
+					//height: auto;
+				}
+
+				.main-navigation{
+					clear: none;
+					width: auto !important;
+					padding-bottom: 0;
+
+					.left-nav-menu{
+						width: 100%;
+
+						.nav-menu{
+							border: none;
+							padding: 0;
+							display: block !important;
+
+							> li {
+
+								&::before {
+									content: ' ';
+									width: 2px;
+									display: inline-block;
+									border-right: 2px solid #dad7ca;
+									height: 15px;
+									position: absolute;
+									top: 50%;
+									@include transform(translateY(-50%));
+								}
+
+								&:first-child::before {
+									content: none;
+								}
+
+								> a {
+									font-size: 15px;
+									color: #1a1a1a;
+									padding: 20px 30px;
+									display: block;
+									text-shadow: none;
+									line-height: 15px;
+								}
+
+							}
+
+							> li{
+								&:hover{
+									 > ul{
+										display: block !important;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.top-nav-links{
+					float: right;
+				}
+			}
+
+		   .header-top-nav-menu,
+            .header-nav-menu{
+				.wrap{
+                	@include clearfix;
+				}
+			}
+		}
+	}
+}
+
+.header-4{
+	header{
+		&.site-header{
+			.wrap{
+                .header-top-nav-menu,
+                .header-nav-menu{
+                    @include clearfix;
+                }
+                .header-nav-menu{
+                	background: #eeebdd none repeat scroll 0 0;
+                    padding: 20px 23px 20px 30px;
+					height: 100px;
+                }
+			}
+			.header-nav-menu{
+                .top-nav-links{
+					padding-right: 0;
+				    display: table;
+				    height: 100%;
+
+                }
+                ul {
+                	li {
+                		display: table-cell;
+                		vertical-align: middle;
+                	}
+                }
+				.donations-link{
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+			.sticky-wrapper{
+				.stuck {
+					position: fixed;
+					top: 0px;
+					width: inherit;
+				}
+			}
+		}
+	}
+}
+
+.header-5 {
+	.top-nav-links{
+		margin-top: 8px;
+
+	}
+	header{
+		&.site-header {
+			.header-nav-menu{
+                background: #eeebdd none repeat scroll 0 0;
+                padding: 20px 0;
+			}
+		}
+	}
+}
+
+.header-3,
+.header-7{
+	.bethlehem-counter{
+		float: right;
+		display: table;
+
+		.counter-title{
+			font-size: 13px;
+			color: #fff;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		ul{
+			margin-left: 15px;
+			float: right;
+			list-style: none;
+			display: table;
+			border-collapse: separate;
+			border-spacing: 4px;
+			margin-bottom: 0;
+
+			> li{
+				background-color: #efefef;
+			    border-radius: 4px;
+			    color: #fff;
+			    display: table-cell;
+			    height: 61px;
+			    line-height: 21px;
+			    vertical-align: middle;
+			    width: 46px;
+			    font-size: 10px;
+			    color: #191919;
+			    margin-right: 4px;
+			    text-transform: uppercase;
+			    text-align: center;
+			    padding-top: 5px;
+
+			    span{
+			    	display: block;
+			    	font-size: 28px;
+
+			    }
+			}
+		}
+	}
+}
+
+.top-nav-links {
+	ul {
+		padding: 0px;
+		margin: 0px;
+		
+		li {
+			list-style: none;
+		}
+	}
+}
+
+.top-nav-links{
+	.donate-btn{
+		text-transform: uppercase;
+		color: #fff;
+		display: table-cell;
+	    padding: 15px 27px;
+	    text-align: center;
+	    text-transform: uppercase;
+	    vertical-align: middle;
+	    border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    font-size: 14px;
+	    letter-spacing: 0.1px;
+	    font-weight: 700;
+	}
+}
+
+.header-6{
+	.header-wrap{
+        position: relative;
+        top: 0;
+    }
+
+    header{
+     	&.site-header{
+     		padding: 0;
+
+	        .header-nav-menu{
+	         	background: #e0dcc8;
+	         	padding: 20px 0;
+
+	         	.site-branding{
+	         		text-align: left;
+	         		.site-description{
+	         			color: $color_links;
+	         			text-shadow: none;
+	         		}
+	         	}
+	        }
+	    }
+    }
+}
+
+.sticky-wrapper{
+	.stuck {
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		z-index: 100;
+	}
+}

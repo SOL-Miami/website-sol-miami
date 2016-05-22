@@ -1,0 +1,578 @@
+/**
+ * Footer
+ */
+
+footer{
+ 	&.site-footer{
+ 		.footer-logo{
+ 			.site-title{
+				text-transform: capitalize;
+ 			}
+ 		}
+
+ 		.connect-with-us{
+ 			text-align: right;
+
+ 			h5{
+ 				text-transform: uppercase;
+ 				font-size: 13px;
+ 			}
+
+ 			.hb-social{
+ 				display: inline-block;
+ 				li{
+ 					i{
+ 						background-color: #787878;
+ 					}
+ 				}
+ 			}
+ 		}
+
+ 		.footer-widget{
+ 			aside.widget_text{
+
+ 				h5{
+	 				text-transform: uppercase;
+	 				font-size: 14px;
+ 				}
+
+ 				.textwidget{
+ 					p{
+ 						color: #ddd;
+ 						font-size: 14px;
+ 						font-weight: 400;
+
+ 						&.site-info{
+ 							font-size: 13px;
+ 							color: #7f7f7f;
+ 						}
+
+ 						a {
+ 							&,
+ 							&:hover,
+ 							&:focus {
+ 								color: #ddd;
+
+ 							}
+ 						}
+ 					}
+
+ 					blockquote{
+ 						font-size: 18px;
+ 						color: #ececec;
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+.footer-1{
+	.footer-logo{
+		.bethlehem-logo svg{
+			fill: #fff;
+		}
+	}
+}
+
+.footer-2{
+	footer{
+ 		&.site-footer{
+ 			padding: 60px 0 50px 0;
+
+            .connect-with-us,.footer-logo{
+ 				width: 100%;
+ 				text-align: center;
+ 				float: none;
+ 			}
+
+ 			.footer-logo{
+ 				margin-bottom: 40px;
+ 				margin-right: 0;
+
+ 				.site-branding{
+ 					float: none;
+
+                    .bethlehem-logo {
+                        width: 280px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+ 					h1{
+ 						font-size: 44px;
+ 						font-family: "Bitter", serif;
+						color: #FFF;
+ 					}
+
+ 					p{
+ 						font-size: 15px;
+                        color: #FFF;
+ 					}
+ 				}
+ 			}
+
+ 			.connect-with-us{
+ 				margin-bottom: 30px;
+
+ 				h5{
+ 					display: none;
+ 				}
+
+ 				ul.hb-social{
+ 					li{
+ 						margin-right: 30px;
+
+                        a{
+ 							i{
+ 								height: 70px;
+ 								width: 70px;
+ 								font-size: 30px;
+ 								background-color: transparent;
+ 							}
+ 						}
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+ 						&.hb-fb{
+							a{
+								&:hover{
+									i{
+										border-color: #3b5998 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-tw{
+							a{
+								&:hover{
+									i{
+										border-color: #00aced !important;
+									}
+								}
+							}
+						}
+
+						&.hb-google-plus{
+							a{
+								&:hover{
+									i{
+										border-color: #dd4b39 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-sky{
+							a{
+								&:hover{
+									i{
+										border-color: #019bd7 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-rss{
+							a{
+								&:hover{
+									i{
+										border-color: #fb8f3d !important;
+									}
+								}
+							}
+						}
+
+						&.hb-pint{
+							a{
+								&:hover{
+									i{
+										border-color: #cb2027 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-link{
+							a{
+								&:hover{
+									i{
+										border-color: #007bb6 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-tumb{
+							a{
+								&:hover{
+									i{
+										border-color: #32506d !important;
+									}
+								}
+							}
+						}
+
+						&.hb-ins{
+							a{
+								&:hover{
+									i{
+										border-color: #517fa4 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-you{
+							a{
+								&:hover{
+									i{
+										border-color: #bb0000 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-vim{
+							a{
+								&:hover{
+									i{
+										border-color: #aad450 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-drib{
+							a{
+								&:hover{
+									i{
+										border-color: #ea4c89 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-stum{
+							a{
+								&:hover{
+									i{
+										border-color: #EB4823 !important;
+									}
+								}
+							}
+						}
+
+						&.hb-sound{
+							a{
+								&:hover{
+									i{
+										border-color: #ff3a00 !important;
+									}
+								}
+							}
+						}
+ 					}
+ 				}
+ 			}
+
+ 			.footer-widgets{
+ 				border: none;
+ 				padding-bottom: 0;
+ 				text-align: center;
+
+ 				.footer-widget{
+ 					display: inline-block;
+ 					padding: 0;
+
+                    p{
+ 						margin-bottom: 0;
+ 						line-height: 1;
+ 						font-size: 14px;
+ 						color: #ddd;
+ 						padding: 0 20px;
+
+ 						a {
+ 							&,
+ 							&:hover,
+ 							&:focus {
+ 								color: #ddd;
+ 							}
+ 						}
+ 					}
+
+ 					&:last-child{
+ 						border: none;
+ 					}
+ 				}
+
+ 				.footer-copyright-text{
+ 					margin: 10px 0 40px 0;
+ 					p{
+ 						font-size: 13px;
+ 						color: #7f7f7f;
+ 					}
+ 				}
+
+ 				.footer-button{
+ 					.hb-more-button{
+ 						color: #fff;
+ 						border-color: #fff;
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+}
+
+.footer-3{
+	footer{
+ 		&.site-footer{
+			padding: 60px 0 0 0;
+			background-color: #212121;
+
+			.footer-logo{
+				margin-bottom: 40px;
+				margin-right: 0;
+				width: 100%;
+				text-align: center;
+				float: none;
+
+				.site-branding{
+					float: none;
+                    display: inline-block;
+                    margin-bottom: 0;
+
+                    .bethlehem-logo{
+                        width: 244px;
+
+                        .site-description{
+                            text-align: right;
+                        }
+                    }
+
+                    .bethlehem-logo-body{
+                        h1{
+    						font-size: 38px;
+    						font-family: "Bitter", serif;
+                            color: #fff;
+    						a{
+    							color: #fff !important;
+    						}
+    					}
+
+    					p{
+    						font-family: "Bitter", serif;
+    						font-size: 13px;
+    						color: #a0a0a0;
+                            line-height: 1;
+                            font-weight: normal;
+    					}
+                    }
+				}
+			}
+
+			.mc4wp-form{
+				form{
+					margin-bottom: 80px;
+				}
+				p{
+					text-align: center;
+					label{
+						display: none
+					}
+
+					&:first-child{
+						margin-bottom: 15px;
+					}
+
+					input[type=email]{
+						width: 31.36%;
+						display: inline-block ;
+						padding: 14.5px 20px;
+						border-radius: 0;
+						text-align: center;
+						font-style: italic;
+						color: #a6a6a6;
+						font-size: 18px;
+						text-transform: capitalize;
+					}
+
+					input[type=submit]{
+						padding: 16px 60px;
+						background-color: transparent;
+						border: 2px solid #a6a6a6;
+						text-transform: uppercase;
+						color: #a6a6a6;
+						font-size: 16px;
+						font-weight: bold;
+						border-radius: 6px;
+						&:hover{
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.footer-widgets{
+				border: none;
+				background-color: #161616;
+				padding-bottom: 0;
+				.footer-copyright-text{
+					p{
+						padding: 44.5px 0;
+						text-align: center;
+						font-size: 14px;
+						color: #d7d7d7;
+						text-transform: capitalize;
+						font-family: 'Montserrat', sans-serif;
+					}
+				}
+			}
+		}
+ 	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    footer{
+		&.site-footer {
+			padding: 0;
+
+			.footer-logo{
+				margin-bottom: 20px;
+				margin-top: 30px;
+
+				.site-branding{
+					float: none;
+					text-align: left;
+					padding: 0;
+				}
+			}
+
+			.connect-with-us{
+                @include clearfix;
+                text-align: left;
+                margin-bottom: 20px;
+                h5{
+
+                }
+
+                .hb-social{
+                	display: block;
+                }
+			}
+
+			.footer-widget{
+	 			aside.widget_text{
+
+	 				.textwidget{
+	 					p{
+	 						&.site-info{
+	 							padding: 30px 0 0 0;
+	 							margin: 0;
+	 							text-align: center;
+	 						}
+	 					}
+
+	 					blockquote{
+	 						margin: 0;
+	 						padding: 0;
+	 						text-align: center;
+	 					}
+	 				}
+	 			}
+	 		}
+		}
+    }
+
+    footer{
+    	&.site-footer{
+    		.connect-with-us{
+    			ul.hb-social{
+    				display: inline-block !important;
+    				li{
+    					margin-right: 10px !important;
+    					a{
+    						i{
+    							font-size: 20px !important;
+    							height: 40px !important;
+    							width: 40px !important;
+    						}
+    					}
+    				}
+    			}
+    		}
+
+    		.site-branding{
+    			text-align: center !important;
+    			margin-bottom: 0;
+    		}
+
+    		.footer-widgets{
+    			.footer-widget{
+    				margin-bottom: 10px;
+    				display: block;
+    				p{
+    					line-height: 1.6;
+    				}
+
+    				&:last-child{
+    					&:after{
+    						display: none;
+    					}
+    				}
+
+    				&:after{
+    					content: "__";
+    				    font-size: 20px;
+    				}
+    			}
+    		}
+    	}
+    }
+
+    .footer-1{
+        .site-footer{
+            .connect-with-us,.footer-widgets{
+                text-align: center;
+            }
+
+            .footer-widget::after{
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+            .widget{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer-2{
+        footer{
+        	&.site-footer{
+        		.footer-widgets{
+        			.footer-widget{
+        				display: block;
+        			}
+        		}
+        	}
+        }
+    }
+
+    .footer-3 footer.site-footer .mc4wp-form p input[type="email"]{
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .footer-3 footer.site-footer .footer-logo .site-branding a{
+        display: inline-block;
+    }
+
+    .footer-3 footer.site-footer .mc4wp-form p input[type="submit"]{
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,686 @@
+/**
+ * Give
+ */
+form[id*="give-form"]{
+	.give-final-total-wrap{
+
+		.give-total-amount{
+			border: 1px solid #ccc;
+		    border-radius: 0;
+		    box-sizing: border-box;
+		    float: left;
+		    font-size: 18px;
+		    height: 35px;
+		    line-height: 35px;
+		    padding: 0 12px;
+		    width: 125px;
+		}
+
+		.give-currency-symbol{
+			background-color: #f2f2f2;
+		    border-bottom: 1px solid #ccc;
+		    border-top: 1px solid #ccc;
+		    box-sizing: border-box;
+		    float: left;
+		    font-size: 18px;
+		    height: 35px;
+		    line-height: 35px;
+		    margin: 0;
+		    padding: 0 12px;
+
+			&.give-currency-position-before{
+				border-left: 1px solid #ccc;
+    			border-right: medium none;
+			}
+
+			&.give-currency-position-after{
+				border-right: 1px solid #ccc;
+				border-left: medium none;
+			}
+		}
+	}
+}
+
+.donations-loop{
+	@include clearfix;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid $color_border;
+
+	.description{
+		font-size: 13px;
+	}
+
+	h4.title{
+		font-size: 21px;
+		line-height: 1;
+	}
+
+	a.give-btn{
+		padding: 12px 54px !important;
+		font-size: 20px !important;
+		float: right;
+	}
+
+	.give-main-image{
+		@include applyMediaLeft;
+		min-width: 241px;
+	}
+
+	.donation-info{
+		@include applyMediaBody;
+		padding-left: 14px;
+	}
+}
+
+.give-page{
+	.widget-area{
+		.search-form{
+			input[type="search"]{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.give-btn{
+    font-weight: 700;
+    text-shadow: 0 1px rgba(2, 3, 3, 0.42);
+    font-size: 28px !important;
+	padding: 17px 75px !important;
+	line-height: 1;
+	color: #fff;
+	border-radius: 50px !important;
+	border: none !important;
+	display: inline-block;
+    &:hover{
+    	background-color: $color_links !important;
+    }
+
+    &:active{
+    	outline: none;
+    }
+}
+
+
+.donation-carousel-wrap{
+	
+	.donation-item{
+		>h3{
+			font-size: 48px;
+			text-transform: uppercase;
+			color: #eeebdd;
+			text-shadow: 1px 2px 0 rgba(2,3,3,.75);
+			line-height: 1;
+			margin-top: 60px;
+		}
+
+		a.give-btn{
+			margin-top: 60px;
+			margin-bottom: 70px;
+		}
+
+		.goal-progress{
+			position: relative;
+			.raised{
+				margin: 100px 0 0 0;
+				position: absolute;
+				width: 100%;
+				font-size: 22px;
+				color: #eeebdd;
+				text-align: center;
+				text-shadow: 0 1px 0 rgba(2,3,3,.75);
+
+				.income{
+					font-size: 72px;
+					text-shadow: 1px 2px 0 rgba(2,3,3,.75);
+					text-align: center;
+					width: 100%;
+					top: -122px;
+				}
+			}
+
+			.progress-bar{
+				height: 20px;
+    			margin-top: 70px;
+    			width: 580px;
+    			display: inline-block;
+			}
+		}
+	}
+}
+
+.donation-carousel-wrap{
+	.owl-carousel {
+		position: relative !important;
+	}
+	
+	&:hover{
+		.owl-prev,.owl-next{
+			opacity: 1;
+		}
+
+		.owl-prev{
+			left: 0;
+		}
+
+		.owl-next{
+			right: 0;
+		}
+	}
+
+	.owl-stage-outer{
+		z-index: 1;
+		.progress-bar{
+			background-color: #000 !important;
+		}
+	}
+
+	.owl-controls{
+		position: absolute !important;
+		display: inherit;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+
+		.owl-nav{
+			height: inherit;
+			width: inherit;
+
+			.owl-prev,.owl-next{
+				opacity: 1 !important;
+				transition: none !important;
+				position: relative;
+				height: inherit;
+				display: table;
+				z-index: 100;
+				color: #eee;
+				
+				i{
+					vertical-align: middle;
+					display: table-cell;
+					font-size: 80px;
+					
+				}
+
+				&:hover{
+					transition: none !important;
+				}
+			}
+
+			.owl-prev{
+			    float: left;
+			    left: 0;
+			    padding-left: 40px;
+			}
+
+			.owl-next{
+				right: 0;
+			    float: right;
+			    padding-right: 40px;
+			}
+		}
+	}
+}
+
+.mfp-content{
+	.give-display-modal{
+
+		.goal-progress {
+			display: none;
+		}
+		
+		form.give-form{
+			border: none !important;
+			padding: 0 !important;
+			margin: 0 !important;
+
+			#give-payment-mode-select{
+				margin: 0 !important;
+			}
+
+			#give_purchase_form_wrap{
+				#give_purchase_submit{
+					.give-submit-button-wrap{
+						margin: 20px 0 30px 0 !important;
+					}
+
+					.give-final-total-wrap{
+						>input.give-total-amount{
+							border-bottom: 1px solid $color_links !important;
+						}
+					}
+				}
+			}
+		}
+
+		@include give-donation-form;
+	}
+}
+
+
+.give_forms{
+	#give-sidebar-left{
+		width: 100% !important;
+		.give-btn{
+			position: absolute;
+		}
+	}
+
+	.summary {
+		width: 100% !important;
+		position: relative;
+
+		.give-form-title{
+			margin: 20px 0;
+			font-weight: 600;
+			display: inline-block;
+		}
+
+		.hb-social{
+			float: right;
+			margin-top: 34px;
+		}
+
+		form.give-form{
+			@include clearfix;
+			padding: 46px 0;
+			border-top:1px solid $color_border ;
+			border-bottom:1px solid $color_border ;
+			margin-top: 10px;
+			width: 100%;
+
+			.give-total-wrap{
+				display: none;
+			}
+		}
+
+		button.give-btn{
+			margin-bottom: 0;
+			float: right;
+		}
+
+		.give-display-onpage {
+			.goal-progress {
+				width: 100%;
+			}
+		}
+
+		.goal-progress{
+			width: 56%;
+
+			.raised{
+				margin-bottom: 10px;
+				font-size: 15px;
+
+				.income{
+					top: -34px;
+					font-size: 58px;
+				}
+			}
+
+			.progress-bar{
+				height: 18px;
+			}
+		}
+
+		.give-display-onpage,.give-display-reveal{
+			@include give-donation-form;
+		}
+
+		.give-form-content-wrap{
+			p{
+				font-size: 15px;
+				color: #676666;
+			}
+		}
+	}
+}
+
+[id*=give-form] div.summary{
+	float: none;
+	width: 100%;
+}
+
+.donations-loop{
+	.donation-info{
+		.goal-progress{
+			display: inline-block;
+			width: 60%;
+		}
+
+		a.give-btn{
+			margin-top: 12px;
+		}
+	}
+}
+
+.goal-progress{
+	margin: 20px 0 0 0;
+
+	.income {
+		font-size: 28px;
+		line-height: 1;
+		letter-spacing: -1px;
+		font-weight: 600;
+		position: absolute;
+		left: 0;
+		top: -10px;
+	}
+
+	.raised{
+		margin-bottom: 6px;
+		text-align: right;
+		position: relative;
+		color: #676666;
+		font-size: 12px;
+	}
+}
+
+.progress-bar { 
+	height: 10px;  /* Can be anything */
+	position: relative;
+	background-color: #3c3b37;
+	border-radius: 20px;
+
+	> span {
+		display: block;
+		height: 100%;
+		border-radius: 20px;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px){
+	.give_forms{
+		.summary{
+			form.give-form{
+				button.give-btn{
+					padding: 17px 35px !important;
+				}
+			}
+
+			.goal-progress{
+				.raised{
+					text-align: center;
+					.income{
+						top: -44px !important;
+						text-align: center;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+	.donation-carousel-wrap{
+		.donation-item{
+			>h3{
+				font-size: 28px;
+				margin-top: 50px;
+				margin-bottom: 30px;
+			}
+
+			a.give-btn{
+				font-size: 16px !important;
+			    line-height: 0.6;
+			    padding: 14px 24px !important;
+			    margin-top: 40px;
+				margin-bottom: 50px;
+			}
+
+			.goal-progress{
+				.raised{
+					font-size: 16px;
+					margin: 88px 0 0;
+
+					.income{
+						font-size: 52px;
+						top: -94px;
+					}
+				}
+
+				.progress-bar{
+					height: 18px;
+	    			width: 220px;
+	    			margin-top: 60px;
+				}
+			}
+		}
+	}
+
+	.donations-loop {
+		.donation-info{
+           width: 100%;
+		}
+	}
+
+	.give-btn{
+		padding: 17px 40px !important;
+	}
+
+	.donation-carousel-wrap{
+		.owl-controls{
+			.owl-nav{
+
+				.owl-prev,.owl-next{
+					i{
+						font-size: 40px;
+					}
+				}
+
+				.owl-prev{
+				    float: left;
+				    left: 0;
+				    padding-left: 0;
+				}
+
+				.owl-next{
+					right: 0;
+				    float: right;
+				    padding-right: 0;
+				}
+			}
+		}
+	}
+
+	.donations-loop{
+		.give-main-image,.donation-info{
+			display: inherit;
+			float: none;
+		}
+
+		.give-main-image{
+			img{
+				width: 100%;
+			}
+		}
+
+		.donation-info{
+			padding-left: 0;
+			margin-top: 20px;
+
+			.goal-progress{
+				width: 100%;
+				margin: 30px 0 10px 0;
+			}
+
+			a.give-btn{
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+
+	.give_forms{
+		.summary{
+			.hb-social{
+				float: none;
+				margin-top: 0;
+				margin-bottom: 20px;
+			}
+
+			.give-display-reveal {
+				form.give-form {
+					padding-top: 46px;
+				}
+			}
+
+			.give-display-onpage {
+				.goal-progress {
+					margin: 0;
+				}
+			}
+
+			.goal-progress{
+				margin: 70px 0 0;
+				width: 100%;
+				.raised{
+					.income{
+						font-size: 38px;
+						top: -14px;
+					}
+				}
+
+				.progress-bar{
+					height: 12px;
+				}
+			}
+
+			button.give-btn{
+				float: none;
+				padding: 17px 45px !important;
+				font-size: 20px !important;
+			}
+
+			form.give-form{
+				text-align: center;
+			}
+		}
+	}  
+
+	#give_checkout_user_info{
+		p.form-row-first,p.form-row-last{
+			width: 100%;
+		}
+	}
+
+	#give_purchase_submit{
+		.give-final-total-wrap{
+			margin-top: 40px;
+		}
+
+		.give-submit-button-wrap{
+			margin-top: 20px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.donations-loop{
+		.give-main-image,.donation-info{
+			display: inherit;
+			float: none;
+		}
+
+		.give-main-image{
+			img{
+				width: 100%;
+			}
+		}
+
+		.donation-info{
+			padding-left: 0;
+			margin-top: 20px;
+			width: inherit;
+
+			.goal-progress{
+				width: 50%;
+				margin-top: 40px;
+			}
+
+			a.give-btn{
+				padding: 12px 44px !important;
+				margin-top: 40px;
+			}
+		}
+	}
+
+	.give_forms{
+		.summary{
+			.hb-social{
+				float: none;
+				margin-top: 0;
+				margin-bottom: 20px;
+			}
+
+			.goal-progress{
+				width: 60%;
+				.raised{
+					.income{
+						font-size: 38px;
+						top: -14px;
+					}
+				}
+
+				.progress-bar{
+					height: 12px;
+				}
+			}
+
+			button.give-btn{
+				padding: 12px 30px !important;
+				margin-top: 20px !important;
+				font-size: 18px !important;
+			}
+		}
+	}
+
+	.donation-carousel-wrap{
+		.donation-item{
+			>h3{
+				font-size: 38px;
+			}
+
+			a.give-btn{
+				
+			}
+			
+			.goal-progress{
+				.progress-bar{
+	    			width: 500px;
+				}
+			}
+		}
+	}
+
+	.donation-carousel-wrap{
+		.owl-controls{
+			.owl-nav{
+
+				.owl-prev,.owl-next{
+					i{
+						font-size: 60px;
+					}
+				}
+
+				.owl-prev{
+				    float: left;
+				    left: 0;
+				    padding-left: 10px;
+				}
+
+				.owl-next{
+					right: 0;
+				    float: right;
+				    padding-right: 10px;
+				}
+			}
+		}
+	}
+}

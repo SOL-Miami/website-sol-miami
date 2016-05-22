@@ -1,0 +1,370 @@
+/**
+ * Forms
+ */
+
+form {
+	margin-bottom: 1.618em;
+}
+
+select {
+	width: 100% !important;
+	padding: 8px;
+    margin: 0;
+    border-radius:0;
+    background: $body-background;
+    color:#888;
+    border:1px solid #cdc8af;
+    outline:none;
+    display: inline-block;
+    cursor:pointer;
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+
+input,
+textarea{
+	&:focus{
+		outline: none;
+	}
+}
+
+
+.single_add_to_cart_button{
+    background: none repeat scroll 0 0 #1a1a1a;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    width: 188px ;
+    height: 37px;
+    text-align: center;
+    display: block;
+    line-height: 35px;
+    box-shadow: none;
+    border: none;
+
+
+    &:after{
+    	border-bottom: 20px solid transparent;
+	    border-top: 18px solid transparent;
+	    content: "";
+	    display: block;
+	    height: 0;
+	    position: absolute;
+	    right: -80px ;
+	    top: 0;
+	    width: 30px ;
+    }
+
+    &:before{
+	    content: "\f07a";
+	    font-family: 'FontAwesome';
+	    display: block;
+	    height: 37px;
+	    position: absolute;
+	    right: -50px;
+	    text-align: center;
+	    top: 0;
+	    width: 51px ;
+    }
+
+	&.cta,
+	&.alt {
+
+		&:hover {
+			opacity: 0.8;
+			background-color: $color_links;
+		}
+	}
+
+	&:hover {
+		//opacity: 0.8;
+		color: #fff;
+	}
+
+	&:focus {
+		//outline: 2px solid $color_links;
+	}
+
+	&.added {
+		&:after {
+			content: "\f00c";
+			font-family: "FontAwesome";
+			margin-left: .53em;
+		}
+	}
+
+	&.loading {
+		opacity: 0.5;
+	}
+
+	&.small {
+		padding: .53em .857em;
+		font-size: .857em;
+	}
+
+	&.disabled {
+		opacity: 0.5 !important;
+
+		&:hover {
+			opacity: 0.5 !important;
+		}
+	}
+}
+
+.select2-search{
+	border-top-left-radius: 20px !important;
+	border-top-right-radius: 20px !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+
+input[type="search"] {
+	box-sizing: border-box; // Overrules normalize.css.
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+.input-text {
+    border: 1px solid #cbc6ac;
+    border-radius: 30px;
+    color: #514e40;
+    font-size: 13px;
+    height: 37px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: .857em;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 100%;
+	height: auto;
+	padding: 15px;
+}
+
+.select2-container {
+	.select2-choice{
+	    border: 1px solid #cbc6ac;
+	    border-radius: 30px;
+	    height: 37px;
+	    line-height: 35px;
+	    padding: 0 15px;
+
+	    .select2-arrow{
+	    	right: 6px;
+	    }
+	}
+}
+
+label {
+	font-weight: 700;
+	margin-bottom: 5px;
+	color: $label-color;
+}
+
+label.inline {
+	input {
+		width: auto;
+	}
+}
+
+fieldset {
+	padding: 0;
+	border: 0;
+	margin-bottom: 1.618em;
+
+	legend {
+		font-weight: 700;
+	}
+}
+
+.cart-collaterals{
+	.coupon{
+		input[type="submit"]{
+			border-radius: 50px;
+			font-size: 13px;
+			color: #fff;
+			text-shadow: 0 1px 0 rgba(2,3,3,.42);
+			border: none;
+			padding: 10px 30px !important;
+			line-height: 1;
+			&:hover{
+				background-color: $color_links;
+			}
+		}
+	}
+}
+
+
+[placeholder]:focus::-webkit-input-placeholder {
+	-webkit-transition: opacity 0.5s 0.5s ease;
+	-moz-transition: opacity 0.5s 0.5s ease;
+	transition: opacity 0.5s 0.5s ease;
+	opacity: 0;
+}
+
+
+
+.wpcf7{
+	form{
+		.col-2{
+			float: left;
+			width: 50%;
+			.your-name,.your-email{
+				display: block;
+			}
+			.your-name{
+				padding-right: 10px;
+			}
+			.your-email{
+				padding-left: 10px;
+			}
+		}
+		p{
+			>input{
+				border-radius: 50px;
+				text-transform: uppercase;
+				border: none;
+				color: #fff;
+				font-weight: 600;
+				margin-bottom: 20px;
+				&:hover{
+					background-color: $color_links;
+				}
+			}
+		}
+
+		.wpcf7-response-output{
+
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.wpcf7{
+		form{
+			.col-2{
+				float: none;
+				width: 100%;
+				.your-name{
+					padding-right: 0;
+				}
+				.your-email{
+					padding-left: 0;
+				}
+			}
+			p{
+				input{
+					padding: 10px 38px;
+					font-size: 16px;
+					margin: 10px 0 0 0;
+				}
+			}
+			.wpcf7-response-output{
+				line-height: 1.2;
+				padding: 1.4em;
+			}
+		}
+	}
+
+	// .wpb_row{
+	// 	margin-bottom: 0 !important;
+	// }
+
+	.vc-events-list-location{
+		>h3{
+			line-height: 1;
+    		margin-bottom: 20px !important;
+		}
+
+		.event-locations{
+			.tribe-events-event-image{
+				padding-right: 0 !important;
+				width: 100%;
+				img{
+					width: 100%;
+				}
+			}
+
+			.location-content{
+				padding-right: 0 !important;
+				.event-title{
+					font-size: 22px !important;
+					margin-top: 20px;
+				}
+
+				.location-meta{
+					.location{
+						width: 100% !important;
+						padding-right: 0 !important;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+	.vc-events-list-location{
+		>h3{
+			line-height: 1;
+    		margin-bottom: 20px !important;
+		}
+
+		.event-locations{
+			.tribe-events-event-image{
+				padding-right: 0 !important;
+				width: 100%;
+				img{
+					width: 100%;
+				}
+			}
+
+			.location-content{
+				padding-right: 0 !important;
+				.event-title{
+					font-size: 28px !important;
+					margin-top: 20px;
+				}
+
+				.location-meta{
+					.location{
+						width: 100% !important;
+						padding-right: 0 !important;
+					}
+				}
+			}
+		}
+	}
+}

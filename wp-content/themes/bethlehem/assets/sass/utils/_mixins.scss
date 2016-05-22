@@ -1,0 +1,263 @@
+%clearfix {
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin hoverActiveFocus() {
+    &:hover, &:active, &:focus {
+        @content;
+    }
+}
+
+@mixin screen-reader-text() {
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+@mixin message($glyph: "\f05a", $color: $info){
+    padding: 1em 1.618em 1em 3.631em;
+    background: rgba( $color, .7 );
+    margin-bottom: 2.618em;
+    font-weight: normal;
+    position: relative;
+    color: #fff;
+    text-shadow: none;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: $glyph;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 2.618em;
+        background: rgba( darken( $color, 3% ), .7 );
+        text-align: center;
+        padding: 1em .618em;
+        font-weight: normal !important;
+        text-shadow: none;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    a.button {
+        background: #fff;
+        color: $color;
+        font-size: .857em;
+        padding: .202em .618em;
+
+        &:hover,
+        &:active {
+            background: rgba(#fff,.8);
+            color: $color;
+        }
+    }
+}
+
+@mixin applyMedia() {
+    // Proper spacing between instances of .media
+    zoom: 1;
+    overflow: hidden;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+@mixin applyMediaLeft() {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 10px;
+    float: left;
+}
+
+@mixin applyMediaObject( $float : left ) {
+    display: block;
+    float: $float;
+    margin-right: 30px;
+}
+
+@mixin applyMediaBody() {
+    zoom: 1;
+    width: 10000px;
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: top;
+}
+
+@mixin titles(){
+    font-size: 18px;
+    letter-spacing: 0;
+    border-bottom: 2px solid #CBC6AC;
+    padding: 0 0 7px 0;
+    margin: 0 0 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+@mixin style2-titles(){
+    font-size: 18px;
+    letter-spacing: 0;
+    border-bottom: 2px solid #D3D3D3;
+    padding: 0 0 7px 0;
+    margin: 0 0 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+@mixin post-meta(){
+    line-height: 1;
+
+    span{
+        font-size: 13px;
+        color: #676666;
+        text-transform: capitalize;
+
+        a{
+            font-weight: 400;
+            color: #676666;
+        }
+
+        &:after{
+            content: "/";
+        }
+
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+
+        &.post-categories{
+            a{
+                &:after{
+                    content: ", ";
+                }
+                &:last-child{
+                    &:after{
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin responsiv-space( $padding: 20px ){
+    padding-right: $padding;
+    padding-left: $padding;
+}
+
+@mixin mobile-span() {
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+@mixin sm-btn() {
+    background-color: $color_border;
+    border: medium none !important;
+    border-radius: 50px !important;
+    color: #fff;
+    font-size: 15px !important;
+    font-weight: 700;
+    line-height: 1;
+    padding: 10px 30px !important;
+    text-shadow: 0 1px rgba(2, 3, 3, 0.42);
+    &:hover{
+        background-color: $color_links;
+    }
+}
+
+@mixin give-donation-form() {
+    form.give-form{
+        padding-top: 73px;
+
+        label{
+            font-weight: 400;
+        }
+
+        #give-payment-mode-select{
+            margin: 73px 0 0 0;
+        }
+
+        legend{
+            border-color: $color_border ;
+            font-size: 18px;
+        }
+
+        #give_purchase_form_wrap{
+            #give_checkout_user_info{
+                margin: 0 0 20px 0;
+
+                input{
+                    border: 1px solid $color_border !important;
+                }
+            }
+
+            #give_purchase_submit{
+                margin: 0;
+
+                #give_show_terms{
+                    a{
+                        @include sm-btn;
+                    }
+                }
+
+                .give-final-total-wrap{
+                    @include clearfix;
+
+                    span.give-currency-symbol,input.give-total-amount{
+                        height: 45px;
+                        border-color: $color_links;
+                    }
+
+                    span.give-currency-symbol{
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        background-color: $color_links;
+                        color: #fff;
+                        padding: 4px 20px;
+                        font-size: 20px;
+                    }
+
+                    input.give-total-amount{
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+
+                    }
+                }
+
+                .give-submit-button-wrap{
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

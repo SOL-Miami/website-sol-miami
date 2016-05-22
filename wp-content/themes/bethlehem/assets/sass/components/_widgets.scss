@@ -1,0 +1,617 @@
+/**
+ * Widgets
+ */
+
+.widget {
+	margin: 0 0 3.631em;
+
+	.widget-search .search-submit {
+		@include screen-reader-text();
+	}
+
+	h3.widget-title {
+		@include titles;
+	}
+
+	ul {
+		margin-left: 0;
+		list-style: none;
+
+		ul {
+			margin-left: 1.618em;
+		}
+	}
+}
+
+.widget-area {
+	.widget {
+		a.button {
+			font-weight: 700 !important;
+			color: #fff;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.header-widget-region {
+	@include clearfix;
+
+	.widget {
+		margin: 0;
+		padding: 1em 0;
+	}
+}
+
+.widget_search,
+.widget_product_search {
+	form {
+		position: relative;
+
+		input[type=text],
+		input[type=search] {
+			width: 100%;
+			padding-left: 2.618em;
+		}
+
+		input[type=submit] {
+			@include screen-reader-text();
+		}
+
+		&:after {
+			content: "\f002";
+			font-family: "FontAwesome";
+			position: absolute;
+			top: .618em;
+			right: 1em;
+			line-height: 1;
+			font-size: 16px;
+		}
+	}
+}
+
+.widget_recent_entries,
+.widget_pages,
+.widget_categories,
+.widget_archive,
+.widget_recent_comments,
+.widget_nav_menu,
+.widget_links,
+.widget_meta,
+.widget_rss {
+	ul {
+		margin: 0;
+
+		li {
+			list-style: none;
+			margin-bottom: 0;
+			border-bottom: 1px solid #CBC6AC;
+			padding: 11px 0;
+		}
+
+		.sub-menu {
+			margin-top: .618em;
+			margin-left: 1.618em;
+		}
+	}
+}
+
+.widget-area,
+.footer-widgets {
+	#wp-calendar {
+		th,
+		td {
+			padding: .236em;
+			text-align: center;
+		}
+	}
+}
+
+.widget_recent_entries,
+.widget_pages {
+	ul {
+		ul.children {
+			margin: .618em 0 0 1.387em;
+		}
+	}
+}
+
+.widget-area{
+	.widget_rss{
+		.widget-title{
+			position: relative;
+
+			> a:first-child{
+				position: absolute;
+				right: 0;
+				top: 9px;
+			}
+
+			> a:last-child {
+				color: $color_links;
+				font-weight: bold;
+			}
+		}
+		.rsswidget{
+			display: block;
+			margin-bottom: 8px;
+			line-height: 1.2;
+			font-weight: 600;
+			font-size: 18px;
+		}
+		.rss-date{
+			margin-bottom: 6px;
+			font-size: 13px;
+			display: block;
+			border-top: 1px solid #cbc6ac;
+			border-bottom: 1px solid #cbc6ac;
+			padding: 2px 0;
+			&:before{
+				content: "\f073";
+				font-family: "FontAwesome";
+				font-size: 14px;
+				margin-right: 8px;
+			}
+		}
+		.rssSummary{
+			margin-bottom: 4px;
+			font-size: 14px;
+		}
+		cite{
+			font-size: 14px;
+		}
+	}
+}
+
+.widget-area {
+	.widget {
+
+		h1.widget-title {
+			font-size: 1.387em;
+
+			a{
+				color: $color_links;
+				font-weight: 700;
+			}
+		}
+
+		a {
+			color: $color_body;
+			font-weight: 400;
+
+			&:hover {
+				color: $color_links;
+			}
+		}
+	}
+}
+
+.widget-area {
+	.widget {
+
+		&.widget_products{
+			.product_list_widget{
+				li{
+					>.amount, ins{
+						color: $color_links;
+					}
+					a{
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+
+		&.widget_donations_recent_posts{
+			.beth-recent-posts{
+				li{
+					padding-bottom: 20px;
+					margin-bottom: 20px;
+					border-bottom: 1px solid $color_border;
+
+					&:last-child{
+						padding-bottom: 0;
+						margin-bottom: 0px;
+						border-bottom: none;
+					}
+
+					a{
+						display: inline-block;
+						font-size: 15px;
+						font-weight: 600;
+					}
+
+					&:first-child{
+						a{
+							margin-top: 14px;
+						}
+					}
+				}
+			}
+		}
+
+		&.tribe-events-list-widget, &.tribe-events-adv-list-widget, &.tribe-events-venue-widget, &.tribe_mini_calendar_widget {
+			ol.vcalendar, .vcalendar {
+				margin-left: 0;
+			}
+			.type-tribe_events{
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+				border-bottom: 1px solid $color_border;
+				.date-meta{
+					float: left;
+					font-size: 26px;
+					margin-right: 10px;
+					line-height: 0.7;
+					color: $color_links;
+					span{
+						display: block;
+						font-size: 10px;
+						text-transform: uppercase;
+						text-align: center;
+						line-height: 3.6;
+					}
+				}
+				.entry-title{
+					display: table-cell;
+					font-size: 14px;
+				}
+				.duration{
+					font-size: 13px;
+					color: #7f7e7a;
+					font-weight: 400;
+					>div{
+						display: inline-block;
+						margin-left: 10px;
+					}
+				}
+				.cat-links{
+					display: none;
+				}
+				.hb-social{
+					display: none;
+				}
+			}
+		}
+
+		&.tribe-events-venue-widget {
+			.tribe-venue-widget-venue {
+				margin-bottom: 15px;
+
+				.tribe-venue-widget-venue-name {
+					a{
+						font-size: 18px;
+						color: #5a5a5a;
+						font-weight: 400;
+					}
+				}
+			}
+
+			ol.vcalendar {
+				margin-left: 0;
+
+				li {
+					list-style: none;
+				}
+			}
+		}
+
+		&.tribe_mini_calendar_widget {
+			.vcalendar {
+				.tribe-mini-calendar-event {
+					border: none;
+					.list-date {
+						display: none;
+					}
+				}
+
+				.duration {
+					margin-top: 5px;
+				}
+			}
+		}
+
+		&.widget_recent_reviews,&.widget_top_rated_products{
+			.product_list_widget{
+				li{
+					.star-rating{
+						font-size: 0.8em;
+						margin-bottom: 10px;
+					}
+
+					.reviewer{
+						font-size: 14px;
+						font-style: italic;
+					}
+				}
+			}
+		}
+
+		&.widget_recent_comments{
+			.comment-author-link{
+				a{
+					&.url{
+						color: #1a1a1a;
+					}
+				}
+			}
+		}
+
+		&.widget_search,
+		&.widget_product_search{
+			form{
+				input[type=search]{
+					background-color: #fff;
+					border-radius: 30px;
+					color: #514e40;
+					border: 1px solid #cbc6ac;
+					height: 36px;
+					box-shadow: none;
+					padding-left: 1.418em;
+				}
+			}
+		}
+
+		&.widget_categories,
+		&.widget_pages{
+			li{
+				.children{
+					li{
+						font-size: 14px;
+						border-bottom: none;
+						padding-bottom: 0 !important;
+						&:before{
+							font-family: "FontAwesome";
+							font-weight: 400;
+							content: "\f105";
+							margin-right: .40em;
+						}
+						.children{
+							margin-top: 0;
+							li{
+								padding-bottom: 0;
+								&:before{
+									font-family: "FontAwesome";
+									font-weight: 400;
+									content: "\f101";
+									margin-right: .40em;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.widget_tag_cloud,&.widget_product_tag_cloud{
+			.tagcloud{
+				@include clearfix;
+
+				a{
+				    color: #fff;
+				    display: table;
+				    line-height: 35px;
+				    padding: 0 7px;
+				    text-transform: capitalize;
+				    float: left;
+				    margin-bottom: 10px;
+				    margin-right: 5px;
+				}
+			}
+		}
+
+		&.widget_text{
+			.wp-smiley{
+				float: left;
+				padding-right: 6px;
+			}
+			.wp-caption-text{
+				font-size: 14px;
+				.wp-smiley{
+					float: right;
+				}
+			}
+		}
+
+		&.widget_featured_posts{
+			.fposts{
+				li{
+					margin-bottom: 26px;
+					display: inline-block;
+					width: 100% !important;
+					img{
+						margin-bottom: 8px;
+					}
+
+					.cat-links,
+					.tags-links,
+					.posted-on,
+					.comments-link,
+					.byline {
+						font-style: italic;
+						color: #5c5c5c;
+						font-size: 13px;
+					}
+
+					.cat-links,
+					.tags-links,
+					.comments-link,
+					.byline {
+						&:before {
+							content: "/";
+							padding-left: 2px;
+						}
+						a{
+							text-decoration: underline;
+						}
+					}
+
+					.tags-links{
+						clear: both;
+						display: table;
+					}
+
+					h1.entry-title{
+						margin-top: 3px;
+						line-height: 1;
+						font-size: 24px !important;
+						a{
+							text-transform: uppercase;
+							color: $color_links !important;
+
+						}
+
+					}
+				}
+			}
+
+			.hb-more{
+				font-weight: 600;
+				float: left;
+			}
+
+			.comments-count{
+				float: right;
+				margin-top: 10px;
+				font-size: 13px;
+				color: #686763;
+				font-style: italic;
+			}
+
+			.archive_link{
+				display: none;
+			}
+		}
+
+		&.widget_sermons_recent_posts{
+			>ul{
+				>li{
+					@include clearfix;
+					margin-bottom: 10px;
+					padding-bottom: 10px;
+					border-bottom: 1px solid $color_border;
+					&:last-child{
+						border: none;
+						margin: 0;
+						padding: 0;
+					}
+					img, .bethlehem-img-placeholder {
+						@include applyMediaLeft;
+						width: 70px;
+						height: 70px;
+						padding: 0;
+						margin-right: 14px;
+					}
+					.sermons-widget-content{
+						@include applyMediaBody;
+						.title{
+							line-height: 1;
+						}
+						.post-icons{
+							margin: 0 !important;
+							float: none;
+							li{
+								margin-right: 4px;
+								a{
+									i{
+										height: 22px;
+										width: 22px;
+										font-size: 14px;
+									}
+									&:hover{
+										i{
+											display: table-cell !important;
+										}
+										.icon-info{
+											display: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.widget_mc4wp_widget{
+			.mc4wp-form{
+				form{
+					@include clearfix;
+					p{
+						&:last-child{
+							@include clearfix;
+						}
+					}
+				}
+				label{
+					font-size: 13px;
+				    font-weight: 400;
+				    line-height: 1.6;
+				    margin-bottom: 14px;
+				}
+				input[type="email"]{
+					height: 37px;
+				}
+				input[type="submit"]{
+				    border: medium none;
+				    border-radius: 30px;
+				    color: #fff;
+				    display: table;
+				    font-size: 13px;
+				    font-weight: 700;
+				    height: inherit;
+				    margin: 0;
+				    padding: 10px 20px;
+				    margin-top: 0;
+				    line-height: 1;
+				    text-shadow: 0 1px rgba(2, 3, 3, 0.42);
+				    &:hover{
+				    	background-color: $color_links;
+				    }
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	h3.widget-title{
+		line-height: 1;
+	}
+
+	.widget-area {
+		.widget {
+
+			&.tribe-events-list-widget, &.tribe-events-adv-list-widget, &.tribe-events-venue-widget, &.tribe_mini_calendar_widget {
+				.type-tribe_events{
+
+					.date-meta{
+						font-size: 30px;
+						line-height: 0.4;
+						span{
+							font-size: 12px;
+							line-height: 2.5;
+						}
+					}
+
+					.entry-title{
+						line-height: 1;
+					}
+
+					.duration{
+						display: table;
+						line-height: 1;
+						margin-top: 10px;
+
+						>div{
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

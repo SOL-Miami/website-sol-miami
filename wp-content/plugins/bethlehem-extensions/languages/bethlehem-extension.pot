@@ -1,0 +1,981 @@
+# Copyright (C) 2016 Ibrahim Ibn Dawood
+# This file is distributed under the same license as the Bethlehem Extensions package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Bethlehem Extensions 1.1.3\n"
+"Report-Msgid-Bugs-To: https://github.com/Transvelo/bethlehem/issues\n"
+"POT-Creation-Date: 2016-04-15 06:06:34+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Ibrahim <ibrahim@transvelo.com>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+
+#: modules/js_composer/config/map.php:16
+msgid "Banner"
+msgstr ""
+
+#: modules/js_composer/config/map.php:18
+msgid "Add a banner to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:22 modules/js_composer/config/map.php:87
+#: modules/js_composer/config/map.php:147
+#: modules/js_composer/config/map.php:212
+#: modules/js_composer/config/map.php:268
+#: modules/js_composer/config/map.php:315
+#: modules/js_composer/config/map.php:355
+#: modules/js_composer/config/map.php:400
+#: modules/js_composer/config/map.php:446
+#: modules/js_composer/config/map.php:535
+#: modules/js_composer/config/map.php:620
+#: modules/js_composer/config/map.php:695
+#: modules/js_composer/config/map.php:755
+#: modules/js_composer/config/map.php:840
+#: modules/js_composer/config/map.php:909
+#: modules/js_composer/config/map.php:1047
+msgid "Bethlehem Elements"
+msgstr ""
+
+#: modules/js_composer/config/map.php:26
+msgid "Banner Image"
+msgstr ""
+
+#: modules/js_composer/config/map.php:31
+msgid "Background Color"
+msgstr ""
+
+#: modules/js_composer/config/map.php:33
+msgid "Choose background color instead of image."
+msgstr ""
+
+#: modules/js_composer/config/map.php:37 modules/js_composer/config/map.php:235
+#: modules/js_composer/config/map.php:468
+#: modules/js_composer/config/map.php:545
+msgid "Type"
+msgstr ""
+
+#: modules/js_composer/config/map.php:40 modules/js_composer/config/map.php:238
+#: modules/js_composer/config/map.php:471
+#: modules/js_composer/config/map.php:548
+msgid "Choose Type"
+msgstr ""
+
+#: modules/js_composer/config/map.php:41 modules/js_composer/config/map.php:239
+#: modules/js_composer/config/map.php:472
+msgid "Type 1"
+msgstr ""
+
+#: modules/js_composer/config/map.php:42 modules/js_composer/config/map.php:240
+#: modules/js_composer/config/map.php:473
+msgid "Type 2"
+msgstr ""
+
+#: modules/js_composer/config/map.php:47 modules/js_composer/config/map.php:103
+#: modules/js_composer/config/map.php:163
+#: modules/js_composer/config/map.php:216
+#: modules/js_composer/config/map.php:272
+#: modules/js_composer/config/map.php:319
+#: modules/js_composer/config/map.php:359
+#: modules/js_composer/config/map.php:404
+#: modules/js_composer/config/map.php:450
+#: modules/js_composer/config/map.php:490
+#: modules/js_composer/config/map.php:539
+#: modules/js_composer/config/map.php:567
+#: modules/js_composer/config/map.php:624
+#: modules/js_composer/config/map.php:650
+#: modules/js_composer/config/map.php:711
+#: modules/js_composer/config/map.php:749
+#: modules/js_composer/config/map.php:759
+#: modules/js_composer/config/map.php:844
+#: modules/js_composer/config/map.php:913
+#: modules/js_composer/config/map.php:952
+#: modules/js_composer/config/map.php:1051
+msgid "Title"
+msgstr ""
+
+#: modules/js_composer/config/map.php:49
+msgid "Enter banner title"
+msgstr ""
+
+#: modules/js_composer/config/map.php:54
+msgid "Subtitle Text"
+msgstr ""
+
+#: modules/js_composer/config/map.php:56
+msgid "Enter banner subtitle"
+msgstr ""
+
+#: modules/js_composer/config/map.php:60 modules/js_composer/config/map.php:926
+msgid "Text"
+msgstr ""
+
+#: modules/js_composer/config/map.php:62
+msgid "Active only if choose Type 2."
+msgstr ""
+
+#: modules/js_composer/config/map.php:67 modules/js_composer/config/map.php:126
+#: modules/js_composer/config/map.php:192
+#: modules/js_composer/config/map.php:247
+#: modules/js_composer/config/map.php:299
+#: modules/js_composer/config/map.php:339
+#: modules/js_composer/config/map.php:385
+#: modules/js_composer/config/map.php:424
+#: modules/js_composer/config/map.php:514
+#: modules/js_composer/config/map.php:605
+#: modules/js_composer/config/map.php:674
+#: modules/js_composer/config/map.php:735
+#: modules/js_composer/config/map.php:821
+#: modules/js_composer/config/map.php:870
+#: modules/js_composer/config/map.php:1027
+#: modules/js_composer/config/map.php:1076
+msgid "Extra Class"
+msgstr ""
+
+#: modules/js_composer/config/map.php:69 modules/js_composer/config/map.php:128
+#: modules/js_composer/config/map.php:194
+#: modules/js_composer/config/map.php:249
+#: modules/js_composer/config/map.php:301
+#: modules/js_composer/config/map.php:341
+#: modules/js_composer/config/map.php:387
+#: modules/js_composer/config/map.php:426
+#: modules/js_composer/config/map.php:516
+#: modules/js_composer/config/map.php:607
+#: modules/js_composer/config/map.php:676
+#: modules/js_composer/config/map.php:737
+#: modules/js_composer/config/map.php:823
+#: modules/js_composer/config/map.php:872
+#: modules/js_composer/config/map.php:1029
+#: modules/js_composer/config/map.php:1078
+msgid "Add your extra classes here."
+msgstr ""
+
+#: modules/js_composer/config/map.php:81
+msgid "Donation Carousel"
+msgstr ""
+
+#: modules/js_composer/config/map.php:83
+msgid "Add Donation Carousel."
+msgstr ""
+
+#: modules/js_composer/config/map.php:91 modules/js_composer/config/map.php:151
+#: modules/js_composer/config/map.php:229
+#: modules/js_composer/config/map.php:278
+#: modules/js_composer/config/map.php:325
+#: modules/js_composer/config/map.php:365
+#: modules/js_composer/config/map.php:410
+#: modules/js_composer/config/map.php:456
+#: modules/js_composer/config/map.php:555
+#: modules/js_composer/config/map.php:638
+#: modules/js_composer/config/map.php:699
+#: modules/js_composer/config/map.php:939
+msgid "Limit"
+msgstr ""
+
+#: modules/js_composer/config/map.php:97 modules/js_composer/config/map.php:157
+#: modules/js_composer/config/map.php:484
+#: modules/js_composer/config/map.php:561
+#: modules/js_composer/config/map.php:644
+#: modules/js_composer/config/map.php:705
+#: modules/js_composer/config/map.php:946
+msgid "Order By"
+msgstr ""
+
+#: modules/js_composer/config/map.php:100
+#: modules/js_composer/config/map.php:160
+#: modules/js_composer/config/map.php:487
+#: modules/js_composer/config/map.php:564
+#: modules/js_composer/config/map.php:647
+#: modules/js_composer/config/map.php:708
+#: modules/js_composer/config/map.php:949
+msgid "Choose Order By"
+msgstr ""
+
+#: modules/js_composer/config/map.php:101
+#: modules/js_composer/config/map.php:161
+#: modules/js_composer/config/map.php:488
+#: modules/js_composer/config/map.php:565
+#: modules/js_composer/config/map.php:648
+#: modules/js_composer/config/map.php:709
+#: modules/js_composer/config/map.php:950
+#: modules/js_composer/config/map.php:1000
+msgid "None"
+msgstr ""
+
+#: modules/js_composer/config/map.php:102
+#: modules/js_composer/config/map.php:162
+#: modules/js_composer/config/map.php:489
+#: modules/js_composer/config/map.php:566
+#: modules/js_composer/config/map.php:649
+#: modules/js_composer/config/map.php:710
+#: modules/js_composer/config/map.php:951
+msgid "ID"
+msgstr ""
+
+#: modules/js_composer/config/map.php:104
+#: modules/js_composer/config/map.php:164
+#: modules/js_composer/config/map.php:491
+#: modules/js_composer/config/map.php:568
+#: modules/js_composer/config/map.php:651
+#: modules/js_composer/config/map.php:712
+#: modules/js_composer/config/map.php:953
+msgid "Date"
+msgstr ""
+
+#: modules/js_composer/config/map.php:105
+#: modules/js_composer/config/map.php:165
+#: modules/js_composer/config/map.php:492
+#: modules/js_composer/config/map.php:569
+#: modules/js_composer/config/map.php:652
+#: modules/js_composer/config/map.php:713
+#: modules/js_composer/config/map.php:954
+msgid "Menu Order"
+msgstr ""
+
+#: modules/js_composer/config/map.php:110
+#: modules/js_composer/config/map.php:170
+#: modules/js_composer/config/map.php:497
+#: modules/js_composer/config/map.php:574
+#: modules/js_composer/config/map.php:657
+#: modules/js_composer/config/map.php:718
+#: modules/js_composer/config/map.php:959
+msgid "Order"
+msgstr ""
+
+#: modules/js_composer/config/map.php:113
+#: modules/js_composer/config/map.php:173
+#: modules/js_composer/config/map.php:500
+#: modules/js_composer/config/map.php:577
+#: modules/js_composer/config/map.php:660
+#: modules/js_composer/config/map.php:721
+#: modules/js_composer/config/map.php:884
+#: modules/js_composer/config/map.php:962
+#: modules/js_composer/config/map.php:999
+msgid "Choose Order"
+msgstr ""
+
+#: modules/js_composer/config/map.php:114
+#: modules/js_composer/config/map.php:174
+#: modules/js_composer/config/map.php:501
+#: modules/js_composer/config/map.php:578
+#: modules/js_composer/config/map.php:661
+#: modules/js_composer/config/map.php:722
+#: modules/js_composer/config/map.php:963
+msgid "Ascending"
+msgstr ""
+
+#: modules/js_composer/config/map.php:115
+#: modules/js_composer/config/map.php:175
+#: modules/js_composer/config/map.php:502
+#: modules/js_composer/config/map.php:579
+#: modules/js_composer/config/map.php:662
+#: modules/js_composer/config/map.php:723
+#: modules/js_composer/config/map.php:964
+msgid "Descending"
+msgstr ""
+
+#: modules/js_composer/config/map.php:120
+#: modules/js_composer/config/map.php:186
+#: modules/js_composer/config/map.php:478
+msgid "Background Image"
+msgstr ""
+
+#: modules/js_composer/config/map.php:141
+msgid "Stories Carousel"
+msgstr ""
+
+#: modules/js_composer/config/map.php:143
+msgid "Add Stories Carousel."
+msgstr ""
+
+#: modules/js_composer/config/map.php:180
+msgid "Stories link text"
+msgstr ""
+
+#: modules/js_composer/config/map.php:206
+msgid "Blog Recent Posts Widget"
+msgstr ""
+
+#: modules/js_composer/config/map.php:208
+msgid "Add blog recent posts widget to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:222
+#: modules/js_composer/config/map.php:631
+#: modules/js_composer/config/map.php:851
+#: modules/js_composer/config/map.php:920
+#: modules/js_composer/config/map.php:1058
+msgid "Pre Title"
+msgstr ""
+
+#: modules/js_composer/config/map.php:224
+#: modules/js_composer/config/map.php:626
+#: modules/js_composer/config/map.php:633
+#: modules/js_composer/config/map.php:761
+#: modules/js_composer/config/map.php:846
+#: modules/js_composer/config/map.php:853
+#: modules/js_composer/config/map.php:915
+#: modules/js_composer/config/map.php:1053
+#: modules/js_composer/config/map.php:1060
+msgid "Enter title"
+msgstr ""
+
+#: modules/js_composer/config/map.php:241
+msgid "Type 3"
+msgstr ""
+
+#: modules/js_composer/config/map.php:262
+#: modules/js_composer/config/map.php:309
+msgid "Events List Widget"
+msgstr ""
+
+#: modules/js_composer/config/map.php:264
+#: modules/js_composer/config/map.php:311
+msgid "Add events list widget to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:284
+msgid "Categories"
+msgstr ""
+
+#: modules/js_composer/config/map.php:294
+#: modules/js_composer/config/map.php:334
+#: modules/js_composer/config/map.php:380
+#: modules/js_composer/config/map.php:419
+#: modules/js_composer/config/map.php:769
+msgid "Allow"
+msgstr ""
+
+#: modules/js_composer/config/map.php:349
+msgid "Events Venue Locations"
+msgstr ""
+
+#: modules/js_composer/config/map.php:351
+msgid "Add events venue location to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:371
+msgid "Service Time"
+msgstr ""
+
+#: modules/js_composer/config/map.php:394
+msgid "Events Calendar"
+msgstr ""
+
+#: modules/js_composer/config/map.php:396
+msgid "Add events calendar to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:440
+msgid "Sermons Carousel"
+msgstr ""
+
+#: modules/js_composer/config/map.php:442
+msgid "Add Sermons Carousel."
+msgstr ""
+
+#: modules/js_composer/config/map.php:462
+msgid "Archive link text"
+msgstr ""
+
+#: modules/js_composer/config/map.php:480
+msgid "Background Image is for only type-2."
+msgstr ""
+
+#: modules/js_composer/config/map.php:507
+#: modules/js_composer/config/map.php:584
+#: modules/js_composer/config/map.php:667
+#: modules/js_composer/config/map.php:728
+msgid "Category ID"
+msgstr ""
+
+#: modules/js_composer/config/map.php:529
+msgid "Team Members"
+msgstr ""
+
+#: modules/js_composer/config/map.php:531
+msgid "Add Team Members to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:549
+msgid "Standard"
+msgstr ""
+
+#: modules/js_composer/config/map.php:550
+msgid "Large"
+msgstr ""
+
+#: modules/js_composer/config/map.php:590
+#: modules/js_composer/config/map.php:593
+msgid "Choose Columns"
+msgstr ""
+
+#: modules/js_composer/config/map.php:594
+msgid "2 Columns"
+msgstr ""
+
+#: modules/js_composer/config/map.php:595
+msgid "3 Columns"
+msgstr ""
+
+#: modules/js_composer/config/map.php:596
+msgid "4 Columns"
+msgstr ""
+
+#: modules/js_composer/config/map.php:597
+msgid "5 Columns"
+msgstr ""
+
+#: modules/js_composer/config/map.php:598
+msgid "6 Columns"
+msgstr ""
+
+#: modules/js_composer/config/map.php:600
+msgid "Only for Standard Type."
+msgstr ""
+
+#: modules/js_composer/config/map.php:614
+msgid "Team Members Carousel"
+msgstr ""
+
+#: modules/js_composer/config/map.php:616
+msgid "Add Team Members Carousel to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:689
+msgid "Testimonials Carousel"
+msgstr ""
+
+#: modules/js_composer/config/map.php:691
+msgid "Add Testimonials Carousel."
+msgstr ""
+
+#: modules/js_composer/config/map.php:751
+msgid "Add a Title to your page with Description."
+msgstr ""
+
+#: modules/js_composer/config/map.php:773
+msgid "Title Link"
+msgstr ""
+
+#: modules/js_composer/config/map.php:775
+msgid "Enter link for title or leave empty"
+msgstr ""
+
+#: modules/js_composer/config/map.php:780
+msgid "Description"
+msgstr ""
+
+#: modules/js_composer/config/map.php:782
+msgid "Enter description"
+msgstr ""
+
+#: modules/js_composer/config/map.php:787
+msgid "Description Class"
+msgstr ""
+
+#: modules/js_composer/config/map.php:789
+msgid "Enter description class or leave empty"
+msgstr ""
+
+#: modules/js_composer/config/map.php:794
+msgid "Text Position"
+msgstr ""
+
+#: modules/js_composer/config/map.php:797
+msgid "Choose Text Position"
+msgstr ""
+
+#: modules/js_composer/config/map.php:798
+msgid "Left"
+msgstr ""
+
+#: modules/js_composer/config/map.php:799
+msgid "Right"
+msgstr ""
+
+#: modules/js_composer/config/map.php:800
+msgid "Center"
+msgstr ""
+
+#: modules/js_composer/config/map.php:805
+msgid "Heading Size"
+msgstr ""
+
+#: modules/js_composer/config/map.php:807
+msgid "Select title heading size"
+msgstr ""
+
+#: modules/js_composer/config/map.php:809
+msgid "Choose Heading"
+msgstr ""
+
+#: modules/js_composer/config/map.php:810
+msgid "Heading 1"
+msgstr ""
+
+#: modules/js_composer/config/map.php:811
+msgid "Heading 2"
+msgstr ""
+
+#: modules/js_composer/config/map.php:812
+msgid "Heading 3"
+msgstr ""
+
+#: modules/js_composer/config/map.php:813
+msgid "Heading 4"
+msgstr ""
+
+#: modules/js_composer/config/map.php:814
+msgid "Heading 5"
+msgstr ""
+
+#: modules/js_composer/config/map.php:815
+msgid "Heading 6"
+msgstr ""
+
+#: modules/js_composer/config/map.php:834
+msgid "Sermons Media"
+msgstr ""
+
+#: modules/js_composer/config/map.php:836
+msgid "Add a Sermons Media to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:858
+msgid "Embedded Channel Code"
+msgstr ""
+
+#: modules/js_composer/config/map.php:860
+msgid "Enter Embedded Sermons Channel code here."
+msgstr ""
+
+#: modules/js_composer/config/map.php:864
+#: modules/js_composer/config/map.php:1070
+msgid "Button Link"
+msgstr ""
+
+#: modules/js_composer/config/map.php:903
+msgid "Tiled Gallery"
+msgstr ""
+
+#: modules/js_composer/config/map.php:905
+msgid "Add a Tiled Gallery to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:922
+msgid "Enter pretitle"
+msgstr ""
+
+#: modules/js_composer/config/map.php:928
+msgid "Add description"
+msgstr ""
+
+#: modules/js_composer/config/map.php:932
+msgid "Post Types"
+msgstr ""
+
+#: modules/js_composer/config/map.php:934
+msgid "Enter posttypes"
+msgstr ""
+
+#: modules/js_composer/config/map.php:941
+msgid "Enter limit"
+msgstr ""
+
+#: modules/js_composer/config/map.php:969
+msgid "Taxonomy Name"
+msgstr ""
+
+#: modules/js_composer/config/map.php:971
+msgid "Enter taxonomy name"
+msgstr ""
+
+#: modules/js_composer/config/map.php:976
+msgid "Taxonomy Terms Slug"
+msgstr ""
+
+#: modules/js_composer/config/map.php:978
+msgid "Enter taxonomy terms slug"
+msgstr ""
+
+#: modules/js_composer/config/map.php:983
+msgid "Grid"
+msgstr ""
+
+#: modules/js_composer/config/map.php:989
+msgid "Padding"
+msgstr ""
+
+#: modules/js_composer/config/map.php:991
+msgid "Enter padding for image grids"
+msgstr ""
+
+#: modules/js_composer/config/map.php:996
+msgid "Pagination"
+msgstr ""
+
+#: modules/js_composer/config/map.php:1001
+msgid "Load More"
+msgstr ""
+
+#: modules/js_composer/config/map.php:1002
+msgid "Prev/Next"
+msgstr ""
+
+#: modules/js_composer/config/map.php:1003
+msgid "Paging"
+msgstr ""
+
+#: modules/js_composer/config/map.php:1008
+msgid "Byline Template"
+msgstr ""
+
+#: modules/js_composer/config/map.php:1010
+msgid "Use contents listed from below "
+msgstr ""
+
+#: modules/js_composer/config/map.php:1014
+msgid "Opacity of Byline Content"
+msgstr ""
+
+#: modules/js_composer/config/map.php:1016
+msgid "Choose Byline Opacity between 0 to 1."
+msgstr ""
+
+#: modules/js_composer/config/map.php:1020
+msgid "Background Color for Byline Content"
+msgstr ""
+
+#: modules/js_composer/config/map.php:1022
+msgid "Choose background color Byline Content."
+msgstr ""
+
+#: modules/js_composer/config/map.php:1041
+msgid "Bethlehem Image Carousel"
+msgstr ""
+
+#: modules/js_composer/config/map.php:1043
+msgid "Add a Image Carousel to your page."
+msgstr ""
+
+#: modules/js_composer/config/map.php:1065
+msgid "Carousel Images"
+msgstr ""
+
+#: modules/js_composer/js_composer.php:94
+msgid ""
+"<strong>%s</strong> requires <strong><a href=\"http://bit.ly/vcomposer\" "
+"target=\"_blank\">Visual Composer</a></strong> plugin to be installed and "
+"activated on your site."
+msgstr ""
+
+#: modules/post-types/ministries/includes/template-tags.php:162
+msgid "Ministries"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:39
+#: modules/post-types/sermons/sermons.php:41
+#: modules/post-types/stories/stories.php:40
+msgid "Add New"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:40
+#: modules/post-types/sermons/sermons.php:42
+#: modules/post-types/stories/stories.php:41
+msgid "Edit"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:41
+#: modules/post-types/sermons/sermons.php:43
+#: modules/post-types/stories/stories.php:42
+msgid "New"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:42
+msgid "All Ministries"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:43
+#: modules/post-types/sermons/sermons.php:45
+#: modules/post-types/stories/stories.php:44
+msgid "View"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:44
+#: modules/post-types/sermons/sermons.php:46
+#: modules/post-types/static-block/static-block.php:70
+#: modules/post-types/stories/stories.php:45
+msgid "Search"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:45
+msgid "No ministries found"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:46
+msgid "No ministries found in Trash"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:74
+msgid "Ministries Categories"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:75
+msgid "Ministries Category"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:223
+#: modules/post-types/ministries/ministries.php:224
+msgid "Settings"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:294
+msgid "Facebook Username"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:295
+msgid "Enter this ministries Facebook username (for example: bethlehem)."
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:302
+msgid "Twitter Username"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:303
+msgid "Enter this ministries Twitter username (for example: bethlehem)."
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:310
+msgid "Google Plus Username/ID"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:311
+msgid ""
+"Enter this ministries Google+ username with + or ID (for example: "
+"+bethlehem or 113551191017950459231)."
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:366
+msgid "Ministries Details"
+msgstr ""
+
+#: modules/post-types/sermons/includes/template-tags.php:178
+msgid "Watch"
+msgstr ""
+
+#: modules/post-types/sermons/includes/template-tags.php:187
+msgid "Listen"
+msgstr ""
+
+#: modules/post-types/sermons/includes/template-tags.php:194
+msgid "Save as"
+msgstr ""
+
+#: modules/post-types/sermons/includes/template-tags.php:322
+msgid "About %s"
+msgstr ""
+
+#: modules/post-types/sermons/includes/template-tags.php:394
+msgid "More from the current topic"
+msgstr ""
+
+#: modules/post-types/sermons/sermons.php:44
+msgid "All Sermons"
+msgstr ""
+
+#: modules/post-types/sermons/sermons.php:47
+msgid "No sermons found"
+msgstr ""
+
+#: modules/post-types/sermons/sermons.php:48
+msgid "No sermons found in Trash"
+msgstr ""
+
+#: modules/post-types/sermons/sermons.php:77
+msgid "Sermons Categories"
+msgstr ""
+
+#: modules/post-types/sermons/sermons.php:78
+msgid "Sermons Category"
+msgstr ""
+
+#: modules/post-types/sermons/sermons.php:99
+msgid "Sermons Occasions"
+msgstr ""
+
+#: modules/post-types/sermons/sermons.php:100
+msgid "Sermons Occasion"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:65
+msgid "Add New Block"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:66
+msgid "Edit Block"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:67
+msgid "New Block"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:68
+msgid "Static Blocks"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:69
+msgid "View Block"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:71
+msgid "No blocks found"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:72
+msgid "No blocks found in Trash"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:197
+msgid "Content Options"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:203
+msgid "Content Filters"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:204
+msgid "Apply all WP content filters? This will include plugin added filters."
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:209
+msgid "Defaults (recommended)"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:210
+msgid "All Content Filters"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:214
+msgid "Auto Paragraphs"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:215
+msgid ""
+"Add &lt;p&gt; and &lt;br&gt; tags automatically.<br>(disabling may fix "
+"layout issues)"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:220
+msgid "On"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:221
+msgid "Off"
+msgstr ""
+
+#: modules/post-types/stories/includes/template-tags.php:83
+msgid "Read more"
+msgstr ""
+
+#: modules/post-types/stories/stories.php:43
+msgid "All Stories"
+msgstr ""
+
+#: modules/post-types/stories/stories.php:46
+msgid "No stories found"
+msgstr ""
+
+#: modules/post-types/stories/stories.php:47
+msgid "No stories found in Trash"
+msgstr ""
+
+#: modules/post-types/stories/stories.php:75
+msgid "Stories Categories"
+msgstr ""
+
+#: modules/post-types/stories/stories.php:76
+msgid "Stories Category"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Bethlehem Extensions"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://demo.transvelo.in/wp/bethlehem/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Extensions for Bethlehem Wordpress Theme. Supplied as a separate plugin so "
+"that the customer does not find empty shortcodes on changing the theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Ibrahim Ibn Dawood"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://transvelo.com/"
+msgstr ""
+
+#: modules/post-types/ministries/includes/template-tags.php:189
+msgctxt "Grid as in list view/grid view"
+msgid "Grid"
+msgstr ""
+
+#: modules/post-types/ministries/includes/template-tags.php:192
+msgctxt "List as in list view/grid view"
+msgid "List"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:36
+msgctxt "post type general name"
+msgid "Ministries"
+msgstr ""
+
+#: modules/post-types/sermons/sermons.php:38
+msgctxt "post type general name"
+msgid "Sermons"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:62
+msgctxt "post type general name"
+msgid "Static Content Blocks"
+msgstr ""
+
+#: modules/post-types/stories/stories.php:37
+msgctxt "post type general name"
+msgid "Stories"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:37
+msgctxt "post type singular name"
+msgid "Ministry"
+msgstr ""
+
+#: modules/post-types/sermons/sermons.php:39
+msgctxt "post type singular name"
+msgid "Sermon"
+msgstr ""
+
+#: modules/post-types/static-block/static-block.php:63
+msgctxt "post type singular name"
+msgid "Static Block"
+msgstr ""
+
+#: modules/post-types/stories/stories.php:38
+msgctxt "post type singular name"
+msgid "Story"
+msgstr ""
+
+#: modules/post-types/ministries/ministries.php:38
+#: modules/post-types/sermons/sermons.php:40
+#: modules/post-types/static-block/static-block.php:64
+#: modules/post-types/stories/stories.php:39
+msgctxt "block"
+msgid "Add New"
+msgstr ""
