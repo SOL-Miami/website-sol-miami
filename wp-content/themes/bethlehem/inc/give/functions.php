@@ -231,6 +231,15 @@ if( ! function_exists( 'bethlehem_give_checkout_final_total' ) ) {
 	}
 }
 
+if( ! function_exists('bethlehem_donation_single_toggle_hook') ) {
+	function bethlehem_donation_single_toggle_hook() {
+		if( is_singular( 'give_forms' ) ) {
+			remove_action( 'give_pre_form',				'bethlehem_show_goal_progress',	10, 2 );
+			add_action( 'give_after_donation_levels',	'bethlehem_show_goal_progress',	10, 2 );
+		}
+	}
+}
+
 if( ! function_exists( 'bethlehem_output_donation_levels' ) ) {
 	function bethlehem_output_donation_levels( $form_id = 0, $args = array() ) {
 		do_action( 'give_before_donation_levels', $form_id );
@@ -326,9 +335,11 @@ if( ! function_exists( 'bethlehem_give_templates' ) ) {
 	function bethlehem_give_templates( $template ) {
 		$file = '';
 
+		$give_taxonomies = get_object_taxonomies( 'give_forms' );
+		
 		if ( is_post_type_archive( 'give_forms' ) ) {
 			$file = locate_template('give/archive-give_forms.php');
-		} elseif ( is_tax( 'give_forms_category' ) ) {
+		} elseif ( !empty( $give_taxonomies ) && is_tax( $give_taxonomies ) ) {
 			$file = locate_template('give/archive-give_forms.php');
 		}
 

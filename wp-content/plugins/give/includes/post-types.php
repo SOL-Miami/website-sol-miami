@@ -88,64 +88,14 @@ function give_setup_post_types() {
 		'query_var'          => true,
 		'rewrite'            => $give_forms_rewrite,
 		'map_meta_cap'       => true,
-		'capability_type'    => 'give_forms',
+		'capability_type'    => 'give_form',
 		'has_archive'        => $give_forms_archives,
 		'menu_icon'          => 'dashicons-give',
 		'hierarchical'       => false,
 		'supports'           => apply_filters( 'give_forms_supports', $give_form_supports ),
 	);
 	register_post_type( 'give_forms', apply_filters( 'give_forms_post_type_args', $give_forms_args ) );
-
-
-	/** Give Campaigns Post Type */
-	$give_campaigns_archives = defined( 'GIVE_DISABLE_CAMPAIGNS_ARCHIVE' ) && GIVE_DISABLE_CAMPAIGNS_ARCHIVE ? false : true;
-	$give_campaigns_slug     = defined( 'GIVE_CAMPAIGNS_SLUG' ) ? GIVE_CAMPAIGNS_SLUG : 'campaigns';
-	$give_campaigns_rewrite  = defined( 'GIVE_DISABLE_CAMPAIGNS_REWRITE' ) && GIVE_DISABLE_CAMPAIGNS_REWRITE ? false : array(
-		'slug'       => $give_campaigns_slug,
-		'with_front' => false
-	);
-
-	$give_campaigns_labels = apply_filters( 'give_campaign_labels', array(
-		'name'               => '%2$s',
-		'singular_name'      => '%1$s',
-		'add_new'            => __( 'Add %1$s', 'give' ),
-		'add_new_item'       => __( 'Add New %1$s', 'give' ),
-		'edit_item'          => __( 'Edit %1$s', 'give' ),
-		'new_item'           => __( 'New %1$s', 'give' ),
-		'all_items'          => __( 'All %2$s', 'give' ),
-		'view_item'          => __( 'View %1$s', 'give' ),
-		'search_items'       => __( 'Search %2$s', 'give' ),
-		'not_found'          => __( 'No %2$s found', 'give' ),
-		'not_found_in_trash' => __( 'No %2$s found in Trash', 'give' ),
-		'parent_item_colon'  => '',
-	) );
-
-	foreach ( $give_campaigns_labels as $key => $value ) {
-		$give_campaigns_labels[ $key ] = sprintf( $value, give_get_campaigns_label_singular(), give_get_campaigns_label_plural() );
-	}
-
-	$give_campaigns_args = array(
-		'labels'             => $give_campaigns_labels,
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_in_menu'       => 'edit.php?post_type=give_forms',
-		'query_var'          => true,
-		'rewrite'            => $give_campaigns_rewrite,
-		'map_meta_cap'       => true,
-		'capability_type'    => 'give_campaigns',
-		'has_archive'        => $give_campaigns_archives,
-		'hierarchical'       => false,
-		'supports'           => apply_filters( 'give_campaigns_supports', array(
-			'title',
-			'thumbnail',
-			'excerpt',
-			'revisions',
-			'author'
-		) ),
-	);
-	//	register_post_type( 'give_campaigns', apply_filters( 'give_campaigns_post_type_args', $give_campaigns_args ) );
-
+	
 	/** Payment Post Type */
 	$payment_labels = array(
 		'name'               => _x( 'Donations', 'post type general name', 'give' ),
@@ -292,21 +242,6 @@ function give_get_default_form_labels() {
 }
 
 /**
- * Get Default Campaign Labels
- *
- * @since 1.0
- * @return array $defaults Default labels
- */
-function give_get_default_campaign_labels() {
-	$defaults = array(
-		'singular' => __( 'Campaign', 'give' ),
-		'plural'   => __( 'Campaigns', 'give' )
-	);
-
-	return apply_filters( 'give_default_campaign_name', $defaults );
-}
-
-/**
  * Get Singular Forms Label
  *
  * @since 1.0
@@ -329,33 +264,6 @@ function give_get_forms_label_singular( $lowercase = false ) {
  */
 function give_get_forms_label_plural( $lowercase = false ) {
 	$defaults = give_get_default_form_labels();
-
-	return ( $lowercase ) ? strtolower( $defaults['plural'] ) : $defaults['plural'];
-}
-
-/**
- * Get Singular Campaigns Label
- *
- * @since 1.0
- *
- * @param bool $lowercase
- *
- * @return string $defaults['singular'] Singular label
- */
-function give_get_campaigns_label_singular( $lowercase = false ) {
-	$defaults = give_get_default_campaign_labels();
-
-	return ( $lowercase ) ? strtolower( $defaults['singular'] ) : $defaults['singular'];
-}
-
-/**
- * Get Plural Campaigns Label
- *
- * @since 1.0
- * @return string $defaults['plural'] Plural label
- */
-function give_get_campaigns_label_plural( $lowercase = false ) {
-	$defaults = give_get_default_campaign_labels();
 
 	return ( $lowercase ) ? strtolower( $defaults['plural'] ) : $defaults['plural'];
 }
@@ -491,7 +399,6 @@ function give_add_thumbnail_support() {
 		add_theme_support( 'post-thumbnails' );
 	}
 	add_post_type_support( 'give_forms', 'thumbnail' );
-	add_post_type_support( 'give_campaigns', 'thumbnail' );
 }
 
 /**

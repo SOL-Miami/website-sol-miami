@@ -112,14 +112,18 @@ if ( !function_exists( 'our_team_member_read_more' ) ) {
  * @return  void
  */
 if ( !function_exists( 'our_team_member_archive_social_links' ) ) {
-	function our_team_member_archive_social_links() {
+	function our_team_member_archive_social_links( $post_id = '' ) {
+
+		if( empty( $post_id ) ) {
+			$post_id = get_the_ID();
+		}
 		
 		if ( apply_filters( 'enable_archive_team_member_social', TRUE ) ) :
-			$twitter 			= esc_attr( get_post_meta( get_the_ID(), '_twitter', true ) );
-			$facebook			= esc_attr( get_post_meta( get_the_ID(), '_facebook', true ) );
-			$skype 				= esc_attr( get_post_meta( get_the_ID(), '_skype', true ) );
-			$mail 				= esc_attr( get_post_meta( get_the_ID(), '_contact_email', true ) );
-			$url 				= esc_attr( get_post_meta( get_the_ID(), '_url', true ) );
+			$twitter 			= esc_attr( get_post_meta( $post_id, '_twitter', true ) );
+			$facebook			= esc_attr( get_post_meta( $post_id, '_facebook', true ) );
+			$skype 				= esc_attr( get_post_meta( $post_id, '_skype', true ) );
+			$mail 				= esc_attr( get_post_meta( $post_id, '_contact_email', true ) );
+			$url 				= esc_attr( get_post_meta( $post_id, '_url', true ) );
 
 			$social_icons = apply_filters( 'our_team_member_archive_social_links_icons_args', array(
 	                'skype'			=> array( 
@@ -158,11 +162,12 @@ if ( !function_exists( 'our_team_member_single_social_links' ) ) {
 	function our_team_member_single_social_links() {
 		
 		if ( apply_filters( 'enable_single_team_member_social', TRUE ) ) :
-			$twitter 			= esc_attr( get_post_meta( get_the_ID(), '_twitter', true ) );
-			$facebook			= esc_attr( get_post_meta( get_the_ID(), '_facebook', true ) );
-			$skype 				= esc_attr( get_post_meta( get_the_ID(), '_skype', true ) );
-			$mail 				= esc_attr( get_post_meta( get_the_ID(), '_contact_email', true ) );
-			$url 				= esc_attr( get_post_meta( get_the_ID(), '_url', true ) );
+			$twitter 			= get_post_meta( get_the_ID(), '_twitter', true );
+			$facebook			= get_post_meta( get_the_ID(), '_facebook', true );
+			$skype 				= get_post_meta( get_the_ID(), '_skype', true );
+			$mail 				= get_post_meta( get_the_ID(), '_contact_email', true );
+			$tel 				= get_post_meta( get_the_ID(), '_tel', true );
+			$url 				= get_post_meta( get_the_ID(), '_url', true );
 
 			$social_icons = apply_filters( 'our_team_member_single_social_links_icons_args', array(
 	                'twitter'		=> array( 
@@ -188,6 +193,12 @@ if ( !function_exists( 'our_team_member_single_social_links' ) ) {
 	                	'icon' 			=> 'fa fa-envelope', 
 	                	'title' 		=> __( 'E-mail me', 'bethlehem' ),
 	                	'social_link' 	=> $mail 
+	            	),
+	            	'phone'	=> array( 
+	                	'class' 		=> 'hb-phone', 
+	                	'icon' 			=> 'fa fa-phone', 
+	                	'title' 		=> __( 'Call me', 'bethlehem' ),
+	                	'social_link' 	=> $tel 
 	            	),
 	                'url'		=> array( 
 	                	'class' 		=> 'hb-rss', 

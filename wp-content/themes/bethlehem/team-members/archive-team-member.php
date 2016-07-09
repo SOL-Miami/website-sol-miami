@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 			<?php if ( have_posts() ) : ?>
 				<div class="team-archive">
+					<?php
+						/**
+						 * team_members_before_loop hook
+						 *
+						 */
+						do_action( 'team_members_before_loop' );
+					?>
 					<div class="team-small">
-						<?php
-							/**
-							 * team_members_before_loop hook
-							 *
-							 */
-							do_action( 'team_members_before_loop' );
-						?>
 						<?php while ( have_posts() ) :  the_post(); ?>
 							<div class="member">
 								<?php
@@ -56,14 +56,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 								?>
 							</div>
 						<?php endwhile; ?>
-						<?php
-							/**
-							 * team_members_after_loop hook
-							 *
-							 */
-							do_action( 'team_members_after_loop' );
-						?>
 					</div>
+					<?php
+						/**
+						 * team_members_after_loop hook
+						 *
+						 */
+						do_action( 'team_members_after_loop' );
+					?>
 				</div>
 			<?php else : ?>
 				<?php get_template_part( 'templates/contents/content', 'none' ); ?>

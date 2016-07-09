@@ -23,6 +23,8 @@ add_action( 'team_members_loop_content',			'our_team_archive_post_title',			10 )
 add_action( 'team_members_loop_content',			'our_team_member_read_more',			20 );
 add_action( 'team_members_loop_content',			'our_team_member_archive_social_links',	30 );
 
+add_action( 'team_members_after_loop', 				'bethlehem_paging_nav',					95 );
+
 /**
  * Single Team Member
  */

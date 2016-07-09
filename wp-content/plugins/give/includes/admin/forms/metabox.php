@@ -58,7 +58,7 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 				//Donation Option
 				array(
 					'name'        => __( 'Donation Option', 'give' ),
-					'description' => __( 'Would you like this form to have one set donation price or multiple levels (for example, $10 silver, $20 gold, $50 platinum)?', 'give' ),
+					'description' => __( 'Would you like this form to have one set donation price or multiple levels (for example, $10, $20, $50)?', 'give' ),
 					'id'          => $prefix . 'price_option',
 					'type'        => 'radio_inline',
 					'default'     => 'set',
@@ -121,7 +121,7 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 							'type'       => 'text',
 							'attributes' => array(
 								'placeholder' => __( 'Donation Level', 'give' ),
-								'rows'        => 3,
+								'class'       => 'give-multilevel-text-field',
 							),
 						),
 						array(
@@ -183,7 +183,7 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 				),
 				//Goals
 				array(
-					'name'        => __( 'Set Goal?', 'give' ),
+					'name'        => __( 'Goal', 'give' ),
 					'description' => __( 'Do you want to set a donation goal for this form?', 'give' ),
 					'id'          => $prefix . 'goal_option',
 					'type'        => 'radio_inline',
@@ -194,7 +194,7 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 					),
 				),
 				array(
-					'name'         => __( 'Set Goal', 'give' ),
+					'name'         => __( 'Goal Amount', 'give' ),
 					'description'  => __( 'This is the monetary goal amount you want to reach for this donation form.', 'give' ),
 					'id'           => $prefix . 'set_goal',
 					'type'         => 'text_small',
@@ -227,6 +227,29 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 					'row_classes' => 'give-subfield',
 					'default'     => '#2bc253',
 				),
+
+				array(
+					'name'        => __( 'Close Form when Goal Achieved', 'give' ),
+					'desc'        => __( 'Would you like to close the donation forms and stop accepting donations once this goal has been met?', 'give' ),
+					'id'          => $prefix . 'close_form_when_goal_achieved',
+					'type'        => 'radio_inline',
+					'row_classes' => 'give-subfield',
+					'options'     => array(
+						'yes' => __( 'Yes', 'give' ),
+						'no'  => __( 'No', 'give' ),
+					),
+					'default'     => 'no',
+				),
+				array(
+					'name'        => __( 'Goal Achieved Message', 'give' ),
+					'desc'        => __( 'Would you like to display a custom message when the goal is closed? If none is provided the default message will be displayed', 'give' ),
+					'id'          => $prefix . 'form_goal_achieved_message',
+					'type'        => 'textarea',
+					'row_classes' => 'give-subfield',
+					'attributes'  => array(
+						'placeholder' => __( 'Thank you to all our donors, we have met our fundraising goal.', 'give' ),
+					),
+				)
 			)
 		)
 	) );
@@ -281,7 +304,7 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 			'fields'       => apply_filters( 'give_forms_display_options_metabox_fields', array(
 					array(
 						'name'    => __( 'Payment Fields', 'give' ),
-						'desc'    => __( 'How would you like to display payment information for this form? The "Show on Page" option will display the entire form when the page loads. "Reveal Upon Click" places a button below the donation fields and upon clicks slides into view the rest of the fields. "Modal Window Upon Click" is a similar option, rather than sliding into view the fields they will open in a shadow box or "modal" window.', 'give' ),
+						'desc'    => __( 'How would you like to display payment information for this form? The "Show on Page" option will display the entire form when the page loads. "Reveal Upon Click" places a button below the donation fields and upon click slides into view the rest of the fields. "Modal Window Upon Click" is a similar option, rather than sliding into view the fields they will open in a shadow box or "modal" window.', 'give' ),
 						'id'      => $prefix . 'payment_display',
 						'type'    => 'select',
 						'options' => array(
@@ -404,13 +427,11 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 /**
  * Repeatable Levels Custom Field
  */
-add_action( 'cmb2_render_levels_repeater_header', 'give_cmb_render_levels_repeater_header', 10 );
 function give_cmb_render_levels_repeater_header() {
 	?>
 
 	<div class="table-container">
 		<div class="table-row">
-			<div class="table-cell col-id"><?php _e( 'ID', 'give' ); ?></div>
 			<div class="table-cell col-amount"><?php _e( 'Amount', 'give' ); ?></div>
 			<div class="table-cell col-text"><?php _e( 'Text', 'give' ); ?></div>
 			<div class="table-cell col-default"><?php _e( 'Default', 'give' ); ?></div>
@@ -423,14 +444,23 @@ function give_cmb_render_levels_repeater_header() {
 	<?php
 }
 
+add_action( 'cmb2_render_levels_repeater_header', 'give_cmb_render_levels_repeater_header', 10 );
+
 
 /**
+ *
  * CMB2 Repeatable ID Field
  *
  * @description: Custom CMB2 incremental Levels ID Field
+ *
  * @since      1.0
+ *
+ * @param $field_object
+ * @param $escaped_value
+ * @param $object_id
+ * @param $object_type
+ * @param $field_type_object
  */
-add_action( 'cmb2_render_levels_id', 'give_cmb_render_levels_id', 10, 5 );
 function give_cmb_render_levels_id( $field_object, $escaped_value, $object_id, $object_type, $field_type_object ) {
 
 	$escaped_value = ( isset( $escaped_value['level_id'] ) ? $escaped_value['level_id'] : '' );
@@ -449,16 +479,25 @@ function give_cmb_render_levels_id( $field_object, $escaped_value, $object_id, $
 
 }
 
+add_action( 'cmb2_render_levels_id', 'give_cmb_render_levels_id', 10, 5 );
+
 
 /**
- * CMB2 Repeatable Default ID Field
+ * Default Radio Inline
+ *
+ * @param $field_object
+ * @param $escaped_value
+ * @param $object_id
+ * @param $object_type
+ * @param $field_type_object
  */
-add_action( 'cmb2_render_give_default_radio_inline', 'give_cmb_give_default_radio_inline', 10, 5 );
 function give_cmb_give_default_radio_inline( $field_object, $escaped_value, $object_id, $object_type, $field_type_object ) {
 	echo '<input type="radio" class="cmb2-option donation-level-radio" name="' . $field_object->args['_name'] . '" id="' . $field_object->args['id'] . '" value="default" ' . checked( 'default', $escaped_value, false ) . '>';
 	echo '<label for="' . $field_object->args['id'] . '">Default</label>';
 
 }
+
+add_action( 'cmb2_render_give_default_radio_inline', 'give_cmb_give_default_radio_inline', 10, 5 );
 
 
 /**

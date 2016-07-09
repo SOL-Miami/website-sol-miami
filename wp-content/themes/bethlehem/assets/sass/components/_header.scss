@@ -645,13 +645,14 @@ header.site-header{
 				    display: table;
 				    height: 100%;
 
+				    ul {
+                		li {
+	                		display: table-cell;
+	                		vertical-align: middle;
+	                	}
+	                }
                 }
-                ul {
-                	li {
-                		display: table-cell;
-                		vertical-align: middle;
-                	}
-                }
+
 				.donations-link{
 					display: table-cell;
 					vertical-align: middle;

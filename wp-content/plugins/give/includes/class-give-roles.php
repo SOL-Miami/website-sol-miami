@@ -117,14 +117,14 @@ class Give_Roles {
 			$capabilities = $this->get_core_caps();
 			foreach ( $capabilities as $cap_group ) {
 				foreach ( $cap_group as $cap ) {
-					$wp_roles->add_cap( 'give_manager', $cap );
 					$wp_roles->add_cap( 'administrator', $cap );
+					$wp_roles->add_cap( 'give_manager', $cap );
 					$wp_roles->add_cap( 'give_worker', $cap );
 				}
 			}
 
 			$wp_roles->add_cap( 'give_accountant', 'edit_give_forms' );
-			$wp_roles->add_cap( 'give_accountant', 'read_private_forms' );
+			$wp_roles->add_cap( 'give_accountant', 'read_private_give_forms' );
 			$wp_roles->add_cap( 'give_accountant', 'view_give_reports' );
 			$wp_roles->add_cap( 'give_accountant', 'export_give_reports' );
 			$wp_roles->add_cap( 'give_accountant', 'edit_give_payments' );
@@ -142,7 +142,7 @@ class Give_Roles {
 	public function get_core_caps() {
 		$capabilities = array();
 
-		$capability_types = array( 'give_forms', 'give_campaigns', 'give_payments' );
+		$capability_types = array( 'give_form', 'give_payment' );
 
 		foreach ( $capability_types as $capability_type ) {
 			$capabilities[ $capability_type ] = array(
@@ -179,7 +179,7 @@ class Give_Roles {
 	 * Map meta caps to primitive caps
 	 *
 	 * @access public
-	 * @since  2.0
+	 * @since  1.0
 	 * @return array $caps
 	 */
 	public function meta_caps( $caps, $cap, $user_id, $args ) {
@@ -249,9 +249,9 @@ class Give_Roles {
 				}
 			}
 
-			/** Shop Accountant Capabilities */
+			/** Give Accountant Capabilities */
 			$wp_roles->remove_cap( 'give_accountant', 'edit_give_forms' );
-			$wp_roles->remove_cap( 'give_accountant', 'read_private_forms' );
+			$wp_roles->remove_cap( 'give_accountant', 'read_private_give_forms' );
 			$wp_roles->remove_cap( 'give_accountant', 'view_give_reports' );
 			$wp_roles->remove_cap( 'give_accountant', 'export_give_reports' );
 

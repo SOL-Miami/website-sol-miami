@@ -5,8 +5,8 @@ if( ! function_exists( 'bethlehem_show_goal_progress' ) ) {
 	 * Output Goal Progress
 	 */
 	
-	function bethlehem_show_goal_progress() {
-		give_get_template_part( 'single-give-form/goal-progress' );
+	function bethlehem_show_goal_progress( $form_id = '', $args = array() ) {
+		bethlehem_get_template( 'single-give-form/goal-progress.php', $args = array( 'form_id' => $form_id, 'args' => $args ), give_get_theme_template_dir_name(), 'give/' );
 	}
 }
 

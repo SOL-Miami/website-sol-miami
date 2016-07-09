@@ -189,7 +189,11 @@ form[id*='give-form'], #give-recurring-form, form.give-form {
       border-radius: 0;
       outline: none;
       color: $dark;
+      background-color: #FDFDFD;
 
+      &:focus {
+        background-color: #fff;
+      }
       &.required {
         color: $dark;
       }
@@ -339,14 +343,14 @@ Notices, Warnings & Errors
     @include iconstyle();
     position: absolute;
     top: 50%;
-    font-size:16px;
+    font-size: 16px;
     margin-top: -15px;
     left: -17px;
     background-color: $red;
     color: #FFF;
     width: 30px;
     height: 30px;
-    font-size:16px;
+    font-size: 16px;
     border-radius: 100%;
     text-align: center;
     line-height: 30px;
@@ -446,6 +450,7 @@ form[id*='give-form'] {
     border: 1px solid $borders;
     margin: 0 0 15px;
     display: block;
+    clear: both;
   }
 }
 
@@ -588,13 +593,7 @@ form[id*='give-form'] {
     font-style: italic;
     line-height: 20px;
     font-size: 16px;
-    font-weight:normal;
-
-    &.give-updating-price-loader {
-      float: left;
-      margin: 6px 0 0 20px;
-    }
-
+    font-weight: normal;
   }
   .give-loading-animation {
     @include iconstyle();

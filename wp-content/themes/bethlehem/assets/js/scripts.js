@@ -11,7 +11,7 @@
         /*  WOW
         /*===================================================================================*/
         
-        if (typeof func_name === 'WOW') {
+        if( typeof WOW !== "undefined" ) {
             new WOW().init();
         }
 
@@ -19,7 +19,7 @@
         /*  LAZY LOAD IMAGES USING ECHO
         /*===================================================================================*/
         
-        if (typeof func_name === 'echo') {
+        if( typeof echo !== "undefined" ) {
             echo.init({
                 offset: 100,
                 throttle: 250,
@@ -47,8 +47,10 @@
         /*  STICKY NAVIGATION
         /*===================================================================================*/
 
-        if( bethlehem_options.should_stick == '1' ) {
-            $('.header-nav-menu').waypoint('sticky');
+        if( bethlehem_options.should_stick == '1' && $( ".site-header" ).children().hasClass( "header-nav-menu" ) ) {
+            var sticky_header = new Waypoint.Sticky({
+              element: $('.header-nav-menu')[0]
+            });
         }
 
         /*===================================================================================*/

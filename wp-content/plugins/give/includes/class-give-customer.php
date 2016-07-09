@@ -346,6 +346,12 @@ class Give_Customer {
 			return false;
 		}
 
+		$payment = new Give_Payment( $payment_id );
+
+		if ( 'publish' !== $payment->status && 'revoked' !== $payment->status ) {
+			$update_stats = false;
+		}
+
 		$new_payment_ids = '';
 
 		if ( ! empty( $this->payment_ids ) ) {
@@ -396,7 +402,7 @@ class Give_Customer {
 	 *
 	 * @since  1.0
 	 *
-	 * @param  integer $count The number to imcrement by
+	 * @param  integer $count The number to increment by
 	 *
 	 * @return int            The purchase count
 	 */

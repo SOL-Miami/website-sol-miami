@@ -23,6 +23,7 @@ if ( $type == 'large' ) {
 		echo '<h4 class="title">' .$title. '</h4>';
 	} ?>
 
+	<div class="team-members-wrapper">
 	<?php if( is_array( $query ) || is_object( $query ) ) : ?>
 		<?php foreach ( $query as $post ) : ?>
 			<div class="member">
@@ -34,12 +35,10 @@ if ( $type == 'large' ) {
 					} ?>
 					<div class="line"></div>
 					<a class="hb-more" href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>"><?php echo __('Read more', 'bethlehem'); ?></a>
-					<ul class="hb-social">
-					<li class="hb-sky"><a href="skype:<?php echo esc_attr( get_post_meta( $post->ID, '_skype', true ) ); ?>?call"><i class="fa fa-skype"></i></a></li>
-					<li class="hb-mail"><a href="<?php echo esc_url( 'mailto:' .get_post_meta( $post->ID, '_contact_email', true ) ); ?>"><i class="fa fa-envelope"></i></a></li>
-					</ul>
+					<?php our_team_member_archive_social_links( $post->ID ); ?>
 				</div>
 			</div>
 		<?php endforeach; ?>
 	<?php endif; ?>
+	</div>
 </div>

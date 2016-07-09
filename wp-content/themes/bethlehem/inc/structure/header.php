@@ -325,7 +325,9 @@ if ( ! function_exists( 'bethlehem_event_time' ) ) {
 					break;
 				}
 			}
-			$start_datetime = tribe_get_start_date( $post_id, true, 'F d, Y h:i a' );
+			$start_datetime = strtotime( tribe_get_start_date( $post_id, true, 'Y-m-d G:i' ) . $gmt_offset );
+			$start_datetime = date( 'F d, Y h:i a', $start_datetime );
+			// $start_datetime = tribe_get_start_date( $post_id, true, 'F d, Y h:i a' );
 			?>
 			<div class="bethlehem-counter">
 				<h3 class="counter-title"><?php echo apply_filters( 'events_countdown_widget_title', __( 'Next event starts in:', 'bethlehem' ) ); ?></h3>

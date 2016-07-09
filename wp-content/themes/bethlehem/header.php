@@ -15,9 +15,6 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-<script src="https://use.typekit.net/ukh5gzj.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-<link rel="stylesheet" href="wp-content/themes/bethlehem/assets/css/custom.css" type="text/css" media="all">
 </head>
 
 <body <?php body_class(); ?>>

@@ -54,8 +54,9 @@ function give_get_donation_form( $args = array() ) {
 		give_get_current_page_url()
 	) );
 
-	if ( 'publish' !== $form->post_status && ! current_user_can( 'edit_product', $form->ID ) ) {
-		return false; // Product not published or user doesn't have permission to view drafts
+	//Sanity Check: Donation form not published or user doesn't have permission to view drafts
+	if ( 'publish' !== $form->post_status && ! current_user_can( 'edit_give_forms', $form->ID ) ) {
+		return false;
 	}
 
 	$display_option = ( isset( $args['display_style'] ) && ! empty( $args['display_style'] ) )
@@ -66,13 +67,21 @@ function give_get_donation_form( $args = array() ) {
 		? ' float-labels-enabled'
 		: '';
 
-
-	$form_classes_array = apply_filters( 'give_form_classes', array(
+	//Form Wrap Classes
+	$form_wrap_classes_array = apply_filters( 'give_form_wrap_classes', array(
 		'give-form-wrap',
 		'give-display-' . $display_option
 	), $form->ID, $args );
+	$form_wrap_classes       = implode( ' ', $form_wrap_classes_array );
 
-	$form_classes = implode( ' ', $form_classes_array );
+	//Form Classes
+	$form_classes_array = apply_filters( 'give_form_classes', array(
+		'give-form',
+		'give-form-' . $form->ID,
+		$float_labels_option
+	), $form->ID, $args );
+	$form_classes       = implode( ' ', $form_classes_array );
+
 
 	ob_start();
 
@@ -86,51 +95,69 @@ function give_get_donation_form( $args = array() ) {
 	 */
 	do_action( 'give_pre_form_output', $form->ID, $args ); ?>
 
-	<div id="give-form-<?php echo $form->ID; ?>-wrap" class="<?php echo $form_classes; ?>">
+	<div id="give-form-<?php echo $form->ID; ?>-wrap" class="<?php echo $form_wrap_classes; ?>">
 
-		<?php
-		if ( isset( $args['show_title'] ) && $args['show_title'] == true ) {
+		<?php if ( $form->is_close_donation_form() ) {
 
-			echo apply_filters( 'give_form_title', '<h2  class="give-form-title">' . get_the_title( $form_id ) . '</h2>' );
+			//Get Goal thank you message.
+			$display_thankyou_message = get_post_meta( $form->ID, '_give_form_goal_achieved_message', true );
+			$display_thankyou_message = ! empty( $display_thankyou_message ) ? $display_thankyou_message : __( 'Thank you to all our donors, we have met our fundraising goal.', 'give' );
 
-		} ?>
+			//Print thank you message.
+			apply_filters( 'give_goal_closed_output', give_output_error( $display_thankyou_message, true, 'success' ) );
 
-		<?php do_action( 'give_pre_form', $form->ID, $args ); ?>
+		} else {
 
-		<form id="give-form-<?php echo $form_id; ?>" class="give-form give-form-<?php echo absint( $form->ID ); ?><?php echo $float_labels_option; ?>" action="<?php echo $form_action; ?>" method="post">
-			<input type="hidden" name="give-form-id" value="<?php echo $form->ID; ?>"/>
-			<input type="hidden" name="give-form-title" value="<?php echo htmlentities( $form->post_title ); ?>"/>
-			<input type="hidden" name="give-current-url" value="<?php echo htmlspecialchars( give_get_current_page_url() ); ?>"/>
-			<input type="hidden" name="give-form-url" value="<?php echo htmlspecialchars( give_get_current_page_url() ); ?>"/>
-			<input type="hidden" name="give-form-minimum" value="<?php echo give_get_form_minimum_price( $form->ID ); ?>"/>
-			<?php
+			if ( isset( $args['show_title'] ) && $args['show_title'] == true ) {
 
-			//Price ID hidden field for variable (mult-level) donation forms
-			if ( give_has_variable_prices( $form_id ) ) {
-				//get default selected price ID
-				$prices   = apply_filters( 'give_form_variable_prices', give_get_variable_prices( $form_id ), $form_id );
-				$price_id = 0;
-				//loop through prices
-				foreach ( $prices as $price ) {
-					if ( isset( $price['_give_default'] ) && $price['_give_default'] === 'default' ) {
-						$price_id = $price['_give_id']['level_id'];
-					};
-				}
+				echo apply_filters( 'give_form_title', '<h2 class="give-form-title">' . get_the_title( $form_id ) . '</h2>' );
+
+			}
+
+			do_action( 'give_pre_form', $form->ID, $args ); ?>
+
+			<form id="give-form-<?php echo $form_id; ?>" class="<?php echo $form_classes; ?>" action="<?php echo $form_action; ?>" method="post">
+				<input type="hidden" name="give-form-id" value="<?php echo $form->ID; ?>"/>
+				<input type="hidden" name="give-form-title" value="<?php echo htmlentities( $form->post_title ); ?>"/>
+				<input type="hidden" name="give-current-url" value="<?php echo htmlspecialchars( give_get_current_page_url() ); ?>"/>
+				<input type="hidden" name="give-form-url" value="<?php echo htmlspecialchars( give_get_current_page_url() ); ?>"/>
+				<input type="hidden" name="give-form-minimum" value="<?php echo give_format_amount( give_get_form_minimum_price( $form->ID ) ); ?>"/>
+
+				<!-- The following field is for robots only, invisible to humans: -->
+				<span class="give-hidden" style="display: none !important;">
+					<label for="give-form-honeypot-<?php echo $form_id; ?>"></label>
+					<input id="give-form-honeypot-<?php echo $form_id; ?>" type="text" name="give-honeypot" class="give-honeypot give-hidden"/>
+				</span>
+
+				<?php
+
+				//Price ID hidden field for variable (mult-level) donation forms
+				if ( give_has_variable_prices( $form_id ) ) {
+					//get default selected price ID
+					$prices   = apply_filters( 'give_form_variable_prices', give_get_variable_prices( $form_id ), $form_id );
+					$price_id = 0;
+					//loop through prices
+					foreach ( $prices as $price ) {
+						if ( isset( $price['_give_default'] ) && $price['_give_default'] === 'default' ) {
+							$price_id = $price['_give_id']['level_id'];
+						};
+					}
+					?>
+					<input type="hidden" name="give-price-id" value="<?php echo $price_id; ?>"/>
+				<?php }
+
+				do_action( 'give_checkout_form_top', $form->ID, $args );
+
+				do_action( 'give_payment_mode_select', $form->ID, $args );
+
+				do_action( 'give_checkout_form_bottom', $form->ID, $args );
+
 				?>
-				<input type="hidden" name="give-price-id" value="<?php echo $price_id; ?>"/>
-			<?php }
+			</form>
 
-			do_action( 'give_checkout_form_top', $form->ID, $args );
+			<?php do_action( 'give_post_form', $form->ID, $args ); ?>
 
-			do_action( 'give_payment_mode_select', $form->ID, $args );
-
-			do_action( 'give_checkout_form_bottom', $form->ID, $args );
-
-			?>
-
-		</form>
-
-		<?php do_action( 'give_post_form', $form->ID, $args ); ?>
+		<?php } ?>
 
 		<!--end #give-form-<?php echo absint( $form->ID ); ?>--></div>
 	<?php
@@ -260,7 +287,7 @@ function give_output_donation_amount_top( $form_id = 0, $args = array() ) {
 	$default_amount      = give_format_amount( give_get_default_form_amount( $form_id ) );
 	$custom_amount_text  = get_post_meta( $form_id, '_give_custom_amount_text', true );
 
-	do_action( 'give_before_donation_levels', $form_id );
+	do_action( 'give_before_donation_levels', $form_id, $args );
 
 	//Set Price, No Custom Amount Allowed means hidden price field
 	if ( $allow_custom_amount == 'no' ) {
@@ -269,7 +296,7 @@ function give_output_donation_amount_top( $form_id = 0, $args = array() ) {
 		<label class="give-hidden" for="give-amount-hidden"><?php echo __( 'Donation Amount:', 'give' ); ?></label>
 		<input id="give-amount" class="give-amount-hidden" type="hidden" name="give-amount"
 		       value="<?php echo $default_amount; ?>" required>
-		<p class="set-price give-donation-amount form-row-wide">
+		<div class="set-price give-donation-amount form-row-wide">
 			<?php if ( $currency_position == 'before' ) {
 				echo $currency_output;
 			} ?>
@@ -277,10 +304,7 @@ function give_output_donation_amount_top( $form_id = 0, $args = array() ) {
 			<?php if ( $currency_position == 'after' ) {
 				echo $currency_output;
 			} ?>
-			<span class="give-loading-text give-updating-price-loader">
-				<span class="give-loading-animation"></span> <?php _e( 'Updating Amount...', 'give' ); ?>
-			</span>
-		</p>
+		</div>
 		<?php
 	} else {
 		//Custom Amount Allowed
@@ -295,9 +319,6 @@ function give_output_donation_amount_top( $form_id = 0, $args = array() ) {
 				<?php if ( $currency_position == 'after' ) {
 					echo $currency_output;
 				} ?>
-				<span class="give-loading-text give-updating-price-loader">
-					<span class="give-loading-animation"></span> <?php _e( 'Updating Amount...', 'give' ); ?>
-				</span>
 			</div>
 		</div>
 	<?php }
@@ -410,7 +431,7 @@ function give_output_levels( $form_id ) {
 			//first loop through prices
 			foreach ( $prices as $price ) {
 				$level_text    = apply_filters( 'give_form_level_text', ! empty( $price['_give_text'] ) ? $price['_give_text'] : give_currency_filter( give_format_amount( $price['_give_amount'] ) ), $form_id, $price );
-				$level_classes = apply_filters( 'give_form_level_classes', 'give-donation-level-' . $form_id, $form_id, $price );
+				$level_classes = apply_filters( 'give_form_level_classes', 'give-donation-level-' . $form_id . ( ( isset( $price['_give_default'] ) && $price['_give_default'] === 'default' ) ? ' give-default-level' : '' ), $form_id, $price );
 
 				$output .= '<option data-price-id="' . $price['_give_id']['level_id'] . '" class="' . $level_classes . '" ' . ( ( isset( $price['_give_default'] ) && $price['_give_default'] === 'default' ) ? 'selected="selected"' : '' ) . ' value="' . give_format_amount( $price['_give_amount'] ) . '">';
 				$output .= $level_text;
@@ -1040,9 +1061,10 @@ function give_terms_agreement( $form_id ) {
 				<a href="#" class="give_terms_links" style="display:none;"><?php _e( 'Hide Terms', 'give' ); ?></a>
 			</div>
 
+			<input name="give_agree_to_terms" class="required" type="checkbox" id="give_agree_to_terms" value="1"/>
 			<label
 				for="give_agree_to_terms"><?php echo ! empty( $label ) ? stripslashes( $label ) : __( 'Agree to Terms?', 'give' ); ?></label>
-			<input name="give_agree_to_terms" class="required" type="checkbox" id="give_agree_to_terms" value="1"/>
+
 		</fieldset>
 		<?php
 	}
@@ -1124,11 +1146,7 @@ function give_checkout_button_purchase( $form_id ) {
 
 	$display_label_field = get_post_meta( $form_id, '_give_checkout_label', true );
 	$display_label       = ( ! empty( $display_label_field ) ? $display_label_field : __( 'Donate Now', 'give' ) );
-
-	ob_start();
-
-	?>
-
+	ob_start(); ?>
 	<div class="give-submit-button-wrap give-clearfix">
 		<input type="submit" class="give-submit give-btn" id="give-purchase-button" name="give-purchase" value="<?php echo $display_label; ?>"/>
 		<span class="give-loading-animation"></span>
@@ -1169,31 +1187,6 @@ function give_agree_to_terms_js( $form_id ) {
 
 add_action( 'give_checkout_form_top', 'give_agree_to_terms_js', 10, 2 );
 
-
-/**
- * Adds Actions to Render Form Content
- *
- * @since 1.0
- *
- * @param int $form_id
- * @param array $args
- *
- * @return void
- */
-function give_form_content( $form_id, $args ) {
-
-	$show_content = ( isset( $args['show_content'] ) && ! empty( $args['show_content'] ) )
-		? $args['show_content']
-		: get_post_meta( $form_id, '_give_content_option', true );
-
-	if ( $show_content !== 'none' ) {
-		//add action according to value
-		add_action( $show_content, 'give_form_display_content' );
-	}
-}
-
-add_action( 'give_pre_form_output', 'give_form_content', 10, 2 );
-
 /**
  * Show Give Goals
  *
@@ -1233,7 +1226,7 @@ function give_show_goal_progress( $form_id, $args ) {
 
 	$progress = round( ( $income / $goal ) * 100, 2 );
 
-	if ( $income > $goal ) {
+	if ( $income >= $goal ) {
 		$progress = 100;
 	}
 
@@ -1280,6 +1273,30 @@ function give_show_goal_progress( $form_id, $args ) {
 add_action( 'give_pre_form', 'give_show_goal_progress', 10, 2 );
 
 /**
+ * Adds Actions to Render Form Content
+ *
+ * @since 1.0
+ *
+ * @param int $form_id
+ * @param array $args
+ *
+ * @return void
+ */
+function give_form_content( $form_id, $args ) {
+
+	$show_content = ( isset( $args['show_content'] ) && ! empty( $args['show_content'] ) )
+		? $args['show_content']
+		: get_post_meta( $form_id, '_give_content_option', true );
+
+	if ( $show_content !== 'none' ) {
+		//add action according to value
+		add_action( $show_content, 'give_form_display_content', 10, 2 );
+	}
+}
+
+add_action( 'give_pre_form_output', 'give_form_content', 10, 2 );
+
+/**
  * Renders Post Form Content
  *
  * @description: Displays content for Give forms; fired by action from give_form_content
@@ -1289,9 +1306,12 @@ add_action( 'give_pre_form', 'give_show_goal_progress', 10, 2 );
  * @return void
  * @since      1.0
  */
-function give_form_display_content( $form_id ) {
+function give_form_display_content( $form_id, $args ) {
 
-	$content = wpautop( get_post_meta( $form_id, '_give_form_content', true ) );
+	$content      = wpautop( get_post_meta( $form_id, '_give_form_content', true ) );
+	$show_content = ( isset( $args['show_content'] ) && ! empty( $args['show_content'] ) )
+		? $args['show_content']
+		: get_post_meta( $form_id, '_give_content_option', true );
 
 	if ( give_get_option( 'disable_the_content_filter' ) !== 'on' ) {
 		$content = apply_filters( 'the_content', $content );
@@ -1300,6 +1320,10 @@ function give_form_display_content( $form_id ) {
 	$output = '<div id="give-form-content-' . $form_id . '" class="give-form-content-wrap" >' . $content . '</div>';
 
 	echo apply_filters( 'give_form_content_output', $output );
+
+	//remove action to prevent content output on addition forms on page
+	//@see: https://github.com/WordImpress/Give/issues/634
+	remove_action( $show_content, 'give_form_display_content' );
 }
 
 
@@ -1374,7 +1398,7 @@ add_action( 'give_pre_form', 'give_test_mode_frontend_warning', 10 );
 /**
  * Members-only Form
  *
- * @description If "Disable Guest Donations" a and "Display Register / Login" is set to none
+ * @description If "Disable Guest Donations" and "Display Register / Login" is set to none
  * @since       1.4.1
  */
 

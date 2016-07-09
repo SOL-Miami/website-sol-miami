@@ -9,16 +9,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product, $woocommerce_loop;
 
-// Store loop count we're currently on
-if ( empty( $woocommerce_loop['loop'] ) )
-	$woocommerce_loop['loop'] = 0;
-
 // Ensure visibility
 if ( ! $product || ! $product->is_visible() )
 	return;
 
-// Increase loop count
-$woocommerce_loop['loop']++;
+if( ! function_exists( 'wc_get_loop_class' ) ) {
+	// Store loop count we're currently on
+	if ( empty( $woocommerce_loop['loop'] ) )
+		$woocommerce_loop['loop'] = 0;
+
+	// Increase loop count
+	$woocommerce_loop['loop']++;
+
+}
 
 // Extra post classes
 $classes[] = 'list-view';

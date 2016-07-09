@@ -13,7 +13,7 @@
 header.site-header .site-branding a h1 {
   color: #10c1af; }
 
-.hb-social li.hb-mail a:hover i {
+.hb-social li.hb-mail a:hover i, .hb-social li.hb-phone a:hover i {
   background-color: #10c1af !important; }
 
 .hb-more-button:hover {

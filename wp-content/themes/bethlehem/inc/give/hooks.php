@@ -8,6 +8,7 @@
 /**
  * Single Give Form
  */
+add_action( 'give_before_single_form',					'bethlehem_donation_single_toggle_hook',	10 );
 add_action( 'give_single_form_summary', 				'bethlehem_social_share_icons', 			7 );
 
 /**
@@ -22,12 +23,11 @@ add_filter( 'template_include', 						'bethlehem_give_templates');
 add_filter( 'give_default_form_name',					'bethlehem_change_forms_to_causes' );
 add_filter( 'give_forms_donation_form_metabox_fields',	'bethlehem_remove_goal_progress_color_meta' );
 add_filter( 'give_settings_display',					'bethlehem_enable_give_form_categories' );
-add_filter( 'give_goal_output',							'bethlehem_show_goal_progress' );
 
 remove_filter( 'the_title', 							'give_microdata_title', 					10 );
 remove_action( 'give_pre_form', 						'give_test_mode_frontend_warning', 			10 );
 remove_action( 'give_pre_form',							'give_show_goal_progress',					10, 2 );
-add_action( 'give_after_donation_levels',				'give_show_goal_progress',					10, 2 );
+add_action( 'give_pre_form',							'bethlehem_show_goal_progress',				10, 2 );
 
 /**
  * Give Form Input Changes

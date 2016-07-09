@@ -15,7 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Email the payment confirmation to the buyer in a customizable Donation Receipt
+ * Email Donation Receipt
+ *
+ * @description: Email the donation confirmation to the donor via the customizable "Donation Receipt" settings
  *
  * @since 1.0
  *
@@ -64,7 +66,7 @@ function give_email_donation_receipt( $payment_id, $admin_notice = true ) {
  * Email the donation confirmation to the admin accounts for testing.
  *
  * @since 1.0
- * @global $give_options Array of all the Give Options
+ *
  * @return void
  */
 function give_email_test_donation_receipt() {
@@ -81,7 +83,7 @@ function give_email_test_donation_receipt() {
 
 	$attachments = apply_filters( 'give_receipt_attachments', array(), 0, array() );
 
-	$message = give_email_preview_template_tags( give_get_email_body_content( 0, array() ), 0 );
+	$message = give_email_preview_template_tags( give_get_email_body_content( 0, array() ) );
 
 	$emails = Give()->emails;
 	$emails->__set( 'from_name', $from_name );
@@ -167,7 +169,7 @@ function give_get_admin_notice_emails() {
 }
 
 /**
- * Checks whether admin sale notices are disabled
+ * Checks whether admin donation notices are disabled
  *
  * @since 1.0
  *
@@ -176,8 +178,8 @@ function give_get_admin_notice_emails() {
  * @return mixed
  */
 function give_admin_notices_disabled( $payment_id = 0 ) {
-	global $give_options;
-	$retval = isset( $give_options['disable_admin_notices'] );
+
+	$retval = give_get_option( 'disable_admin_notices' );
 
 	return apply_filters( 'give_admin_notices_disabled', $retval, $payment_id );
 }
@@ -191,7 +193,6 @@ function give_admin_notices_disabled( $payment_id = 0 ) {
  * @return string $message
  */
 function give_get_default_donation_notification_email() {
-	global $give_options;
 
 	$default_email_body = __( 'Hi there,', 'give' ) . "\n\n" . __( 'This email is to inform you that a new donation has been made on your website: ', 'give' ) . '<a href="' . get_bloginfo( 'url' ) . '" target="_blank">' . get_bloginfo( 'url' ) . '</a>' . ".\n\n";
 	$default_email_body .= '<strong>' . __( 'Donor: ', 'give' ) . '</strong> ' . ' {name}' . "\n";
@@ -200,7 +201,8 @@ function give_get_default_donation_notification_email() {
 	$default_email_body .= '<strong>' . __( 'Payment Method: ', 'give' ) . '</strong> ' . ' {payment_method}' . "\n\n";
 	$default_email_body .= __( 'Thank you,', 'give' ) . "\n\n" . '{sitename}';
 
-	$message = ( isset( $give_options['donation_notification'] ) && ! empty( $give_options['donation_notification'] ) ) ? $give_options['donation_notification'] : $default_email_body;
+	$custom_message = give_get_option( 'donation_notification' );
+	$message        = ! empty( $custom_message ) ? $custom_message : $default_email_body;
 
 	return apply_filters( 'give_default_donation_notification_email', $message );
 }
@@ -215,7 +217,6 @@ function give_get_default_donation_notification_email() {
  * @return string $message
  */
 function give_get_default_donation_receipt_email() {
-	global $give_options;
 
 	$default_email_body = __( 'Dear', 'give' ) . " {name},\n\n";
 	$default_email_body .= __( 'Thank you for your donation. Your generosity is appreciated! Here are the details of your donation:', 'give' ) . "\n\n";
@@ -232,7 +233,9 @@ function give_get_default_donation_receipt_email() {
 	$default_email_body .= __( 'Sincerely,', 'give' );
 	$default_email_body .= "\n" . '{sitename}' . "\n";
 
-	$message = ( isset( $give_options['donation_receipt'] ) && ! empty( $give_options['donation_receipt'] ) ) ? $give_options['donation_receipt'] : $default_email_body;
+	$custom_message = give_get_option( 'donation_receipt' );
+
+	$message = ! empty( $custom_message ) ? $custom_message : $default_email_body;
 
 	return apply_filters( 'give_default_donation_receipt_email', $message );
 }

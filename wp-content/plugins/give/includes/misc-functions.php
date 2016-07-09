@@ -63,6 +63,7 @@ function give_get_currency_position() {
  * @since 1.0
  * @return array $currencies A list of the available currencies
  */
+
 function give_get_currencies() {
 	$currencies = array(
 		'USD'  => __( 'US Dollars ($)', 'give' ),
@@ -79,11 +80,14 @@ function give_get_currencies() {
 		'JPY'  => __( 'Japanese Yen (¥)', 'give' ),
 		'MYR'  => __( 'Malaysian Ringgits (RM)', 'give' ),
 		'MXN'  => __( 'Mexican Peso ($)', 'give' ),
+		'MAD'  => __( 'Moroccan Dirham (&#x2e;&#x62f;&#x2e;&#x645;)', 'give' ),
 		'NZD'  => __( 'New Zealand Dollar ($)', 'give' ),
 		'NOK'  => __( 'Norwegian Krone (Kr.)', 'give' ),
 		'PHP'  => __( 'Philippine Pesos (₱)', 'give' ),
 		'PLN'  => __( 'Polish Zloty (zł)', 'give' ),
 		'SGD'  => __( 'Singapore Dollar ($)', 'give' ),
+		'KRW'  => __( 'South Korean Won (₩)', 'give' ),
+		'ZAR'  => __( 'South African Rand (R)', 'give' ),
 		'SEK'  => __( 'Swedish Krona (kr)', 'give' ),
 		'CHF'  => __( 'Swiss Franc (CHF)', 'give' ),
 		'TWD'  => __( 'Taiwan New Dollars (NT$)', 'give' ),
@@ -178,10 +182,20 @@ function give_currency_symbol( $currency = '' ) {
 		case 'CZK' :
 			$symbol = 'Kč';
 			break;
+		case 'KRW' :
+			$symbol = '₩';
+			break;
+		case 'ZAR' :
+			$symbol = 'R';
+			break;
+		case 'MAD' :
+			$symbol = '&#x2e;&#x62f;&#x2e;&#x645;';
+			break;
 		default :
 			$symbol = $currency;
 			break;
 	endswitch;
+
 
 	return apply_filters( 'give_currency_symbol', $symbol, $currency );
 }
@@ -198,7 +212,7 @@ function give_get_current_page_url() {
 	if ( is_front_page() ) {
 		$current_url = home_url( '/' );
 	} else {
-		$current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$current_url = set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . untrailingslashit( $_SERVER['REQUEST_URI'] ) );
 	}
 
 	return apply_filters( 'give_get_current_page_url', esc_url( $current_url ) );
@@ -312,6 +326,7 @@ function give_get_ip() {
  */
 function give_set_purchase_session( $purchase_data = array() ) {
 	Give()->session->set( 'give_purchase', $purchase_data );
+	Give()->session->set( 'give_email', $purchase_data['user_email'] );
 }
 
 /**
@@ -479,7 +494,7 @@ function give_is_host( $host = false ) {
 /**
  * Marks a function as deprecated and informs when it has been used.
  *
- * There is a hook edd_deprecated_function_run that will be called that can be used
+ * There is a hook give_deprecated_function_run that will be called that can be used
  * to get the backtrace up to what file and function called the deprecated
  * function.
  *
@@ -487,9 +502,9 @@ function give_is_host( $host = false ) {
  *
  * This function is to be used in every function that is deprecated.
  *
- * @uses do_action() Calls 'edd_deprecated_function_run' and passes the function name, what to use instead,
+ * @uses do_action() Calls 'give_deprecated_function_run' and passes the function name, what to use instead,
  *   and the version the function was deprecated in.
- * @uses apply_filters() Calls 'edd_deprecated_function_trigger_error' and expects boolean value of true to do
+ * @uses apply_filters() Calls 'give_deprecated_function_trigger_error' and expects boolean value of true to do
  *   trigger or false to not trigger error.
  *
  * @param string $function The function that was called
@@ -882,4 +897,24 @@ function give_can_view_receipt( $payment_key = '' ) {
 
 	return (bool) apply_filters( 'give_can_view_receipt', $return, $payment_key );
 
+}
+
+/**
+ * Fallback for cal_days_in_month
+ *
+ * @description: Fallback in case the calendar extension is not loaded in PHP; Only supports Gregorian calendar
+ */
+if ( ! function_exists( 'cal_days_in_month' ) ) {
+	/**
+	 * cal_days_in_month
+	 *
+	 * @param $calendar
+	 * @param $month
+	 * @param $year
+	 *
+	 * @return bool|string
+	 */
+	function cal_days_in_month( $calendar, $month, $year ) {
+		return date( 't', mktime( 0, 0, 0, $month, 1, $year ) );
+	}
 }

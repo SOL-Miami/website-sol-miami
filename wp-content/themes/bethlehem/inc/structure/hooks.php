@@ -15,6 +15,7 @@
  * @see  bethlehem_get_sidebar()
  */
 add_action( 'after_setup_theme',			'bethlehem_setup' );
+add_action( 'after_setup_theme',			'bethlehem_register_image_sizes' );
 add_action( 'widgets_init',					'bethlehem_widgets_init' );
 add_action( 'widgets_init', 				'bethlehem_register_widgets');
 add_action( 'wp_enqueue_scripts',			'bethlehem_scripts',				10 );

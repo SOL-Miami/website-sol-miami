@@ -5,6 +5,15 @@
  * @package bethlehem
  */
 
+if ( ! function_exists( 'bethlehem_register_image_sizes' ) ) {
+	/**
+	 * Registers all image sizes used in bethlehem
+	 */
+	function bethlehem_register_image_sizes() {
+		add_image_size( 'give_form_thumbnail', 241, 152, true );
+	}
+}
+
 if( ! function_exists( 'bethlehem_get_image_sizes' ) ) {
 	/**
 	 * List available image sizes with width and height following

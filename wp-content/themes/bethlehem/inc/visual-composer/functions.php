@@ -4,6 +4,9 @@
  * 
  * @return void
  */
+
+vc_disable_frontend();
+
 if( ! function_exists( 'bethlehem_setup_visual_composer' ) ) {
 	function bethlehem_setup_visual_composer() {
 		// Setup Visual Composer as part of theme
