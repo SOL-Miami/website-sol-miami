@@ -185,21 +185,43 @@ class Stories {
 // Load Template
 add_filter( 'template_include', 'stories_template_loader' );
 
-function stories_template_loader( $template ) {
-	$file = '';
-	if ( is_single() && get_post_type() == 'stories' ) {
-		$file = STORIES_DIR . '/single-stories.php';
+if ( ! function_exists( 'stories_template_loader' ) ) {
+	function stories_template_loader( $template ) {
+		$file = '';
+
+		$taxonomies = get_object_taxonomies( 'stories' );
+
+		if ( is_single() && get_post_type() == 'stories' ) {
+			$file = stories_locate_template( 'single-stories.php' );
+		} elseif ( ! empty( $taxonomies ) && is_tax( $taxonomies ) ) {
+			$file = stories_locate_template( 'archive-stories.php' );
+		} elseif ( is_post_type_archive( 'stories' ) ) {
+			$file = stories_locate_template( 'archive-stories.php' );
+		}
+
+		if ( $file ) {
+			$template = $file;
+		}
+
+		return $template;
 	}
-	elseif ( is_tax( get_object_taxonomies( 'stories' ) ) ) {
-		$file = STORIES_DIR . '/archive-stories.php';
+}
+
+if ( ! function_exists( 'stories_locate_template' ) ) {
+	function stories_locate_template( $template_name ) {
+		$template = '';
+		if( function_exists( 'bethlehem_locate_template' ) ) {
+			$template_path = 'stories/';
+			$default_path = trailingslashit( STORIES_DIR );
+			$template = bethlehem_locate_template( $template_name, $template_path, $default_path );
+		}
+
+		if ( ! $template ) {
+			$template = trailingslashit( STORIES_DIR ) . $template_name;
+		}
+
+		return $template;
 	}
-	elseif ( is_post_type_archive( 'stories' ) ) {
-		$file = STORIES_DIR . '/archive-stories.php';
-	}
-	if ( $file ) {
-		$template = $file;
-	}
-	return $template;
 }
 
 // HELPER: Get content ID by slug

@@ -179,23 +179,43 @@ class Ministries {
 // Load Template
 add_filter( 'template_include', 'ministries_template_loader' );
 
-function ministries_template_loader( $template ) {
-	$file = '';
+if ( ! function_exists( 'ministries_template_loader' ) ) {
+	function ministries_template_loader( $template ) {
+		$file = '';
 
-	if ( is_single() && get_post_type() == 'ministries' ) {
-		$file = MINISTRIES_DIR . '/single-ministries.php';
-	}
-	elseif ( is_tax( get_object_taxonomies( 'ministries' ) ) ) {
-		$file = MINISTRIES_DIR . '/archive-ministries.php';
-	}
-	elseif ( is_post_type_archive( 'ministries' ) ) {
-		$file = MINISTRIES_DIR . '/archive-ministries.php';
-	}
-	if ( $file ) {
-		$template = $file;
-	}
+		$taxonomies = get_object_taxonomies( 'ministries' );
 
-	return $template;
+		if ( is_single() && get_post_type() == 'ministries' ) {
+			$file = ministries_locate_template( 'single-ministries.php' );
+		} elseif ( ! empty( $taxonomies ) && is_tax( $taxonomies ) ) {
+			$file = ministries_locate_template( 'archive-ministries.php' );
+		} elseif ( is_post_type_archive( 'ministries' ) ) {
+			$file = ministries_locate_template( 'archive-ministries.php' );
+		}
+
+		if ( $file ) {
+			$template = $file;
+		}
+
+		return $template;
+	}
+}
+
+if ( ! function_exists( 'ministries_locate_template' ) ) {
+	function ministries_locate_template( $template_name ) {
+		$template = '';
+		if( function_exists( 'bethlehem_locate_template' ) ) {
+			$template_path = 'ministries/';
+			$default_path = trailingslashit( MINISTRIES_DIR );
+			$template = bethlehem_locate_template( $template_name, $template_path, $default_path );
+		}
+
+		if ( ! $template ) {
+			$template = trailingslashit( MINISTRIES_DIR ) . $template_name;
+		}
+
+		return $template;
+	}
 }
 
 // HELPER: Get content ID by slug

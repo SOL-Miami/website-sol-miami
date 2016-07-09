@@ -3,7 +3,7 @@
 Plugin Name: Bethlehem Extensions
 Plugin URI: http://demo.transvelo.in/wp/bethlehem/
 Description: Extensions for Bethlehem Wordpress Theme. Supplied as a separate plugin so that the customer does not find empty shortcodes on changing the theme.
-Version: 1.1.4
+Version: 1.2.2
 Author: Ibrahim Ibn Dawood
 Author URI: http://transvelo.com/
 */

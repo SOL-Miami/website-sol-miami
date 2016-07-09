@@ -196,23 +196,43 @@ add_filter( 'template_include', 'sermons_template_loader' );
 if ( ! function_exists( 'sermons_template_loader' ) ) {
 	function sermons_template_loader( $template ) {
 		$file = '';
+
+		$taxonomies = get_object_taxonomies( 'sermons' );
+
 		if ( is_single() && get_post_type() == 'sermons' ) {
-			$file = SERMONS_DIR . '/single-sermons.php';
-		}
-		elseif ( is_tax( get_object_taxonomies( 'sermons' ) ) ) {
+			$file = sermons_locate_template( 'single-sermons.php' );
+		} elseif ( ! empty( $taxonomies ) && is_tax( $taxonomies ) ) {
 			if ( is_tax( 'sermons-category') ) {
-				$file = SERMONS_DIR . '/taxonomy-sermons-category.php';
+				$file = sermons_locate_template( 'taxonomy-sermons-category.php' );
 			}
 			elseif ( is_tax( 'sermons-occasion') ) {
-				$file = SERMONS_DIR . '/taxonomy-sermons-occasion.php';
+				$file = sermons_locate_template( 'taxonomy-sermons-occasion.php' );
 			}
+		} elseif ( is_post_type_archive( 'sermons' ) ) {
+			$file = sermons_locate_template( 'archive-sermons.php' );
 		}
-		elseif ( is_post_type_archive( 'sermons' ) ) {
-			$file = SERMONS_DIR . '/archive-sermons.php';
-		}
+
 		if ( $file ) {
 			$template = $file;
 		}
+
+		return $template;
+	}
+}
+
+if ( ! function_exists( 'sermons_locate_template' ) ) {
+	function sermons_locate_template( $template_name ) {
+		$template = '';
+		if( function_exists( 'bethlehem_locate_template' ) ) {
+			$template_path = 'sermons/';
+			$default_path = trailingslashit( SERMONS_DIR );
+			$template = bethlehem_locate_template( $template_name, $template_path, $default_path );
+		}
+
+		if ( ! $template ) {
+			$template = trailingslashit( SERMONS_DIR ) . $template_name;
+		}
+
 		return $template;
 	}
 }

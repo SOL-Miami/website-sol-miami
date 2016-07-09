@@ -30,6 +30,10 @@ function shortcode_vc_team_members( $atts, $content = null ){
         $category = 0;
     }
 
+    if( $type == 'large' ) {
+        $title = '';
+    }
+
     if( ! empty( $columns ) ) {
         $el_class = $columns . ' ' . $el_class;
     }

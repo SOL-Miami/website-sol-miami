@@ -74,13 +74,15 @@ if( ! function_exists( 'ministries_post_excerpt' ) ) {
 
 if( ! function_exists( 'ministries_grid_content' ) ) {
 	function ministries_grid_content() {
-		load_template( MINISTRIES_DIR . '/content-grid.php');
+		$template = ministries_locate_template( 'content-grid.php' );
+		load_template( $template );
 	}
 }
 
 if( ! function_exists( 'ministries_list_content' ) ) {
 	function ministries_list_content() {
-		load_template( MINISTRIES_DIR . '/content-list.php');
+		$template = ministries_locate_template( 'content-list.php' );
+		load_template( $template );
 	}
 }
 
