@@ -435,3 +435,18 @@ body.bethlehem-style-3 input[type="submit"]:hover, body.bethlehem-style-3 input[
 
 body.bethlehem-style-3 .vc-events-list-location .event-locations .location-content .event-btns a:hover {
   background-color: #3498db; }
+
+.donate-btn {
+    background-color: transparent;
+    border: white solid 1px;
+    border-radius: 0px !important;
+}
+.donate-btn:hover, .donate-btn:focus {
+    background-color: white;
+    color: black;
+    transition: .2s all;
+}
+body.bethlehem-style-3 .content-area .bethlehem-tiled-gallery .gallery-content .wp-tiles-tile .wp-tiles-byline-content {
+    font-family: "proxima-nova",sans-serif !important;
+    font-weight: 100;
+}
