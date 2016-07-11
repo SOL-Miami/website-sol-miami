@@ -191,7 +191,7 @@ if( ! function_exists( 'bethlehem_page_title' ) ) {
 			$page_title = '';
 
 			$give_taxonomies = get_object_taxonomies( 'give_forms' );
-			
+
 			if ( is_front_page() && is_home() ) {
 			  // Default homepage
 			} elseif ( is_front_page() ) {
@@ -346,7 +346,7 @@ if ( ! function_exists( 'bethlehem_event_time' ) ) {
 
 							var currenttime = new Date();
 							var eventtime = $('.bethlehem-counter .counter-start-time').text();
-							
+
 							eventtime = Date.parse(eventtime);
 							eventtime = new Date(eventtime);
 
