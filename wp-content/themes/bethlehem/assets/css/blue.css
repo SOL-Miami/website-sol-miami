@@ -472,3 +472,7 @@ body.bethlehem-style-3 .content-area .bethlehem-tiled-gallery .gallery-content .
   width: 130px;
   padding-top: 13px;
 }
+
+.sermons-loop .post-author {
+  display: none;
+}
