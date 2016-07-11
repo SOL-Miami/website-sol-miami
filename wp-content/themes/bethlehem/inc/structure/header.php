@@ -237,7 +237,7 @@ if ( ! function_exists( 'bethlehem_navigation_links' ) ) {
 		<div class="top-nav-links">
 			<?php if( is_array( $btn_args ) && ! empty( $btn_args ) ) : ?>
 				<ul>
-					<li class="live-stream"><img src="/wp-content/uploads/2016/07/livestream-logo-inverted.png" alt=""/></li>
+					<li class="live-stream"><a href="http://livestream.com/solmiami" target="_blank"><img src="/wp-content/uploads/2016/07/livestream-logo-inverted.png" alt=""/></a></li>
 					<?php foreach ( $btn_args as $btn ) : ?>
 						<li>
 							<?php
