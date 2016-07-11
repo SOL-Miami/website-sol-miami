@@ -207,7 +207,7 @@ if( ! function_exists( 'bethlehem_page_title' ) ) {
 	  		} elseif( is_post_type_archive( 'stories' ) || is_singular( 'stories' ) || is_tax( get_object_taxonomies( 'stories' ) ) ) {
 	  			$page_title = __( 'Stories', 'bethlehem' );
 	  		} elseif( is_post_type_archive( 'team-member' ) || is_singular( 'team-member' ) || is_tax( get_object_taxonomies( 'team-member' ) ) ) {
-	  			$page_title = __( 'People', 'bethlehem' );
+	  			$page_title = __( 'Pastor', 'bethlehem' );
 	  		} elseif( is_events_calendar_activated() && ( tribe_is_event() || tribe_is_event_category() || tribe_is_view() || is_singular( 'tribe_events' ) ) ) {
 	  			$page_title = __( 'Events', 'bethlehem' );
 	  		} elseif ( is_page() ) {
@@ -325,9 +325,7 @@ if ( ! function_exists( 'bethlehem_event_time' ) ) {
 					break;
 				}
 			}
-			$start_datetime = strtotime( tribe_get_start_date( $post_id, true, 'Y-m-d G:i' ) . $gmt_offset );
-			$start_datetime = date( 'F d, Y h:i a', $start_datetime );
-			// $start_datetime = tribe_get_start_date( $post_id, true, 'F d, Y h:i a' );
+			$start_datetime = tribe_get_start_date( $post_id, true, 'F d, Y h:i a' );
 			?>
 			<div class="bethlehem-counter">
 				<h3 class="counter-title"><?php echo apply_filters( 'events_countdown_widget_title', __( 'Next event starts in:', 'bethlehem' ) ); ?></h3>

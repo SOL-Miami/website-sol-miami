@@ -463,3 +463,7 @@ body.bethlehem-style-3 .content-area .bethlehem-tiled-gallery .gallery-content .
 .hb-social {
   display: inline-flex !important;
 }
+
+#post-1740 .team-member-carousel-wrap .owl-carousel .owl-stage-outer .owl-stage .team-member-carousel-item .member a img {
+  height: 100% !important;
+}
