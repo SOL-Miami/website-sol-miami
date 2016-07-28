@@ -134,13 +134,19 @@ if ( ! function_exists( 'bethlehem_footer_logo' ) ) {
 		?>
 		<div class="footer-logo">
 			<?php echo apply_filters( 'bethlehem_footer_logo', $site_logo ); ?>
+			<ul class="social-buttons">
+				<li><a href="#"><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-2x fa-youtube-square" aria-hidden="true"></i></a></li>
+			</ul>
+			<h4 class="newsletter-htag">Subscribe to newsletter</h4>
 		</div>
 		<?php
 	}
 }
 
 if ( ! function_exists( 'bethlehem_footer_connect' ) ) {
-	function bethlehem_footer_connect() {	
+	function bethlehem_footer_connect() {
 		echo '<div class="connect-with-us">';
 			echo sprintf( '<h5>%s</h5>', apply_filters( 'bethlehem_footer_connect_text', __( 'Connect with us', 'bethlehem' ) ) );
 			apply_filters( 'bethlehem_footer_social_icons', bethlehem_social_icons() );
@@ -149,9 +155,9 @@ if ( ! function_exists( 'bethlehem_footer_connect' ) ) {
 }
 
 if ( ! function_exists( 'bethlehem_footer_before_content' ) ) {
-	function bethlehem_footer_before_content() {	
+	function bethlehem_footer_before_content() {
 		$footer = bethlehem_get_footer();
-		
+
 		if( apply_filters( 'bethlehem_is_stores_carousel_enable', TRUE ) && $footer != 'footer-3' ) {
 			do_action( 'bethlehem_store_carousel' );
 		}

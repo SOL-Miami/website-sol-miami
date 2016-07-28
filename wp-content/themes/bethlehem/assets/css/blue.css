@@ -480,3 +480,26 @@ body.bethlehem-style-3 .content-area .bethlehem-tiled-gallery .gallery-content .
 .sermon-info .post-author, .author-wrap {
   display: none;
 }
+
+ul.social-buttons {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+ul.social-buttons li {
+  display: inline-block;
+  margin-right: 25px;
+  text-align: center;
+  color: white;
+}
+ul.social-buttons li a {
+  color: white !important;
+}
+
+.newsletter-htag {
+  text-transform: uppercase;
+  color: white !important;
+  margin-bottom: 0;
+}
+
+.footer-3 footer.site-footer .footer-logo {margin-bottom: 25px !important;}
