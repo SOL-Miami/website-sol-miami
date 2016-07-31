@@ -135,9 +135,9 @@ if ( ! function_exists( 'bethlehem_footer_logo' ) ) {
 		<div class="footer-logo">
 			<?php echo apply_filters( 'bethlehem_footer_logo', $site_logo ); ?>
 			<ul class="social-buttons">
-				<li><a href="#"><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-2x fa-youtube-square" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.facebook.com/springoflifefellowship" target="_blank"><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.instagram.com/solfellowship/" target="_blank"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.youtube.com/user/worldchanger2029" target="_blank"><i class="fa fa-2x fa-youtube-square" aria-hidden="true"></i></a></li>
 			</ul>
 			<h4 class="newsletter-htag">Subscribe to newsletter</h4>
 		</div>
