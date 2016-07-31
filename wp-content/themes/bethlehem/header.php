@@ -15,6 +15,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<script src="https://use.fontawesome.com/8349ea28f8.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
