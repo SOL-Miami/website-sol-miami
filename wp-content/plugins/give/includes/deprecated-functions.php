@@ -2,7 +2,7 @@
 /**
  * Deprecated Functions
  *
- * @description: All functions that have been deprecated.
+ * All functions that have been deprecated.
  *
  * @package     Give
  * @subpackage  Deprecated
@@ -37,25 +37,4 @@ function give_no_guest_checkout( $form_id ) {
 	$ret = get_post_meta( $form_id, '_give_logged_in_only', true );
 
 	return (bool) apply_filters( 'give_no_guest_checkout', $ret );
-}
-
-/**
- * Reduces earnings and donation stats when a donation is refunded
- *
- * @since 1.0
- *
- * @param $payment_id
- * @param $new_status
- * @param $old_status
- *
- * @return void
- */
-function give_undo_donation_on_refund( $payment_id, $new_status, $old_status ) {
-
-	$backtrace = debug_backtrace();
-	_give_deprecated_function( 'give_undo_purchase_on_refund', '1.5', 'Give_Payment->refund()', $backtrace );
-
-	$payment = new Give_Payment( $payment_id );
-	$payment->refund();
-
 }

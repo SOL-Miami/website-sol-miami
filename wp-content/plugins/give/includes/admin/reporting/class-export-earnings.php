@@ -61,9 +61,10 @@ class Give_Earnings_Export extends Give_Export {
 	public function csv_cols() {
 
 		$cols = array(
-			'date'      => __( 'Date', 'give' ),
-			'donations' => __( 'Donations', 'give' ),
-			'earnings'  => __( 'Income', 'give' ) . ' (' . html_entity_decode( give_currency_filter( '' ) ) . ')'
+			'date'      => esc_html__( 'Date', 'give' ),
+			'donations' => esc_html__( 'Donations', 'give' ),
+			/* translators: %s: currency */
+			'earnings'  => sprintf( esc_html__( 'Income (%s)', 'give' ), html_entity_decode( give_currency_filter( '' ) ) )
 		);
 
 		return $cols;
@@ -118,7 +119,7 @@ class Give_Earnings_Export extends Give_Export {
 
 				$data[] = array(
 					'date'      => date_i18n( 'F Y', $date1 ),
-					'donations' => $stats->get_sales( 0, $date1, $date2, array( 'publish', 'revoked' ) ),
+					'donations' => $stats->get_sales( 0, $date1, $date2 ),
 					'earnings'  => give_format_amount( $stats->get_earnings( 0, $date1, $date2 ) ),
 				);
 

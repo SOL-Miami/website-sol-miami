@@ -83,7 +83,7 @@ div.cmb-type-levels-repeater-header + div.cmb-repeat-group-wrap {
 
 #_give_donation_levels_repeat {
   background: #F7F7F7;
-  padding: 0 12px 20px;
+  padding: 0 1px 20px 12px;
   box-sizing: border-box;
 
   .cmb-row, .inside {
@@ -134,10 +134,12 @@ div.cmb-type-levels-repeater-header + div.cmb-repeat-group-wrap {
 
 .give-money-symbol-before {
   border-right: 0;
+  margin-right: -4px;
 }
 
 .give-money-symbol-after {
   border-left: 0;
+  margin-left: -4px;
 }
 
 .give-underline {
